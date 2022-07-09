@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Generated-from: 1653679010000;type=2
+Bundle-ManifestVersion: 2
+Bundle-Name: Preferences Plug-in
+Bundle-SymbolicName: org.deri.wsml.eclipse.reasoner.predefinedqueries; singleton:=true
+Bundle-Version: 0.1
+Bundle-ClassPath: predprefs.jar,
+ lib/wslet-flight-A.jar
+Bundle-Activator: org.deri.wsml.eclipse.reasoner.predefinedqueries.PredefinedQueriesPlugin
+Bundle-Vendor: STI Innsbruck
+Bundle-Localization: plugin
+Export-Package: org.deri.wsml.eclipse.reasoner.internal.predefinedqueries,
+ org.deri.wsml.eclipse.reasoner.internal.predefinedqueries.ui,
+ org.deri.wsml.eclipse.reasoner.internal.predefinedqueries.ui.text,
+ org.deri.wsml.eclipse.reasoner.internal.predefinedqueries.validation,
+ org.deri.wsml.eclipse.reasoner.predefinedqueries,
+ org.deri.wsml.eclipse.reasoner.predefinedqueries.model,
+ org.deri.wsml.eclipse.reasoner.predefinedqueries.util,
+ wslet.flightA.analysis,
+ wslet.flightA.lexer,
+ wslet.flightA.node,
+ wslet.flightA.parser
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.jface.text,
+ org.deri.wsml.eclipse,
+ net.sourceforge.wsmo4j
+Eclipse-LazyStart: true

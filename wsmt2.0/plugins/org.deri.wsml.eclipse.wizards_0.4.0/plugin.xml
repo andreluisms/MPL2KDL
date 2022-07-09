@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="org.deri.wsml.eclipse.wizards"
+   name="WSML Wizards"
+   version="0.4"
+   provider-name="STI Innsbruck"
+   class="org.deri.wsml.eclipse.wizards.WSMLWizardsPlugin">
+
+   <runtime>
+      <library name="wsml-wizards.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/powerswing-0.3.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="net.sourceforge.wsmo4j"/>
+      <import plugin="org.deri.wsml.eclipse"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.ui.views"/>
+   </requires>
+
+	<extension point="org.eclipse.ui.perspectiveExtensions">
+        <perspectiveExtension targetID="org.deri.wsml.eclipse.perspective">
+            <newWizardShortcut id="org.deri.wsml.eclipse.wizards.WSMLProjectWizard"/>
+            <newWizardShortcut id="org.deri.wsml.eclipse.wizards.OntologyWizard"/>
+            <newWizardShortcut id="org.deri.wsml.eclipse.wizards.WebServiceWizard"/>
+            <newWizardShortcut id="org.deri.wsml.eclipse.wizards.GoalWizard"/>
+            <newWizardShortcut id="org.deri.wsml.eclipse.wizards.MediatorWizard"/>
+        </perspectiveExtension>
+    </extension>
+	<extension
+         point="org.eclipse.ui.newWizards">      
+     <category
+            id="org.deri.wsml.eclipse.wizards"
+            name="WSML"/>
+      <wizard
+            category="org.deri.wsml.eclipse.wizards"
+            class="org.deri.wsml.eclipse.wizards.WSMLProjectWizard"
+            finalPerspective="org.deri.wsml.eclipse.perspective"
+            icon="icons/wsml_project.gif"
+            id="org.deri.wsml.eclipse.wizards.WSMLProjectWizard"
+            name="WSML Project"
+            project="true">
+         <description>
+            Create a new WSML project
+         </description>
+     </wizard>
+     <wizard
+           category="org.deri.wsml.eclipse.wizards"
+           class="org.deri.wsml.eclipse.wizards.OntologyWizard"
+           finalPerspective="org.deri.wsml.eclipse.perspective"
+           icon="icons/ontology.gif"
+           id="org.deri.wsml.eclipse.wizards.OntologyWizard"
+           name="Ontology"
+           project="false">
+        <description>Create a new WSML Ontology</description>
+     </wizard>
+     <wizard
+           category="org.deri.wsml.eclipse.wizards"
+           class="org.deri.wsml.eclipse.wizards.WebServiceWizard"
+           finalPerspective="org.deri.wsml.eclipse.perspective"
+           icon="icons/webservice.gif"
+           id="org.deri.wsml.eclipse.wizards.WebServiceWizard"
+           name="Web Service"
+           project="false">
+        <description>Create a new WSML Web Service</description>
+     </wizard>
+     <wizard
+           category="org.deri.wsml.eclipse.wizards"
+           class="org.deri.wsml.eclipse.wizards.GoalWizard"
+           finalPerspective="org.deri.wsml.eclipse.perspective"
+           icon="icons/goal.gif"
+           id="org.deri.wsml.eclipse.wizards.GoalWizard"
+           name="Goal"
+           project="false">
+        <description>Create a new WSML Goal</description>
+     </wizard>
+     <wizard
+           category="org.deri.wsml.eclipse.wizards"
+           class="org.deri.wsml.eclipse.wizards.MediatorWizard"
+           finalPerspective="org.deri.wsml.eclipse.perspective"
+           icon="icons/mediators.gif"
+           id="org.deri.wsml.eclipse.wizards.MediatorWizard"
+           name="Mediator"
+           project="false">
+        <description>Create a new WSML Mediator</description>
+     </wizard>
+   </extension>
+</plugin>

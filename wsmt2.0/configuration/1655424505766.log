@@ -1,0 +1,1217 @@
+!SESSION 2022-06-16 21:08:25.668 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.15
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.equinox.common 4 0 2022-06-16 21:08:26.211
+!MESSAGE 
+!STACK 0
+org.osgi.framework.BundleException: The bundle could not be resolved. Reason: Missing Constraint: Bundle-RequiredExecutionEnvironment: CDC-1.0/Foundation-1.0,J2SE-1.3
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:305)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:355)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1074)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:616)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:508)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:299)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:489)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:211)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:321)
+
+!ENTRY org.eclipse.update.configurator 4 0 2022-06-16 21:08:26.216
+!MESSAGE 
+!STACK 0
+org.osgi.framework.BundleException: The bundle could not be resolved. Reason: Missing Constraint: Bundle-RequiredExecutionEnvironment: J2SE-1.4,CDC-1.0/Foundation-1.0,J2SE-1.3
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:305)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:355)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1074)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:616)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:508)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:299)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:489)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:211)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:321)
+
+!ENTRY org.eclipse.core.runtime 4 0 2022-06-16 21:08:26.219
+!MESSAGE 
+!STACK 0
+org.osgi.framework.BundleException: The bundle could not be resolved. Reason: Missing Constraint: Bundle-RequiredExecutionEnvironment: CDC-1.0/Foundation-1.0,J2SE-1.3
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:305)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:355)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1074)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:616)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:508)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:299)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:489)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:211)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:321)
+
+!ENTRY org.eclipse.osgi 4 0 2022-06-16 21:08:26.222
+!MESSAGE Bundle initial@reference:file:plugins/org.eclipse.equinox.common_3.4.0.v20080421-2006.jar/ was not resolved.
+
+!ENTRY org.eclipse.osgi 4 0 2022-06-16 21:08:26.222
+!MESSAGE Bundle initial@reference:file:plugins/org.eclipse.update.configurator_3.2.201.R34x_v20080819.jar/ was not resolved.
+
+!ENTRY org.eclipse.osgi 4 0 2022-06-16 21:08:26.222
+!MESSAGE Bundle initial@reference:file:plugins/org.eclipse.core.runtime_3.4.0.v20080512.jar/ was not resolved.
+
+!ENTRY org.eclipse.osgi 4 0 2022-06-16 21:08:26.224
+!MESSAGE Application error
+!STACK 1
+java.lang.IllegalStateException: Unable to acquire application service. Ensure that the org.eclipse.core.runtime bundle is resolved and started (see config.ini).
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:74)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:386)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:549)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:504)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1236)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1212)
+
+!ENTRY org.eclipse.osgi 2 0 2022-06-16 21:08:26.240
+!MESSAGE One or more bundles are not resolved because the following root constraints are not resolved:
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.240
+!MESSAGE Bundle update@plugins/org.eclipse.equinox.security_1.0.1.R34x_v20080721.jar was not resolved.
+!SUBENTRY 2 org.eclipse.equinox.security 2 0 2022-06-16 21:08:26.240
+!MESSAGE Missing imported package javax.security.auth.callback_0.0.0.
+!SUBENTRY 2 org.eclipse.equinox.security 2 0 2022-06-16 21:08:26.240
+!MESSAGE Missing imported package javax.crypto.spec_0.0.0.
+!SUBENTRY 2 org.eclipse.equinox.security 2 0 2022-06-16 21:08:26.240
+!MESSAGE Missing imported package javax.crypto_0.0.0.
+!SUBENTRY 2 org.eclipse.equinox.security 2 0 2022-06-16 21:08:26.240
+!MESSAGE Missing imported package javax.security.auth_0.0.0.
+!SUBENTRY 2 org.eclipse.equinox.security 2 0 2022-06-16 21:08:26.240
+!MESSAGE Missing imported package javax.security.auth.login_0.0.0.
+!SUBENTRY 2 org.eclipse.equinox.security 2 0 2022-06-16 21:08:26.240
+!MESSAGE Missing imported package javax.security.auth.spi_0.0.0.
+
+!ENTRY org.eclipse.osgi 2 0 2022-06-16 21:08:26.248
+!MESSAGE The following is a complete list of bundles which are not resolved, see the prior log entry for the root cause if it exists:
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.248
+!MESSAGE Bundle initial@reference:file:plugins/org.eclipse.equinox.common_3.4.0.v20080421-2006.jar/ [1] was not resolved.
+!SUBENTRY 2 org.eclipse.equinox.common 2 0 2022-06-16 21:08:26.248
+!MESSAGE Missing Constraint: Bundle-RequiredExecutionEnvironment: CDC-1.0/Foundation-1.0,J2SE-1.3
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.248
+!MESSAGE Bundle initial@reference:file:plugins/org.eclipse.update.configurator_3.2.201.R34x_v20080819.jar/ [2] was not resolved.
+!SUBENTRY 2 org.eclipse.update.configurator 2 0 2022-06-16 21:08:26.248
+!MESSAGE Missing required bundle org.eclipse.equinox.common_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.update.configurator 2 0 2022-06-16 21:08:26.248
+!MESSAGE Missing imported package javax.xml.parsers_0.0.0.
+!SUBENTRY 2 org.eclipse.update.configurator 2 0 2022-06-16 21:08:26.248
+!MESSAGE Missing imported package org.w3c.dom_0.0.0.
+!SUBENTRY 2 org.eclipse.update.configurator 2 0 2022-06-16 21:08:26.248
+!MESSAGE Missing imported package org.xml.sax_0.0.0.
+!SUBENTRY 2 org.eclipse.update.configurator 2 0 2022-06-16 21:08:26.248
+!MESSAGE Missing imported package org.xml.sax.helpers_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.248
+!MESSAGE Bundle initial@reference:file:plugins/org.eclipse.core.runtime_3.4.0.v20080512.jar/ [3] was not resolved.
+!SUBENTRY 2 org.eclipse.core.runtime 2 0 2022-06-16 21:08:26.248
+!MESSAGE Missing required bundle org.eclipse.equinox.common_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.core.runtime 2 0 2022-06-16 21:08:26.248
+!MESSAGE Missing required bundle org.eclipse.core.jobs_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.core.runtime 2 0 2022-06-16 21:08:26.248
+!MESSAGE Missing required bundle org.eclipse.equinox.registry_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.core.runtime 2 0 2022-06-16 21:08:26.248
+!MESSAGE Missing required bundle org.eclipse.equinox.preferences_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.core.runtime 2 0 2022-06-16 21:08:26.248
+!MESSAGE Missing required bundle org.eclipse.core.contenttype_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.core.runtime 2 0 2022-06-16 21:08:26.248
+!MESSAGE Missing optionally required bundle org.eclipse.core.runtime.compatibility.auth_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.core.runtime 2 0 2022-06-16 21:08:26.248
+!MESSAGE Missing required bundle org.eclipse.equinox.app_[1.0.0,2.0.0).
+!SUBENTRY 2 org.eclipse.core.runtime 2 0 2022-06-16 21:08:26.248
+!MESSAGE Missing imported package org.eclipse.core.internal.runtime.auth_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.248
+!MESSAGE Bundle update@plugins/org.eclipse.ui.views.properties.tabbed_3.4.2.M20090127-1700.jar [5] was not resolved.
+!SUBENTRY 2 org.eclipse.ui.views.properties.tabbed 2 0 2022-06-16 21:08:26.248
+!MESSAGE Missing required bundle org.eclipse.ui.forms_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.views.properties.tabbed 2 0 2022-06-16 21:08:26.248
+!MESSAGE Missing required bundle org.eclipse.ui.views_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.views.properties.tabbed 2 0 2022-06-16 21:08:26.248
+!MESSAGE Missing required bundle org.eclipse.ui_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.views.properties.tabbed 2 0 2022-06-16 21:08:26.248
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.views.properties.tabbed 2 0 2022-06-16 21:08:26.248
+!MESSAGE Missing imported package com.ibm.icu.text_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.248
+!MESSAGE Bundle update@plugins/org.deri.wsml.eclipse.discovery_0.2.0/ [6] was not resolved.
+!SUBENTRY 2 org.deri.wsml.eclipse.discovery 2 0 2022-06-16 21:08:26.248
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.discovery 2 0 2022-06-16 21:08:26.248
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.discovery 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing required bundle org.eclipse.ui.views_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.discovery 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.discovery 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing required bundle org.deri.wsml.eclipse.reasoner_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.discovery 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing required bundle org.openoasis.see.integration_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.discovery 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing required bundle org.deri.wsmx.integration.eclipse_[0.3.0,1.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.249
+!MESSAGE Bundle update@plugins/org.eclipse.swt.gtk.linux.x86_64_3.4.1.v3452b.jar [7] was not resolved.
+!SUBENTRY 2 org.eclipse.swt.gtk.linux.x86_64 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing host org.eclipse.swt_[3.0.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.249
+!MESSAGE Bundle update@plugins/org.eclipse.ui.views_3.3.1.M20081112-0800.jar [8] was not resolved.
+!SUBENTRY 2 org.eclipse.ui.views 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.views 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing required bundle org.eclipse.help_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.views 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing required bundle org.eclipse.ui_[3.3.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.249
+!MESSAGE Bundle update@plugins/org.eclipse.ltk.ui.refactoring_3.4.1.r341_v20080716-0800.jar [9] was not resolved.
+!SUBENTRY 2 org.eclipse.ltk.ui.refactoring 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ltk.ui.refactoring 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing required bundle org.eclipse.core.expressions_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ltk.ui.refactoring 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing required bundle org.eclipse.core.filebuffers_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ltk.ui.refactoring 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing required bundle org.eclipse.core.filesystem_[1.1.0,2.0.0).
+!SUBENTRY 2 org.eclipse.ltk.ui.refactoring 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing required bundle org.eclipse.core.resources_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ltk.ui.refactoring 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing required bundle org.eclipse.ltk.core.refactoring_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ltk.ui.refactoring 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing required bundle org.eclipse.jface.text_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ltk.ui.refactoring 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing required bundle org.eclipse.ui_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ltk.ui.refactoring 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing required bundle org.eclipse.ui.navigator_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ltk.ui.refactoring 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing required bundle org.eclipse.compare_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ltk.ui.refactoring 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing required bundle org.eclipse.team.core_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ltk.ui.refactoring 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing required bundle org.eclipse.team.ui_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ltk.ui.refactoring 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing imported package com.ibm.icu.text_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.249
+!MESSAGE Bundle update@plugins/org.eclipse.core.runtime.compatibility_3.2.0.v20071008.jar [10] was not resolved.
+!SUBENTRY 2 org.eclipse.core.runtime.compatibility 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.core.runtime.compatibility 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing required bundle org.eclipse.update.configurator_[3.1.100,4.0.0).
+!SUBENTRY 2 org.eclipse.core.runtime.compatibility 2 0 2022-06-16 21:08:26.249
+!MESSAGE Missing imported package javax.xml.parsers_0.0.0.
+!SUBENTRY 2 org.eclipse.core.runtime.compatibility 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing imported package org.xml.sax_0.0.0.
+!SUBENTRY 2 org.eclipse.core.runtime.compatibility 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing imported package org.xml.sax.helpers_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.250
+!MESSAGE Bundle update@plugins/org.deri.mapping.eclipse.views_1.2.0/ [11] was not resolved.
+!SUBENTRY 2 org.deri.mapping.eclipse.views 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.views 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.views 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing required bundle org.deri.mapping.eclipse_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.views 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing required bundle net.sourceforge.mediation_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.250
+!MESSAGE Bundle update@plugins/org.deri.wsml.eclipse.io_1.3.0/ [12] was not resolved.
+!SUBENTRY 2 org.deri.wsml.eclipse.io 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.io 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.io 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.io 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing required bundle org.deri.wsml.eclipse_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.io 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.io 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing required bundle org.eclipse.ui.ide_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.250
+!MESSAGE Bundle update@plugins/org.eclipse.ui.ide_3.4.2.M20090127-1700.jar [13] was not resolved.
+!SUBENTRY 2 org.eclipse.ui.ide 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing optionally required bundle org.eclipse.core.resources_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.ide 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.ide 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing required bundle org.eclipse.core.filesystem_[1.0.0,2.0.0).
+!SUBENTRY 2 org.eclipse.ui.ide 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing required bundle org.eclipse.help_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.ide 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing required bundle org.eclipse.ui_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.ide 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing optionally required bundle org.eclipse.ui.views_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.ide 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing optionally required bundle org.eclipse.update.configurator_[3.1.100,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.ide 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing optionally required bundle org.eclipse.update.core_[3.1.100,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.ide 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing optionally required bundle org.eclipse.update.ui_[3.1.100,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.ide 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing required bundle org.eclipse.jface.text_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.ide 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing optionally required bundle org.eclipse.ui.forms_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.ide 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing imported package com.ibm.icu.text_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.250
+!MESSAGE Bundle update@plugins/org.eclipse.equinox.registry_3.4.0.v20080516-0950.jar [14] was not resolved.
+!SUBENTRY 2 org.eclipse.equinox.registry 2 0 2022-06-16 21:08:26.250
+!MESSAGE Missing required bundle org.eclipse.equinox.common_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.equinox.registry 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing imported package javax.xml.parsers_0.0.0.
+!SUBENTRY 2 org.eclipse.equinox.registry 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing imported package org.eclipse.core.runtime.jobs_0.0.0.
+!SUBENTRY 2 org.eclipse.equinox.registry 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing imported package org.xml.sax_0.0.0.
+!SUBENTRY 2 org.eclipse.equinox.registry 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing imported package org.xml.sax.helpers_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.251
+!MESSAGE Bundle update@plugins/org.eclipse.ltk.core.refactoring_3.4.2.r342_v20081028-0800.jar [15] was not resolved.
+!SUBENTRY 2 org.eclipse.ltk.core.refactoring 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ltk.core.refactoring 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing required bundle org.eclipse.core.expressions_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ltk.core.refactoring 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing required bundle org.eclipse.core.filesystem_[1.1.0,2.0.0).
+!SUBENTRY 2 org.eclipse.ltk.core.refactoring 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing required bundle org.eclipse.core.filebuffers_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ltk.core.refactoring 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing required bundle org.eclipse.core.resources_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ltk.core.refactoring 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing required bundle org.eclipse.core.commands_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ltk.core.refactoring 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing required bundle org.eclipse.text_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ltk.core.refactoring 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing imported package com.ibm.icu.text_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.251
+!MESSAGE Bundle update@plugins/org.eclipse.core.resources_3.4.2.R34x_v20090126.jar [16] was not resolved.
+!SUBENTRY 2 org.eclipse.core.resources 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing optionally required bundle org.eclipse.ant.core_[3.1.0,4.0.0).
+!SUBENTRY 2 org.eclipse.core.resources 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing required bundle org.eclipse.core.expressions_[3.1.0,4.0.0).
+!SUBENTRY 2 org.eclipse.core.resources 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing required bundle org.eclipse.core.filesystem_[1.1.0,2.0.0).
+!SUBENTRY 2 org.eclipse.core.resources 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.2.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.251
+!MESSAGE Bundle update@plugins/org.eclipse.ui_3.4.2.M20090204-0800.jar [17] was not resolved.
+!SUBENTRY 2 org.eclipse.ui 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing required bundle org.eclipse.swt_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing required bundle org.eclipse.jface_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing required bundle org.eclipse.ui.workbench_[3.4.2,4.0.0).
+!SUBENTRY 2 org.eclipse.ui 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing required bundle org.eclipse.core.expressions_[3.4.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.251
+!MESSAGE Bundle update@plugins/org.eclipse.ui.workbench.texteditor_3.4.1.r341_v20080827-1100.jar [18] was not resolved.
+!SUBENTRY 2 org.eclipse.ui.workbench.texteditor 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.workbench.texteditor 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing required bundle org.eclipse.core.expressions_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.workbench.texteditor 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing required bundle org.eclipse.jface.text_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.workbench.texteditor 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing required bundle org.eclipse.ui_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.workbench.texteditor 2 0 2022-06-16 21:08:26.251
+!MESSAGE Missing imported package com.ibm.icu.text_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.252
+!MESSAGE Bundle update@plugins/net.sourceforge.wsmo4j_0.6.1/ [19] was not resolved.
+!SUBENTRY 2 net.sourceforge.wsmo4j 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 net.sourceforge.wsmo4j 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.252
+!MESSAGE Bundle update@plugins/org.eclipse.update.core.linux_3.2.1.R34x_v20081024.jar [20] was not resolved.
+!SUBENTRY 2 org.eclipse.update.core.linux 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing host org.eclipse.update.core_[3.0.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.252
+!MESSAGE Bundle update@plugins/org.deri.wsml.eclipse.discoveryview_0.2.0/ [21] was not resolved.
+!SUBENTRY 2 org.deri.wsml.eclipse.discoveryview 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.deri.wsml.eclipse.discovery_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.discoveryview 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.discoveryview 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.discoveryview 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.deri.wsml.eclipse_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.discoveryview 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.discoveryview 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.eclipse.jface.text_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.discoveryview 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.eclipse.ui.ide_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.discoveryview 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.discoveryview 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.deri.wsml.eclipse.texteditor_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.discoveryview 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.eclipse.ui.forms_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.discoveryview 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.deri.wsml.eclipse.reasoner_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.252
+!MESSAGE Bundle update@plugins/org.deri.mapping.eclipse.runtime_0.2.0/ [22] was not resolved.
+!SUBENTRY 2 org.deri.mapping.eclipse.runtime 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.runtime 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.runtime 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle net.sourceforge.mediation_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.runtime 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.runtime 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.deri.wsml.eclipse.reasoner_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.runtime 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.openoasis.see.integration_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.252
+!MESSAGE Bundle update@plugins/org.deri.wsml.eclipse_1.5.0/ [23] was not resolved.
+!SUBENTRY 2 org.deri.wsml.eclipse 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.eclipse.ui.ide_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.eclipse.ui.views_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.eclipse.jface.text_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse 2 0 2022-06-16 21:08:26.252
+!MESSAGE Missing required bundle org.deri.wsml.eclipse.discovery_[0.1.0,1.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.253
+!MESSAGE Bundle update@plugins/org.eclipse.ui.forms_3.3.103.v20081027_34x.jar [24] was not resolved.
+!SUBENTRY 2 org.eclipse.ui.forms 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.1.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.forms 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing required bundle org.eclipse.jface_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.forms 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing optionally required bundle org.eclipse.ui_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.forms 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing imported package com.ibm.icu.text_0.0.0.
+!SUBENTRY 2 org.eclipse.ui.forms 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing imported package javax.xml.parsers_0.0.0.
+!SUBENTRY 2 org.eclipse.ui.forms 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing imported package org.w3c.dom_0.0.0.
+!SUBENTRY 2 org.eclipse.ui.forms 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing imported package org.xml.sax_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.253
+!MESSAGE Bundle update@plugins/org.eclipse.compare_3.4.1.r34x_20090121.jar [25] was not resolved.
+!SUBENTRY 2 org.eclipse.compare 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing required bundle org.eclipse.ui_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.compare 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing required bundle org.eclipse.core.resources_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.compare 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing required bundle org.eclipse.jface.text_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.compare 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing required bundle org.eclipse.ui.ide_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.compare 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing required bundle org.eclipse.ui.views_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.compare 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing required bundle org.eclipse.ui.workbench.texteditor_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.compare 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.compare 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing required bundle org.eclipse.core.expressions_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.compare 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing required bundle org.eclipse.ui.editors_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.compare 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing required bundle org.eclipse.ui.forms_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.compare 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing imported package com.ibm.icu.util_0.0.0.
+!SUBENTRY 2 org.eclipse.compare 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing imported package com.ibm.icu.text_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.253
+!MESSAGE Bundle update@plugins/org.eclipse.core.variables_3.2.100.v20080529-1300.jar [26] was not resolved.
+!SUBENTRY 2 org.eclipse.core.variables 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.3.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.253
+!MESSAGE Bundle update@plugins/org.eclipse.team.ui_3.4.1.r34x_20080827.jar [28] was not resolved.
+!SUBENTRY 2 org.eclipse.team.ui 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing optionally required bundle org.eclipse.ui.ide_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.team.ui 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing required bundle org.eclipse.core.resources_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.team.ui 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.team.ui 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing required bundle org.eclipse.team.core_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.team.ui 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing required bundle org.eclipse.ui_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.team.ui 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing required bundle org.eclipse.compare_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.team.ui 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing required bundle org.eclipse.ui.forms_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.team.ui 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing required bundle org.eclipse.ui.navigator_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.team.ui 2 0 2022-06-16 21:08:26.253
+!MESSAGE Missing required bundle org.eclipse.jface.text_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.team.ui 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle org.eclipse.ui.navigator.resources_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.team.ui 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle org.eclipse.ui.editors_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.team.ui 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing imported package com.ibm.icu.text_0.0.0.
+!SUBENTRY 2 org.eclipse.team.ui 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing imported package com.ibm.icu.util_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.254
+!MESSAGE Bundle update@plugins/org.eclipse.equinox.app_1.1.0.v20080421-2006.jar [29] was not resolved.
+!SUBENTRY 2 org.eclipse.equinox.app 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle org.eclipse.equinox.registry_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.equinox.app 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle org.eclipse.equinox.common_[3.2.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.254
+!MESSAGE Bundle update@plugins/org.eclipse.ui.workbench_3.4.2.M20090127-1700.jar [30] was not resolved.
+!SUBENTRY 2 org.eclipse.ui.workbench 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.workbench 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle org.eclipse.help_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.workbench 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle org.eclipse.jface_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.workbench 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle org.eclipse.swt_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.workbench 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle org.eclipse.core.expressions_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.workbench 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle org.eclipse.jface.databinding_[1.1.0,2.0.0).
+!SUBENTRY 2 org.eclipse.ui.workbench 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle org.eclipse.core.databinding_[1.0.0,2.0.0).
+!SUBENTRY 2 org.eclipse.ui.workbench 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing imported package com.ibm.icu.text_0.0.0.
+!SUBENTRY 2 org.eclipse.ui.workbench 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing imported package javax.xml.parsers_0.0.0.
+!SUBENTRY 2 org.eclipse.ui.workbench 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing imported package org.w3c.dom_0.0.0.
+!SUBENTRY 2 org.eclipse.ui.workbench 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing imported package org.xml.sax_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.254
+!MESSAGE Bundle update@plugins/com.ibm.icu_3.8.1.v20080530.jar [33] was not resolved.
+!SUBENTRY 2 com.ibm.icu 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing Constraint: Bundle-RequiredExecutionEnvironment: CDC-1.0/Foundation-1.0,J2SE-1.3
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.254
+!MESSAGE Bundle update@plugins/org.eclipse.ui.navigator_3.3.102.M20090127-1700.jar [34] was not resolved.
+!SUBENTRY 2 org.eclipse.ui.navigator 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle org.eclipse.jface_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.navigator 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle org.eclipse.ui.workbench_[3.2.1,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.navigator 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.navigator 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle org.eclipse.ui_[3.2.1,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.navigator 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle org.eclipse.core.expressions_[3.2.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.254
+!MESSAGE Bundle update@plugins/org.deri.wsml.eclipse.reasoner_0.64.0/ [35] was not resolved.
+!SUBENTRY 2 org.deri.wsml.eclipse.reasoner 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.reasoner 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.reasoner 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.254
+!MESSAGE Bundle update@plugins/org.deri.wsml.eclipse.io.rdf_0.3.0/ [36] was not resolved.
+!SUBENTRY 2 org.deri.wsml.eclipse.io.rdf 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.io.rdf 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.io.rdf 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.io.rdf 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle org.deri.wsml.eclipse.io_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.io.rdf 2 0 2022-06-16 21:08:26.254
+!MESSAGE Missing required bundle org.deri.wsml.eclipse_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.io.rdf 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.255
+!MESSAGE Bundle update@plugins/org.eclipse.equinox.launcher_1.0.101.R34x_v20081125.jar [37] was not resolved.
+!SUBENTRY 2 org.eclipse.equinox.launcher 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing Constraint: Bundle-RequiredExecutionEnvironment: J2SE-1.4,CDC-1.0/Foundation-1.0,J2SE-1.3
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.255
+!MESSAGE Bundle update@plugins/net.sourceforge.jpowergraph_0.4.0/ [38] was not resolved.
+!SUBENTRY 2 net.sourceforge.jpowergraph 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 net.sourceforge.jpowergraph 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.eclipse.swt_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.255
+!MESSAGE Bundle update@plugins/org.deri.wsml.eclipse.texteditor_0.5.0/ [39] was not resolved.
+!SUBENTRY 2 org.deri.wsml.eclipse.texteditor 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.texteditor 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.deri.lib.texteditor_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.texteditor 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.deri.wsml.eclipse_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.texteditor 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.texteditor 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.texteditor 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.eclipse.jface.text_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.texteditor 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.texteditor 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.eclipse.ui.editors_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.texteditor 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.eclipse.ui.ide_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.texteditor 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.eclipse.ui.workbench.texteditor_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.texteditor 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.eclipse.ui.views_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.texteditor 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.deri.wsml.eclipse.ui_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.255
+!MESSAGE Bundle update@plugins/org.deri.wsml.eclipse.ui_0.1.0/ [40] was not resolved.
+!SUBENTRY 2 org.deri.wsml.eclipse.ui 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.ui 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.ui 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.ui 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.eclipse.ui.ide_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.ui 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.eclipse.ui.views_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.ui 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.eclipse.ui.navigator_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.ui 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.eclipse.ui.navigator.resources_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.ui 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.ui 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.deri.wsml.eclipse.wizards_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.ui 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.deri.wsml.eclipse.reasoner.predefinedqueries_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.ui 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.deri.wsml.eclipse_1.4.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.255
+!MESSAGE Bundle update@plugins/org.eclipse.core.databinding_1.1.1.M20080827-0800b.jar [41] was not resolved.
+!SUBENTRY 2 org.eclipse.core.databinding 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.eclipse.equinox.common_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.core.databinding 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing imported package com.ibm.icu.text_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.255
+!MESSAGE Bundle update@plugins/org.eclipse.core.filesystem_1.2.0.v20080604-1400.jar [42] was not resolved.
+!SUBENTRY 2 org.eclipse.core.filesystem 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.eclipse.equinox.common_0.0.0.
+!SUBENTRY 2 org.eclipse.core.filesystem 2 0 2022-06-16 21:08:26.255
+!MESSAGE Missing required bundle org.eclipse.equinox.registry_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.256
+!MESSAGE Bundle update@plugins/org.deri.wsml.eclipse.reasonerview_0.7.0/ [43] was not resolved.
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.deri.lib.texteditor_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.deri.wsml.eclipse_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.eclipse.jface.text_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.eclipse.ui.editors_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.eclipse.ui.ide_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.eclipse.ui.workbench.texteditor_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.deri.wsml.eclipse.reasoner_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.deri.wsml.eclipse.reasoner.predefinedqueries_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.256
+!MESSAGE Bundle update@plugins/org.deri.wsml.eclipse.sdcgraph_0.3.0/ [44] was not resolved.
+!SUBENTRY 2 org.deri.wsml.eclipse.sdcgraph 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.sdcgraph 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.sdcgraph 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.eclipse.ui.editors_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.sdcgraph 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.eclipse.ui.ide_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.sdcgraph 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.sdcgraph 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle net.sourceforge.jpowergraph_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.sdcgraph 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.deri.wsml.eclipse_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.sdcgraph 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.256
+!MESSAGE Bundle update@plugins/org.deri.mapping.eclipse.viewbasededitor_0.2.0/ [45] was not resolved.
+!SUBENTRY 2 org.deri.mapping.eclipse.viewbasededitor 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.viewbasededitor 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.eclipse.jface.text_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.viewbasededitor 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.viewbasededitor 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.eclipse.ui.editors_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.viewbasededitor 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.eclipse.ui.workbench.texteditor_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.viewbasededitor 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle net.sourceforge.mediation_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.viewbasededitor 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.deri.mapping.eclipse_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.viewbasededitor 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.viewbasededitor 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.viewbasededitor 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.eclipse.ui.ide_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.viewbasededitor 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.eclipse.ui.views_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.viewbasededitor 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.deri.wsml.eclipse_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.256
+!MESSAGE Bundle update@plugins/org.deri.wsml.eclipse.wizards_0.4.0/ [46] was not resolved.
+!SUBENTRY 2 org.deri.wsml.eclipse.wizards 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.wizards 2 0 2022-06-16 21:08:26.256
+!MESSAGE Missing required bundle org.deri.wsml.eclipse_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.wizards 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.wizards 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.wizards 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.wizards 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing required bundle org.eclipse.ui.ide_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.wizards 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing required bundle org.eclipse.ui.views_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.257
+!MESSAGE Bundle update@plugins/org.eclipse.update.ui_3.2.101.R34x_v20081128.jar [47] was not resolved.
+!SUBENTRY 2 org.eclipse.update.ui 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.1.0,4.0.0).
+!SUBENTRY 2 org.eclipse.update.ui 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing required bundle org.eclipse.ui_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.update.ui 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing required bundle org.eclipse.update.core_[3.1.0,4.0.0).
+!SUBENTRY 2 org.eclipse.update.ui 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing required bundle org.eclipse.update.configurator_[3.1.0,4.0.0).
+!SUBENTRY 2 org.eclipse.update.ui 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing required bundle org.eclipse.ui.forms_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.update.ui 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing imported package javax.xml.parsers_0.0.0.
+!SUBENTRY 2 org.eclipse.update.ui 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing imported package org.w3c.dom_0.0.0.
+!SUBENTRY 2 org.eclipse.update.ui 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing imported package org.xml.sax_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.257
+!MESSAGE Bundle update@plugins/org.eclipse.equinox.preferences_3.2.201.R34x_v20080709.jar [48] was not resolved.
+!SUBENTRY 2 org.eclipse.equinox.preferences 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing required bundle org.eclipse.equinox.common_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.equinox.preferences 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing optionally required bundle org.eclipse.equinox.registry_[3.2.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.257
+!MESSAGE Bundle update@plugins/org.eclipse.help_3.3.102.v20081014_34x.jar [49] was not resolved.
+!SUBENTRY 2 org.eclipse.help 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.1.0,4.0.0).
+!SUBENTRY 2 org.eclipse.help 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing required bundle org.eclipse.core.expressions_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.help 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing imported package javax.xml.parsers_0.0.0.
+!SUBENTRY 2 org.eclipse.help 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing imported package javax.xml.transform_0.0.0.
+!SUBENTRY 2 org.eclipse.help 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing imported package javax.xml.transform.dom_0.0.0.
+!SUBENTRY 2 org.eclipse.help 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing imported package javax.xml.transform.stream_0.0.0.
+!SUBENTRY 2 org.eclipse.help 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing imported package org.w3c.dom_0.0.0.
+!SUBENTRY 2 org.eclipse.help 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing imported package org.xml.sax_0.0.0.
+!SUBENTRY 2 org.eclipse.help 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing imported package org.xml.sax.helpers_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.257
+!MESSAGE Bundle update@plugins/org.eclipse.jface_3.4.2.M20090107-0800.jar [50] was not resolved.
+!SUBENTRY 2 org.eclipse.jface 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing required bundle org.eclipse.swt_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jface 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing required bundle org.eclipse.core.commands_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jface 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing required bundle org.eclipse.equinox.common_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jface 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing imported package javax.xml.parsers_0.0.0.
+!SUBENTRY 2 org.eclipse.jface 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing imported package org.w3c.dom_0.0.0.
+!SUBENTRY 2 org.eclipse.jface 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing imported package org.xml.sax_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.257
+!MESSAGE Bundle update@plugins/org.eclipse.update.core_3.2.202.R34x_v20081128.jar [51] was not resolved.
+!SUBENTRY 2 org.eclipse.update.core 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.1.0,4.0.0).
+!SUBENTRY 2 org.eclipse.update.core 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing required bundle org.eclipse.update.configurator_[3.1.0,4.0.0).
+!SUBENTRY 2 org.eclipse.update.core 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing required bundle org.eclipse.core.net_[1.0.0,2.0.0).
+!SUBENTRY 2 org.eclipse.update.core 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing imported package javax.xml.parsers_0.0.0.
+!SUBENTRY 2 org.eclipse.update.core 2 0 2022-06-16 21:08:26.257
+!MESSAGE Missing imported package org.w3c.dom_0.0.0.
+!SUBENTRY 2 org.eclipse.update.core 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing imported package org.xml.sax_0.0.0.
+!SUBENTRY 2 org.eclipse.update.core 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing imported package org.xml.sax.helpers_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.258
+!MESSAGE Bundle update@plugins/org.eclipse.core.filebuffers_3.4.0.v20080603-2000.jar [52] was not resolved.
+!SUBENTRY 2 org.eclipse.core.filebuffers 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.core.filebuffers 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing optionally required bundle org.eclipse.core.resources_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.core.filebuffers 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing required bundle org.eclipse.text_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.core.filebuffers 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing required bundle org.eclipse.core.filesystem_[1.1.0,2.0.0).
+!SUBENTRY 2 org.eclipse.core.filebuffers 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing imported package com.ibm.icu.text_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.258
+!MESSAGE Bundle update@plugins/org.eclipse.team.core_3.4.2.r34x_20080115.jar [54] was not resolved.
+!SUBENTRY 2 org.eclipse.team.core 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing required bundle org.eclipse.core.resources_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.team.core 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.team.core 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing required bundle org.eclipse.core.filesystem_[1.1.0,2.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.258
+!MESSAGE Bundle update@plugins/uk.ac.open.kmi.irsIII.integration_0.2.0/ [55] was not resolved.
+!SUBENTRY 2 uk.ac.open.kmi.irsIII.integration 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 uk.ac.open.kmi.irsIII.integration 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing required bundle uk.ac.open.kmi.ocml2wsml_0.0.0.
+!SUBENTRY 2 uk.ac.open.kmi.irsIII.integration 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 uk.ac.open.kmi.irsIII.integration 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+!SUBENTRY 2 uk.ac.open.kmi.irsIII.integration 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 2 uk.ac.open.kmi.irsIII.integration 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing required bundle org.openoasis.see.integration_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.258
+!MESSAGE Bundle update@plugins/org.eclipse.core.runtime.compatibility.auth_3.2.100.v20070502.jar [56] was not resolved.
+!SUBENTRY 2 org.eclipse.core.runtime.compatibility.auth 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing required bundle org.eclipse.equinox.common_[3.2.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.258
+!MESSAGE Bundle update@plugins/org.eclipse.ui.console_3.3.1.v20090128_r342.jar [57] was not resolved.
+!SUBENTRY 2 org.eclipse.ui.console 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing required bundle org.eclipse.ui_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.console 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing required bundle org.eclipse.jface.text_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.console 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing required bundle org.eclipse.ui.workbench.texteditor_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.console 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.console 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing required bundle org.eclipse.core.expressions_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.console 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing required bundle org.eclipse.core.variables_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.console 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing imported package com.ibm.icu.text_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.258
+!MESSAGE Bundle update@plugins/org.eclipse.core.contenttype_3.3.0.v20080604-1400.jar [58] was not resolved.
+!SUBENTRY 2 org.eclipse.core.contenttype 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing required bundle org.eclipse.equinox.preferences_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.core.contenttype 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing required bundle org.eclipse.equinox.registry_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.core.contenttype 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing required bundle org.eclipse.equinox.common_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.core.contenttype 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing imported package javax.xml.parsers_0.0.0.
+!SUBENTRY 2 org.eclipse.core.contenttype 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing imported package org.xml.sax_0.0.0.
+!SUBENTRY 2 org.eclipse.core.contenttype 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing imported package org.xml.sax.ext_0.0.0.
+!SUBENTRY 2 org.eclipse.core.contenttype 2 0 2022-06-16 21:08:26.258
+!MESSAGE Missing imported package org.xml.sax.helpers_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.258
+!MESSAGE Bundle update@plugins/org.deri.mapping.eclipse_0.3.0/ [59] was not resolved.
+!SUBENTRY 2 org.deri.mapping.eclipse 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.ui.ide_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.ui.views_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle net.sourceforge.mediation_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.jface.text_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.259
+!MESSAGE Bundle update@plugins/javax.servlet_2.4.0.v200806031604.jar [60] was not resolved.
+!SUBENTRY 2 javax.servlet 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing Constraint: Bundle-RequiredExecutionEnvironment: CDC-1.0/Foundation-1.0,J2SE-1.3
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.259
+!MESSAGE Bundle update@plugins/org.deri.wsml.eclipse.visualizer_0.7.0/ [61] was not resolved.
+!SUBENTRY 2 org.deri.wsml.eclipse.visualizer 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.visualizer 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.deri.wsml.eclipse_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.visualizer 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.deri.wsml.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.visualizer 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.visualizer 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.visualizer 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.jface.text_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.visualizer 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.visualizer 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.ui.editors_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.visualizer 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.ui.ide_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.visualizer 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.ui.views_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.visualizer 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.ui.workbench.texteditor_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.visualizer 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle net.sourceforge.jpowergraph_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.259
+!MESSAGE Bundle update@plugins/org.eclipse.swt_3.4.2.v3452b.jar [62] was not resolved.
+!SUBENTRY 2 org.eclipse.swt 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing imported package org.mozilla.xpcom_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.259
+!MESSAGE Bundle update@plugins/org.eclipse.jface.text_3.4.2.r342_v20081119-0800.jar [63] was not resolved.
+!SUBENTRY 2 org.eclipse.jface.text 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jface.text 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.text_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jface.text 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.jface_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jface.text 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing imported package com.ibm.icu.text_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.259
+!MESSAGE Bundle update@plugins/org.deri.lib.texteditor_0.4.0/ [64] was not resolved.
+!SUBENTRY 2 org.deri.lib.texteditor 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.lib.texteditor 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.lib.texteditor 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+!SUBENTRY 2 org.deri.lib.texteditor 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.jface.text_0.0.0.
+!SUBENTRY 2 org.deri.lib.texteditor 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.ui.editors_0.0.0.
+!SUBENTRY 2 org.deri.lib.texteditor 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing required bundle org.eclipse.ui.workbench.texteditor_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.259
+!MESSAGE Bundle update@plugins/org.eclipse.core.resources.compatibility_3.4.0.v20080604-1400.jar [65] was not resolved.
+!SUBENTRY 2 org.eclipse.core.resources.compatibility 2 0 2022-06-16 21:08:26.259
+!MESSAGE Missing host org.eclipse.core.resources_[3.4.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.259
+!MESSAGE Bundle update@plugins/org.eclipse.ui.editors_3.4.0.v20080603-2000.jar [66] was not resolved.
+!SUBENTRY 2 org.eclipse.ui.editors 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.editors 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.ui.ide_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.editors 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.ui_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.editors 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.jface.text_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.editors 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.ui.workbench.texteditor_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.editors 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.core.filebuffers_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.editors 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.core.resources_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.editors 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.core.filesystem_[1.1.0,2.0.0).
+!SUBENTRY 2 org.eclipse.ui.editors 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing imported package com.ibm.icu.text_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.260
+!MESSAGE Bundle update@plugins/org.deri.wsmx.integration.eclipse_0.4.0/ [67] was not resolved.
+!SUBENTRY 2 org.deri.wsmx.integration.eclipse 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.wsmx.integration.eclipse 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.wsmx.integration.eclipse 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 2 org.deri.wsmx.integration.eclipse 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.openoasis.see.integration_0.0.0.
+!SUBENTRY 2 org.deri.wsmx.integration.eclipse 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle net.sourceforge.mediation_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.260
+!MESSAGE Bundle update@plugins/org.deri.wsmt_1.4.3/ [69] was not resolved.
+!SUBENTRY 2 org.deri.wsmt 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.ui.ide.application_0.0.0.
+!SUBENTRY 2 org.deri.wsmt 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.wsmt 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.wsmt 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.ui.ide_0.0.0.
+!SUBENTRY 2 org.deri.wsmt 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.260
+!MESSAGE Bundle update@plugins/org.eclipse.jface.databinding_1.2.1.M20080827-0800a.jar [70] was not resolved.
+!SUBENTRY 2 org.eclipse.jface.databinding 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.core.databinding_[1.0.0,2.0.0).
+!SUBENTRY 2 org.eclipse.jface.databinding 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.swt_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jface.databinding 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.jface_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jface.databinding 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.equinox.common_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.jface.databinding 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing imported package com.ibm.icu.text_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.260
+!MESSAGE Bundle update@plugins/org.openoasis.see.integration_0.4.0/ [71] was not resolved.
+!SUBENTRY 2 org.openoasis.see.integration 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.openoasis.see.integration 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.260
+!MESSAGE Bundle update@plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.0.101.R34x_v20080731/ [72] was not resolved.
+!SUBENTRY 2 org.eclipse.equinox.launcher.gtk.linux.x86_64 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing host org.eclipse.equinox.launcher_[1.0.0,1.1.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.260
+!MESSAGE Bundle update@plugins/org.deri.see.interaction_0.4.0/ [73] was not resolved.
+!SUBENTRY 2 org.deri.see.interaction 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.deri.wsml.eclipse_0.0.0.
+!SUBENTRY 2 org.deri.see.interaction 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.deri.wsmx.integration.eclipse_0.0.0.
+!SUBENTRY 2 org.deri.see.interaction 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.see.interaction 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.see.interaction 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 2 org.deri.see.interaction 2 0 2022-06-16 21:08:26.260
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+!SUBENTRY 2 org.deri.see.interaction 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing required bundle uk.ac.open.kmi.ocml2wsml_0.0.0.
+!SUBENTRY 2 org.deri.see.interaction 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing required bundle uk.ac.open.kmi.irsIII.integration_0.0.0.
+!SUBENTRY 2 org.deri.see.interaction 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing required bundle org.deri.wsml.eclipse.wizards_0.0.0.
+!SUBENTRY 2 org.deri.see.interaction 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing required bundle org.eclipse.ui.ide_0.0.0.
+!SUBENTRY 2 org.deri.see.interaction 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing required bundle org.openoasis.see.integration_0.0.0.
+!SUBENTRY 2 org.deri.see.interaction 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing required bundle at.deri.ordi.integration.eclipse_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.261
+!MESSAGE Bundle update@plugins/uk.ac.open.kmi.ocml2wsml_0.3.0/ [74] was not resolved.
+!SUBENTRY 2 uk.ac.open.kmi.ocml2wsml 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 uk.ac.open.kmi.ocml2wsml 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.261
+!MESSAGE Bundle update@plugins/at.deri.ordi.integration.eclipse_0.1.0.jar [75] was not resolved.
+!SUBENTRY 2 at.deri.ordi.integration.eclipse 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 at.deri.ordi.integration.eclipse 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 at.deri.ordi.integration.eclipse 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 2 at.deri.ordi.integration.eclipse 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing required bundle org.openoasis.see.integration_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.261
+!MESSAGE Bundle update@plugins/org.eclipse.core.commands_3.4.0.I20080509-2000.jar [76] was not resolved.
+!SUBENTRY 2 org.eclipse.core.commands 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing required bundle org.eclipse.equinox.common_[3.2.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.261
+!MESSAGE Bundle update@plugins/org.eclipse.equinox.security_1.0.1.R34x_v20080721.jar [77] was not resolved.
+!SUBENTRY 2 org.eclipse.equinox.security 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing imported package javax.crypto_0.0.0.
+!SUBENTRY 2 org.eclipse.equinox.security 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing imported package javax.crypto.spec_0.0.0.
+!SUBENTRY 2 org.eclipse.equinox.security 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing imported package javax.security.auth_0.0.0.
+!SUBENTRY 2 org.eclipse.equinox.security 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing imported package javax.security.auth.callback_0.0.0.
+!SUBENTRY 2 org.eclipse.equinox.security 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing imported package javax.security.auth.login_0.0.0.
+!SUBENTRY 2 org.eclipse.equinox.security 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing imported package javax.security.auth.spi_0.0.0.
+!SUBENTRY 2 org.eclipse.equinox.security 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing imported package org.eclipse.core.internal.runtime_0.0.0.
+!SUBENTRY 2 org.eclipse.equinox.security 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing imported package org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.eclipse.equinox.security 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing imported package org.eclipse.core.runtime.jobs_0.0.0.
+!SUBENTRY 2 org.eclipse.equinox.security 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing imported package org.eclipse.core.runtime.preferences_0.0.0.
+!SUBENTRY 2 org.eclipse.equinox.security 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing imported package org.osgi.service.prefs_[1.1.0,2.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.261
+!MESSAGE Bundle update@plugins/org.eclipse.core.net_1.1.0.I20080604.jar [78] was not resolved.
+!SUBENTRY 2 org.eclipse.core.net 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing required bundle org.eclipse.equinox.security_[1.0.0,2.0.0).
+!SUBENTRY 2 org.eclipse.core.net 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing required bundle org.eclipse.equinox.common_3.4.0.
+!SUBENTRY 2 org.eclipse.core.net 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing required bundle org.eclipse.equinox.preferences_3.2.200.
+!SUBENTRY 2 org.eclipse.core.net 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing required bundle org.eclipse.equinox.registry_3.4.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.261
+!MESSAGE Bundle update@plugins/org.eclipse.ui.navigator.resources_3.3.101.M20080910-0800.jar [79] was not resolved.
+!SUBENTRY 2 org.eclipse.ui.navigator.resources 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing required bundle org.eclipse.ui.ide_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.navigator.resources 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing required bundle org.eclipse.core.resources_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.navigator.resources 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing required bundle org.eclipse.jface_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.navigator.resources 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing required bundle org.eclipse.ui_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.navigator.resources 2 0 2022-06-16 21:08:26.261
+!MESSAGE Missing required bundle org.eclipse.ui.navigator_[3.2.1,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.navigator.resources 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.navigator.resources 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing required bundle org.eclipse.ui.views.properties.tabbed_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.navigator.resources 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing required bundle org.eclipse.ui.workbench.texteditor_[3.2.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.262
+!MESSAGE Bundle update@plugins/org.deri.wsml.eclipse.reasoner.predefinedqueries_0.1.0/ [80] was not resolved.
+!SUBENTRY 2 org.deri.wsml.eclipse.reasoner.predefinedqueries 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.reasoner.predefinedqueries 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.reasoner.predefinedqueries 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing required bundle org.eclipse.jface.text_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.reasoner.predefinedqueries 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing required bundle org.deri.wsml.eclipse_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.reasoner.predefinedqueries 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.262
+!MESSAGE Bundle update@plugins/org.eclipse.ui.ide.application_1.0.1.M20090204-0800.jar [81] was not resolved.
+!SUBENTRY 2 org.eclipse.ui.ide.application 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing required bundle org.eclipse.ui.ide_[3.4.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.ide.application 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.ide.application 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing required bundle org.eclipse.core.resources_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.ide.application 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing required bundle org.eclipse.update.configurator_[3.1.100,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.ide.application 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing required bundle org.eclipse.ui_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.ide.application 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing required bundle org.eclipse.ui.navigator.resources_[3.2.100,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.ide.application 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing required bundle org.eclipse.core.net_[1.0.0,2.0.0).
+!SUBENTRY 2 org.eclipse.ui.ide.application 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing required bundle org.eclipse.update.core_[3.1.100,4.0.0).
+!SUBENTRY 2 org.eclipse.ui.ide.application 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing required bundle com.ibm.icu_3.8.1.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.262
+!MESSAGE Bundle update@plugins/org.eclipse.core.jobs_3.4.1.R34x_v20081128.jar [82] was not resolved.
+!SUBENTRY 2 org.eclipse.core.jobs 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing required bundle org.eclipse.equinox.common_[3.2.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.262
+!MESSAGE Bundle update@plugins/org.eclipse.core.filesystem.linux.x86_64_1.0.100.v20080604-1400.jar [83] was not resolved.
+!SUBENTRY 2 org.eclipse.core.filesystem.linux.x86_64 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing host org.eclipse.core.filesystem_[1.1.0,2.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.262
+!MESSAGE Bundle update@plugins/org.eclipse.core.runtime.compatibility.registry_3.2.200.v20080610/ [84] was not resolved.
+!SUBENTRY 2 org.eclipse.core.runtime.compatibility.registry 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing host org.eclipse.equinox.registry_[3.3.0,3.5.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.262
+!MESSAGE Bundle update@plugins/net.sourceforge.mediation_0.5.0/ [85] was not resolved.
+!SUBENTRY 2 net.sourceforge.mediation 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.262
+!MESSAGE Bundle update@plugins/org.eclipse.core.expressions_3.4.1.r342_v20081203-0800.jar [86] was not resolved.
+!SUBENTRY 2 org.eclipse.core.expressions 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.core.expressions 2 0 2022-06-16 21:08:26.262
+!MESSAGE Missing imported package org.w3c.dom_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.262
+!MESSAGE Bundle update@plugins/org.deri.wsml.eclipse.io.owl_0.3.0/ [87] was not resolved.
+!SUBENTRY 2 org.deri.wsml.eclipse.io.owl 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.io.owl 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.io.owl 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.io.owl 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.deri.wsml.eclipse_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.io.owl 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.deri.wsml.eclipse.io_0.0.0.
+!SUBENTRY 2 org.deri.wsml.eclipse.io.owl 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.263
+!MESSAGE Bundle update@plugins/org.eclipse.ant.core_3.2.0.v20080529.jar [88] was not resolved.
+!SUBENTRY 2 org.eclipse.ant.core 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.eclipse.core.variables_[3.1.0,4.0.0).
+!SUBENTRY 2 org.eclipse.ant.core 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.eclipse.core.runtime_[3.2.0,4.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.263
+!MESSAGE Bundle update@plugins/org.deri.mapping.eclipse.testingview_0.2.0/ [89] was not resolved.
+!SUBENTRY 2 org.deri.mapping.eclipse.testingview 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.testingview 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.testingview 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle net.sourceforge.mediation_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.testingview 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.testingview 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.deri.mapping.eclipse_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.testingview 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.deri.wsml.eclipse_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.testingview 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.deri.wsml.eclipse.reasoner_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.testingview 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.eclipse.jface.text_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.testingview 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.testingview 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.deri.mapping.eclipse.runtime_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.testingview 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.openoasis.see.integration_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.testingview 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.eclipse.ui.console_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.testingview 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.eclipse.compare_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.testingview 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.deri.mapping.eclipse.views_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.testingview 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.eclipse.ui.ide_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.testingview 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.deri.wsml.eclipse.texteditor_[0.4.0,1.0.0).
+!SUBENTRY 2 org.deri.mapping.eclipse.testingview 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.eclipse.ui.editors_[3.4.0,4.0.0).
+!SUBENTRY 2 org.deri.mapping.eclipse.testingview 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.deri.lib.texteditor_[0.3.0,1.0.0).
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.263
+!MESSAGE Bundle update@plugins/org.deri.mapping.eclipse.wizards_0.2.0/ [90] was not resolved.
+!SUBENTRY 2 org.deri.mapping.eclipse.wizards 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle net.sourceforge.mediation_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.wizards 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.deri.mapping.eclipse_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.wizards 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.eclipse.core.runtime_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.wizards 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.eclipse.ui_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.wizards 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.eclipse.core.resources_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.wizards 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.eclipse.ui.ide_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.wizards 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.eclipse.ui.views_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.wizards 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.deri.wsml.eclipse_0.0.0.
+!SUBENTRY 2 org.deri.mapping.eclipse.wizards 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle net.sourceforge.wsmo4j_0.0.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2022-06-16 21:08:26.263
+!MESSAGE Bundle update@plugins/org.eclipse.text_3.4.0.v20080605-1800.jar [91] was not resolved.
+!SUBENTRY 2 org.eclipse.text 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.eclipse.core.commands_[3.2.0,4.0.0).
+!SUBENTRY 2 org.eclipse.text 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing required bundle org.eclipse.equinox.common_[3.3.0,4.0.0).
+!SUBENTRY 2 org.eclipse.text 2 0 2022-06-16 21:08:26.263
+!MESSAGE Missing imported package com.ibm.icu.text_0.0.0.
+!SUBENTRY 2 org.eclipse.text 2 0 2022-06-16 21:08:26.264
+!MESSAGE Missing imported package com.ibm.icu.util_0.0.0.

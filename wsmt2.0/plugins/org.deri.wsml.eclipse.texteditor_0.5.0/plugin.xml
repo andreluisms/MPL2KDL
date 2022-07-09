@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="org.deri.wsml.eclipse.texteditor"
+   name="WSML Text Editor for Human Readable Syntax"
+   version="0.5"
+   provider-name="STI Innsbruck"
+   class="org.deri.wsml.eclipse.texteditor.WSMLTextEditorPlugin">
+   <runtime>
+      <library name="lib/powerswing-0.3.jar">
+         <export name="*"/>
+      </library>
+      <library name="wsmltexteditor.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+   <requires>
+      <import plugin="net.sourceforge.wsmo4j"/>
+      <import plugin="org.deri.lib.texteditor"/>
+      <import plugin="org.deri.wsml.eclipse"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.jface.text"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.ui.editors"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.ui.workbench.texteditor"/>
+      <import plugin="org.eclipse.ui.views"/>
+      <import plugin="org.deri.wsml.eclipse.ui"/>
+      <!--<import plugin="org.deri.wsml.eclipse.ui"/>-->
+   </requires>
+
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            name="WSML Text Editor"
+            default="false"
+            extensions="wsml"
+            icon="icons/wsmlfile.gif"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            class="org.deri.wsml.eclipse.texteditor.editors.WSMLTextEditor"
+            id="org.deri.wsml.eclipse.texteditor.WSMLTextEditor">
+      </editor>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+	        category = "org.deri.wsml.eclipse.preferences.WSMLPreferences"
+            class="org.deri.wsml.eclipse.texteditor.preferences.TextEditorPreferences"
+            id="org.deri.wsml.eclipse.texteditor.preferences.TextEditorPreferences"
+            name="Text Editor"/>
+      <page
+      		category = "org.deri.wsml.eclipse.texteditor.preferences.TextEditorPreferences"
+            class="org.deri.wsml.eclipse.texteditor.preferences.TextEditorFoldingPreferences"
+            id="org.deri.wsml.eclipse.texteditor.preferences.TextEditorFoldingPreferences"
+            name="Folding"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts">
+   	  <context
+            name="WSML Text Editor Context"
+            parentId="org.eclipse.ui.textEditorScope"
+            id="org.deri.wsml.eclipse.texteditor.WSMLTextEditorScope">
+      </context>
+   </extension>
+    
+   <extension point="org.eclipse.ui.actionSetPartAssociations">
+	  <actionSetPartAssociation targetID="org.deri.wsml.eclipse.texteditor.editorActions">
+	  		<part id="org.deri.wsml.eclipse.texteditor.WSMLTextEditor"/>
+	  </actionSetPartAssociation>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <actionSet
+         label="WSML Text Editor Actions"
+         visible="false"
+		 id="org.deri.wsml.eclipse.texteditor.editorActions">
+		 
+		<menu id="org.deri.wsml.eclipse.texteditor.source.menu"
+			label="Source"
+			path="edit">
+			<separator name="commentGroup"/>
+			<separator name="contentassistGroup"/>
+		</menu>
+		<action
+        	label="Content Assist"
+            definitionId="org.deri.wsml.eclipse.texteditor.commands.contentassist"
+            class="org.deri.lib.texteditor.actions.ContentAssist"
+            menubarPath="org.deri.wsml.eclipse.texteditor.source.menu/contentassistGroup"
+            id="org.deri.wsml.eclipse.texteditor.editorActions.comment">
+        </action>
+        <action
+        	label="Toggle Comment"
+            definitionId="org.deri.wsml.eclipse.texteditor.commands.toggleComment"
+            class="org.deri.lib.texteditor.actions.ToggleComment"
+            menubarPath="org.deri.wsml.eclipse.texteditor.source.menu/commentGroup"
+            id="org.deri.wsml.eclipse.texteditor.editorActions.toggleComment">
+        </action>
+        <action
+        	label="Uncomment"
+            definitionId="org.deri.wsml.eclipse.texteditor.commands.uncomment"
+            class="org.deri.lib.texteditor.actions.Uncomment"
+            menubarPath="org.deri.wsml.eclipse.texteditor.source.menu/commentGroup"
+            id="org.deri.wsml.eclipse.texteditor.editorActions.uncomment">
+        </action>
+        <action
+        	label="Comment"
+            definitionId="org.deri.wsml.eclipse.texteditor.commands.comment"
+            class="org.deri.lib.texteditor.actions.Comment"
+            menubarPath="org.deri.wsml.eclipse.texteditor.source.menu/commentGroup"
+            id="org.deri.wsml.eclipse.texteditor.editorActions.comment">
+        </action>
+      </actionSet>
+   </extension>
+   <extension point="org.eclipse.ui.commands">
+      <command
+            name="Content Assist"
+            category="org.eclipse.ui.category.edit"
+            id="org.deri.wsml.eclipse.texteditor.commands.contentassist">
+      </command>
+      <keyBinding
+      		contextId="org.deri.wsml.eclipse.texteditor.WSMLTextEditorScope"
+        	keySequence="Ctrl+Space"
+        	commandId="org.deri.wsml.eclipse.texteditor.commands.contentassist"
+        	keyConfigurationId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </keyBinding>
+      <command
+            name="Toggle Comment"
+            category="org.eclipse.ui.category.edit"
+            id="org.deri.wsml.eclipse.texteditor.commands.toggleComment">
+      </command>
+      <keyBinding
+      		contextId="org.deri.wsml.eclipse.texteditor.WSMLTextEditorScope"
+        	keySequence="Ctrl+/"
+        	commandId="org.deri.wsml.eclipse.texteditor.commands.toggleComment"
+        	keyConfigurationId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </keyBinding>
+      <keyBinding
+      		contextId="org.deri.wsml.eclipse.texteditor.WSMLTextEditorScope"
+        	keySequence="Ctrl+Shift+C"
+        	commandId="org.deri.wsml.eclipse.texteditor.commands.toggleComment"
+        	keyConfigurationId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </keyBinding>
+      <keyBinding
+      		contextId="org.deri.wsml.eclipse.texteditor.WSMLTextEditorScope"
+        	keySequence="Ctrl+7"
+        	commandId="org.deri.wsml.eclipse.texteditor.commands.toggleComment"
+        	keyConfigurationId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </keyBinding>
+      <command
+            name="Uncomment"
+            category="org.eclipse.ui.category.edit"
+            id="org.deri.wsml.eclipse.texteditor.commands.uncomment">
+      </command>
+      <keyBinding
+      		contextId="org.deri.wsml.eclipse.texteditor.WSMLTextEditorScope"
+        	keySequence="Alt+9"
+        	commandId="org.deri.wsml.eclipse.texteditor.commands.uncomment"
+        	keyConfigurationId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </keyBinding>
+      <command
+            name="Comment"
+            category="org.eclipse.ui.category.edit"
+            id="org.deri.wsml.eclipse.texteditor.commands.comment">
+      </command>
+      <keyBinding
+      		contextId="org.deri.wsml.eclipse.texteditor.WSMLTextEditorScope"
+        	keySequence="Alt+8"
+        	commandId="org.deri.wsml.eclipse.texteditor.commands.comment"
+        	keyConfigurationId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </keyBinding>
+   </extension>
+   
+   <extension point="org.eclipse.core.filebuffers.documentSetup">
+		<participant extensions="wsml" class="org.deri.wsml.eclipse.texteditor.editors.WSMLDocumentSetup"></participant >
+   </extension >
+</plugin>

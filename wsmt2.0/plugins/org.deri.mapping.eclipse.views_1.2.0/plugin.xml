@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="org.deri.mapping.eclipse.views"
+   name="Abstract Mapping Language Views"
+   version="1.2"
+   provider-name="STI Innsbruck"
+   class="org.deri.mapping.eclipse.views.ViewsPlugin">
+
+   <runtime>
+      <library name="mappingviews.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.deri.mapping.eclipse"/>
+      <import plugin="net.sourceforge.mediation"/>
+   </requires>
+
+
+   <extension point="org.eclipse.ui.views">
+      <category
+            name="Mapping"
+            id="org.deri.mapping">
+      </category>
+	  <view
+            allowMultiple="false"
+            category="org.deri.mapping"
+            class="org.deri.mapping.eclipse.views.views.A2AView"
+            icon="icons/mapping.png"
+            id="org.deri.mapping.eclipse.views.A2AView"
+            name="Attribute2Attribute"/>
+      <view
+            allowMultiple="false"
+            category="org.deri.mapping"
+            class="org.deri.mapping.eclipse.views.views.A2CView"
+            icon="icons/mapping.png"
+            id="org.deri.mapping.eclipse.views.A2CView"
+            name="Attribute2Concept"/>
+      <view
+            allowMultiple="false"
+            category="org.deri.mapping"
+            class="org.deri.mapping.eclipse.views.views.C2AView"
+            icon="icons/mapping.png"
+            id="org.deri.mapping.eclipse.views.C2AView"
+            name="Concept2Attribute"/>
+      <view
+            allowMultiple="false"
+            category="org.deri.mapping"
+            class="org.deri.mapping.eclipse.views.views.C2CView"
+            icon="icons/mapping.png"
+            id="org.deri.mapping.eclipse.views.C2CView"
+            name="Concept2Concept"/>
+   </extension>
+</plugin>

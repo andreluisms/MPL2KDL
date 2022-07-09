@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="org.deri.wsml.eclipse"
+   name="WSML Plugin"
+   version="1.5"
+   provider-name="STI Innsbruck"
+   class="org.deri.wsml.eclipse.WSMLPlugin">
+   <runtime>
+      <library name="wsml.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/powerswing-0.4.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+   </runtime>
+   <requires>
+      <import plugin="net.sourceforge.wsmo4j"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.ui.views"/>
+      <import plugin="org.eclipse.jface.text"/>
+      <import plugin="org.deri.wsml.eclipse.discovery" version="0.1.0"/>
+   </requires>
+   
+   <extension point="org.eclipse.core.runtime.preferences">
+		<initializer class="org.deri.wsml.eclipse.WSMLPreferenceInitializer"/>
+	</extension>
+   
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="org.deri.wsml.eclipse.perspective.WSMLPerspective"
+            fixed="false"
+            icon="icons/wsml_logo.png"
+            id="org.deri.wsml.eclipse.perspective"
+            name="WSML"/>
+   </extension>
+   <extension
+         id="org.deri.wsml.eclipse.nature.WSMLBuilder"
+         name="WSML Validator"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            >
+         <run class="org.deri.wsml.eclipse.nature.WSMLBuilder"/>
+      </builder>
+   </extension>
+   <extension
+         id="org.deri.wsml.eclipse.nature.WSMLNature"
+         name="WSML Nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run class="org.deri.wsml.eclipse.nature.WSMLNature"/>
+      </runtime>
+      <builder id="org.deri.wsml.eclipse.nature.WSMLBuilder"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.ide.projectNatureImages">
+      <image
+            icon="icons/wsmlprojectoverlay.gif"
+            id="org.deri.wsml.eclipse.nature.WSMLNatureImage"
+            natureId="org.deri.wsml.eclipse.nature.WSMLNature"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.decorators">
+      <decorator
+            adaptable="true"
+            class="org.deri.wsml.eclipse.decorator.WSMLLabelDecorator"
+            id="org.deri.wsml.eclipse.decorator.WSMLLabelDecorator"
+            label="WSML Decorator"
+            lightweight="true"
+            state="true">
+         <enablement>
+            <objectClass name="org.eclipse.core.resources.IResource"/>
+         </enablement>
+      </decorator>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.deri.wsml.eclipse.preferences.WSMLPreferences"
+            id="org.deri.wsml.eclipse.preferences.WSMLPreferences"
+            name="WSML"/>
+      <page
+      		category = "org.deri.wsml.eclipse.preferences.WSMLPreferences"
+            class="org.deri.wsml.eclipse.preferences.SyntaxHighlightingPreferences"
+            id="org.deri.wsml.eclipse.preferences.SyntaxHighlightingPreferences"
+            name="Syntax Coloring"/>
+      <page
+      		category = "org.deri.wsml.eclipse.preferences.WSMLPreferences"
+            class="org.deri.wsml.eclipse.preferences.ContentAssistPreferences"
+            id="org.deri.wsml.eclipse.preferences.ContentAssistPreferences"
+            name="Content Assist"/>
+   </extension>
+   <extension point="org.eclipse.ui.views">
+	  <category name="WSML" id="org.deri.wsml.views" /> 
+   </extension>
+   
+   <extension point="org.eclipse.ui.views">
+	  <view
+            allowMultiple="false"
+            category="org.deri.wsml.views"
+            icon="icons/wsml_logo.png"
+            class="org.deri.wsml.eclipse.view.WSMLCacheView"
+            id="org.deri.wsml.eclipse.view.WSMLCacheView"
+            name="WSML Cache View"/>
+   </extension>
+</plugin>

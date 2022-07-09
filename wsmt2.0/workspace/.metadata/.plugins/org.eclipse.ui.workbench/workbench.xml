@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench version="2.0">
+<workbenchAdvisor/>
+<window height="768" maximized="true" width="1028" x="149" y="199">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout locked="0">
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="116" y="38"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="200" y="38"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.deri.wsml.eclipse.texteditor.WSMLTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1237923700039" focus="true" label="Workspace - WSML">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="org.deri.wsml.eclipse.visualizer.WSMLViz" name="the-simpsons-ontology.wsml" partName="WSML Visualizer - http://ontologies.sti2.at/joe_quimby" path="/home/andrelumesi/my_prjs/FromASToWSML/wsmt2.0/workspace/Examples/The Simpsons/the-simpsons-ontology.wsml" title="WSML Visualizer - http://ontologies.sti2.at/joe_quimby" tooltip="Examples/The Simpsons/the-simpsons-ontology.wsml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Examples/The Simpsons/the-simpsons-ontology.wsml"/>
+</editor>
+<editor activePart="true" focus="true" id="org.deri.wsml.eclipse.visualizer.WSMLViz" name="PythonToWSMLOntology.wsml" partName="WSML Visualizer - id0x7f5bc2afc4f0" path="/home/andrelumesi/my_prjs/FromASToWSML/wsmt2.0/workspace/PythonToWSML/PythonToWSMLOntology.wsml" title="WSML Visualizer - id0x7f5bc2afc4f0" tooltip="PythonToWSML/PythonToWSMLOntology.wsml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/PythonToWSML/PythonToWSMLOntology.wsml"/>
+</editor>
+<editor id="org.deri.wsml.eclipse.texteditor.WSMLTextEditor" name="PythonToWSMLOntology.wsml" partName="PythonToWSMLOntology.wsml" path="/home/andrelumesi/my_prjs/FromASToWSML/wsmt2.0/workspace/PythonToWSML/PythonToWSMLOntology.wsml" title="PythonToWSMLOntology.wsml" tooltip="PythonToWSML/PythonToWSMLOntology.wsml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/PythonToWSML/PythonToWSMLOntology.wsml"/>
+<editorState selectionLength="16" selectionOffset="4861"/>
+</editor>
+</editors>
+<views>
+<view id="org.deri.wsml.eclipse.ui.navigator" partName="WSML Navigator">
+<viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
+<view id="org.deri.mapping.eclipse.views.C2CView" partName="Concept2Concept">
+<viewState/>
+</view>
+<view id="org.deri.mapping.eclipse.views.A2CView" partName="Attribute2Concept"/>
+<view id="org.deri.mapping.eclipse.views.A2AView" partName="Attribute2Attribute">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.deri.mapping.eclipse.testingview.views.UnitTestingView" partName="Mapping Unit Tests">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ResourceNavigator" partName="Navigator">
+<viewState LINK_NAVIGATOR_TO_EDITOR="0" sorter="1">
+<filters>
+<filter element=".*" isEnabled="false"/>
+</filters>
+<expanded>
+<element path="/Examples"/>
+<element path="/Examples/Mapping"/>
+<element path="/Examples/Mapping/Virtual Travel Agency"/>
+</expanded>
+<selection>
+<element path="/Examples/Mapping/Virtual Travel Agency/travel_more.map"/>
+</selection>
+</viewState>
+</view>
+<view id="WSMXServers" partName="Servers">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Errors (1 item)"/>
+</expanded>
+<columnWidths org.eclipse.ui.ide.locationField="63" org.eclipse.ui.ide.markerType="1622" org.eclipse.ui.ide.pathField="123" org.eclipse.ui.ide.resourceField="93" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.deri.wsml.eclipse.view.WSMLCacheView" partName="WSML Cache View">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.deri.mapping.eclipse.views.C2AView" partName="Concept2Attribute"/>
+<view id="org.deri.wsml.eclipse.reasonerview.views.MainView" partName="WSML-Reasoner">
+<viewState>
+<Tab_Proportion Bottom="376" Top="390"/>
+</viewState>
+</view>
+<view id="org.deri.wsml.eclipse.discoveryview.views.WebServiceView" partName="WSML Discovery">
+<viewState/>
+</view>
+</views>
+<perspectives activePart="org.deri.wsml.eclipse.visualizer.WSMLViz" activePerspective="org.deri.wsml.eclipse.perspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.deri.wsmx.eclipse.management.perspective.WSMXManagementPerspective" id="SEEManagementPerspective" label="SEE"/>
+<alwaysOnActionSet id="org.deri.wsml.eclipse.ui.actions"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<perspective_action id="WSMX Management"/>
+<view id="WSMXServers"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@c47498">
+<folder activePageID="WSMXServers" appearance="2" expanded="2">
+<page content="WSMXServers" label="Servers"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="org.eclipse.ui.internal.ViewStack@c47498">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.23951782" ratioLeft="457" ratioRight="1451" relationship="2" relative="org.eclipse.ui.internal.ViewStack@c47498"/>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.deri.mapping.eclipse.perspective.MappingPerspective" id="org.deri.mapping.eclipse.perspective" label="Mapping"/>
+<alwaysOnActionSet id="org.deri.wsml.eclipse.ui.actions"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<new_wizard_action id="org.deri.mapping.eclipse.wizards.MappingFileWizard"/>
+<perspective_action id="Mapping"/>
+<view id="org.eclipse.ui.views.ResourceNavigator"/>
+<view id="org.deri.mapping.eclipse.testingview.views.UnitTestingView"/>
+<view id="org.deri.mapping.eclipse.views.C2CView"/>
+<view id="org.deri.mapping.eclipse.views.A2AView"/>
+<view id="org.deri.mapping.eclipse.views.C2AView"/>
+<view id="org.deri.mapping.eclipse.views.A2CView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="naviFolder">
+<folder activePageID="org.eclipse.ui.views.ResourceNavigator" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ResourceNavigator" label="Navigator"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="naviFolder">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.19601677" ratioLeft="374" ratioRight="1534" relationship="2" relative="naviFolder"/>
+<info folder="true" part="bottomFolder" ratio="0.6446446" ratioLeft="644" ratioRight="355" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.deri.mapping.eclipse.views.C2CView" appearance="2" expanded="2">
+<page content="org.deri.mapping.eclipse.views.C2CView" label="Concept2Concept"/>
+<page content="org.deri.mapping.eclipse.views.A2AView" label="Attribute2Attribute"/>
+<page content="org.deri.mapping.eclipse.views.C2AView" label="Concept2Attribute"/>
+<page content="org.deri.mapping.eclipse.views.A2CView" label="Attribute2Concept"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="testingFolder" ratio="0.45941558" ratioLeft="283" ratioRight="333" relationship="4" relative="naviFolder">
+<folder activePageID="org.deri.mapping.eclipse.testingview.views.UnitTestingView" appearance="2" expanded="2">
+<page content="org.deri.mapping.eclipse.testingview.views.UnitTestingView" label="Mapping Unit Tests"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.deri.wsml.eclipse.perspective.WSMLPerspective" id="org.deri.wsml.eclipse.perspective" label="WSML"/>
+<alwaysOnActionSet id="org.deri.wsml.eclipse.ui.actions"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<new_wizard_action id="org.deri.wsml.eclipse.wizards.WSMLProjectWizard"/>
+<new_wizard_action id="org.deri.wsml.eclipse.wizards.OntologyWizard"/>
+<new_wizard_action id="org.deri.wsml.eclipse.wizards.WebServiceWizard"/>
+<new_wizard_action id="org.deri.wsml.eclipse.wizards.GoalWizard"/>
+<new_wizard_action id="org.deri.wsml.eclipse.wizards.MediatorWizard"/>
+<view id="org.deri.wsml.eclipse.ui.navigator"/>
+<view id="org.deri.wsml.eclipse.reasonerview.views.MainView"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.deri.wsml.eclipse.view.WSMLCacheView"/>
+<view id="org.deri.wsml.eclipse.discoveryview.views.WebServiceView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="naviFolder">
+<folder activePageID="org.deri.wsml.eclipse.ui.navigator" appearance="2" expanded="2">
+<page content="org.deri.wsml.eclipse.ui.navigator" label="WSML Navigator"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="naviFolder">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.19009174" ratioLeft="518" ratioRight="2207" relationship="2" relative="naviFolder"/>
+<info folder="true" part="problemsFolder" ratio="0.6046046" ratioLeft="604" ratioRight="395" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.deri.wsml.eclipse.view.WSMLCacheView" label="WSML Cache View"/>
+<page content="org.deri.wsml.eclipse.discoveryview.views.WebServiceView" label="WSML Discovery"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="outlineFolder" ratio="0.6873734" ratioLeft="1018" ratioRight="463" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="reasonerFolder" ratio="0.45941558" ratioLeft="283" ratioRight="333" relationship="4" relative="naviFolder">
+<folder activePageID="org.deri.wsml.eclipse.reasonerview.views.MainView" appearance="2" expanded="2">
+<page content="org.deri.wsml.eclipse.reasonerview.views.MainView" label="WSML-Reasoner"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.deri.wsml.eclipse.visualizer.WSMLViz" path="/Examples/The Simpsons/the-simpsons-ontology.wsml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.deri.mapping.eclipse.viewbasededitor.ViewBasedEditor" path="/Examples/Mapping/Virtual Travel Agency/travel_more.map"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.deri.wsml.eclipse.visualizer.WSMLViz" path="/PythonToWSML/PythonToWSMLOntology.wsml"/>
+</editors>
+<item historyLabel="WSML Visualizer - http://ontologies.sti2.at/simpsons" index="0"/>
+<item historyLabel="View Based Mapping Editor" index="1"/>
+<item historyLabel="WSML Visualizer - http://ontologies.sti2.at/simpsons" index="0"/>
+<item historyLabel="WSML Visualizer - id0x7f5bc2afc4f0" index="2">
+<position/>
+</item>
+<item historyLabel="WSML Visualizer - id0x7f5bc2afc4f0" index="2">
+<position info="not_deleted" x="223" y="0"/>
+</item>
+<item historyLabel="WSML Visualizer - http://ontologies.sti2.at/simpsons" index="0"/>
+<item historyLabel="WSML Visualizer - idexp0x7f5bc2b255b0" index="2"/>
+<item historyLabel="WSML Visualizer - http://ontologies.sti2.at/simpsons" index="0"/>
+<item active="true" historyLabel="WSML Visualizer - id0x7f5bc2afc4f0" index="2">
+<position info="not_deleted" x="4861" y="16"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.deri.wsml.eclipse.texteditor.WSMLTextEditor" name="PythonToWSMLOntology.wsml" tooltip="PythonToWSML/PythonToWSMLOntology.wsml">
+<persistable path="/PythonToWSML/PythonToWSMLOntology.wsml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.deri.mapping.eclipse.viewbasededitor.ViewBasedEditor" name="travel_more.map" tooltip="Examples/Mapping/Virtual Travel Agency/travel_more.map">
+<persistable path="/Examples/Mapping/Virtual Travel Agency/travel_more.map"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.deri.wsml.eclipse.visualizer.WSMLViz" name="the-simpsons-ontology.wsml" tooltip="Examples/The Simpsons/the-simpsons-ontology.wsml">
+<persistable path="/Examples/The Simpsons/the-simpsons-ontology.wsml"/>
+</file>
+</mruList>
+</workbench>

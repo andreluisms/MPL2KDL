@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="org.openoasis.see.integration"
+   name="Semantic Execution Environment (SEE) Integration API"
+   version="0.4"
+   provider-name="OASIS Semantic Execution Environment (SEE) Technical Committee"
+   class="org.semanticweb.dip.integration_api.DIPIntegrationAPI_Plugin">
+
+   <runtime>
+      <library name="lib/log4j/log4j-1.2.8.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/wsmx-api-1.0-SNAPSHOT.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="openoasis.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="net.sourceforge.wsmo4j"/>
+   </requires>
+
+</plugin>

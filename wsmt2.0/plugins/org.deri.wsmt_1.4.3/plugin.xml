@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="org.deri.wsmt"
+   name="Web Services Modeling Toolkit"
+   version="1.4.3"
+   provider-name="STI Innsbruck"
+   class="org.deri.wsmt.WSMTPlugin">
+   <runtime>
+      <library name="wsmt.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+   <requires>
+      <import plugin="org.eclipse.ui.ide.application"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.core.resources"/>
+   </requires>
+   
+   <extension id="application" point="org.eclipse.core.runtime.applications">
+      <application>
+         <run class="org.deri.wsmt.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         id="WSMT"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.deri.wsmt.application"
+            description="Web Services Modeling Toolkit"
+            name="Web Services Modeling Toolkit">
+         <property
+               name="windowImages"
+               value="icons/wsmt16.gif,icons/wsmt32.gif,icons/wsmt48.gif,icons/wsmt64.gif,icons/wsmt128.gif"/>
+         <property
+               name="appName"
+               value="Web Services Modeling Toolkit"/>
+         <property
+               name="aboutImage"
+               value="images/wsmowsmlwsmxirs.gif"/>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini"/>
+      </product>
+   </extension>
+</plugin>

@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Generated-from: 1653679010000;type=2
+Bundle-ManifestVersion: 2
+Bundle-Name: Abstract Mapping Language Views
+Bundle-SymbolicName: org.deri.mapping.eclipse.views; singleton:=true
+Bundle-Version: 1.2
+Bundle-ClassPath: mappingviews.jar
+Bundle-Activator: org.deri.mapping.eclipse.views.ViewsPlugin
+Bundle-Vendor: STI Innsbruck
+Bundle-Localization: plugin
+Export-Package: org.deri.mapping.eclipse.views,
+ org.deri.mapping.eclipse.views.views,
+ org.deri.mapping.eclipse.views.views.mappingcomponents
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.deri.mapping.eclipse,
+ net.sourceforge.mediation
+Eclipse-LazyStart: true

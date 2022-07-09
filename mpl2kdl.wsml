@@ -1,0 +1,180 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-rule"
+namespace { _"http://ufs.br/ontologies/mpl2kdl#"}
+
+ontology mpl2kdl
+   importsOntology{_"http://ufs.br/ontologies/mpl2kdl#PythonAbstractSyntax"}  
+
+   instance Module0x7fb2f105ba00 memberOf Module
+      _body hasValue {ImportFrom0x7fb2f105b9a0, ImportFrom0x7fb2f105ba90, Import0x7fb2f1072040, If0x7fb2f1072100}
+   instance ImportFrom0x7fb2f105b9a0 memberOf ImportFrom
+      _module hasValue "python2kdl"
+      _names hasValue {alias0x7fb2f104dbb0}
+   instance alias0x7fb2f104dbb0 memberOf alias
+      _name hasValue "generate_ontology"
+   instance ImportFrom0x7fb2f105ba90 memberOf ImportFrom
+      _module hasValue "os.path"
+      _names hasValue {alias0x7fb2f104db50}
+   instance alias0x7fb2f104db50 memberOf alias
+      _name hasValue "exists"
+   instance Import0x7fb2f1072040 memberOf Import
+      _names hasValue {alias0x7fb2f1072070}
+   instance alias0x7fb2f1072070 memberOf alias
+      _name hasValue "sys"
+   instance If0x7fb2f1072100 memberOf If
+      _test hasValue Compare0x7fb2f1072160
+      _body hasValue {Assign0x7fb2f10721f0, For0x7fb2f1072250, For0x7fb2f1072340}
+   instance Compare0x7fb2f1072160 memberOf Compare
+      _left hasValue Name0x7fb2f1072130
+      _ops hasValue {Eq0x7fb2f1131c40}
+      _comparators hasValue {Constant0x7fb2f10721c0}
+   instance Name0x7fb2f1072130 memberOf Name
+      _id hasValue "__name__"
+      _ctx hasValue Load0x7fb2f1131100
+   instance Load0x7fb2f1131100 memberOf Load
+   instance Eq0x7fb2f1131c40 memberOf Eq
+   instance Constant0x7fb2f10721c0 memberOf Constant
+      _value hasValue "__main__"
+   instance Assign0x7fb2f10721f0 memberOf Assign
+      _targets hasValue {Name0x7fb2f1072220}
+      _value hasValue List0x7fb2f1072280
+   instance Name0x7fb2f1072220 memberOf Name
+      _id hasValue "invalFiles"
+      _ctx hasValue Store0x7fb2f1131160
+   instance Store0x7fb2f1131160 memberOf Store
+   instance List0x7fb2f1072280 memberOf List
+      _ctx hasValue Load0x7fb2f1131100
+   instance Load0x7fb2f1131100 memberOf Load
+   instance For0x7fb2f1072250 memberOf For
+      _target hasValue Tuple0x7fb2f10722b0
+      _iter hasValue Call0x7fb2f1072370
+      _body hasValue {If0x7fb2f10723d0}
+   instance Tuple0x7fb2f10722b0 memberOf Tuple
+      _elts hasValue {Name0x7fb2f10722e0, Name0x7fb2f1072310}
+      _ctx hasValue Store0x7fb2f1131160
+   instance Name0x7fb2f10722e0 memberOf Name
+      _id hasValue "i"
+      _ctx hasValue Store0x7fb2f1131160
+   instance Store0x7fb2f1131160 memberOf Store
+   instance Name0x7fb2f1072310 memberOf Name
+      _id hasValue "arg"
+      _ctx hasValue Store0x7fb2f1131160
+   instance Store0x7fb2f1131160 memberOf Store
+   instance Store0x7fb2f1131160 memberOf Store
+   instance Call0x7fb2f1072370 memberOf Call
+      _func hasValue Name0x7fb2f10723a0
+      _args hasValue {Attribute0x7fb2f1072400}
+   instance Name0x7fb2f10723a0 memberOf Name
+      _id hasValue "enumerate"
+      _ctx hasValue Load0x7fb2f1131100
+   instance Load0x7fb2f1131100 memberOf Load
+   instance Attribute0x7fb2f1072400 memberOf Attribute
+      _value hasValue Name0x7fb2f1072430
+      _attr hasValue "argv"
+      _ctx hasValue Load0x7fb2f1131100
+   instance Name0x7fb2f1072430 memberOf Name
+      _id hasValue "sys"
+      _ctx hasValue Load0x7fb2f1131100
+   instance Load0x7fb2f1131100 memberOf Load
+   instance Load0x7fb2f1131100 memberOf Load
+   instance If0x7fb2f10723d0 memberOf If
+      _test hasValue Call0x7fb2f1072460
+      _body hasValue {If0x7fb2f1072520}
+      _orelse hasValue {Expr0x7fb2f10725e0}
+   instance Call0x7fb2f1072460 memberOf Call
+      _func hasValue Name0x7fb2f1072490
+      _args hasValue {Name0x7fb2f10724c0}
+   instance Name0x7fb2f1072490 memberOf Name
+      _id hasValue "exists"
+      _ctx hasValue Load0x7fb2f1131100
+   instance Load0x7fb2f1131100 memberOf Load
+   instance Name0x7fb2f10724c0 memberOf Name
+      _id hasValue "arg"
+      _ctx hasValue Load0x7fb2f1131100
+   instance Load0x7fb2f1131100 memberOf Load
+   instance If0x7fb2f1072520 memberOf If
+      _test hasValue Compare0x7fb2f1072550
+      _body hasValue {Expr0x7fb2f1072610}
+   instance Compare0x7fb2f1072550 memberOf Compare
+      _left hasValue Name0x7fb2f1072580
+      _ops hasValue {NotEq0x7fb2f1131ca0}
+      _comparators hasValue {Constant0x7fb2f10725b0}
+   instance Name0x7fb2f1072580 memberOf Name
+      _id hasValue "i"
+      _ctx hasValue Load0x7fb2f1131100
+   instance Load0x7fb2f1131100 memberOf Load
+   instance NotEq0x7fb2f1131ca0 memberOf NotEq
+   instance Constant0x7fb2f10725b0 memberOf Constant
+   instance Expr0x7fb2f1072610 memberOf Expr
+      _value hasValue Call0x7fb2f1072640
+   instance Call0x7fb2f1072640 memberOf Call
+      _func hasValue Name0x7fb2f1072670
+      _args hasValue {Name0x7fb2f10726a0}
+   instance Name0x7fb2f1072670 memberOf Name
+      _id hasValue "generate_ontology"
+      _ctx hasValue Load0x7fb2f1131100
+   instance Load0x7fb2f1131100 memberOf Load
+   instance Name0x7fb2f10726a0 memberOf Name
+      _id hasValue "arg"
+      _ctx hasValue Load0x7fb2f1131100
+   instance Load0x7fb2f1131100 memberOf Load
+   instance Expr0x7fb2f10725e0 memberOf Expr
+      _value hasValue Call0x7fb2f1072700
+   instance Call0x7fb2f1072700 memberOf Call
+      _func hasValue Attribute0x7fb2f1072730
+      _args hasValue {Name0x7fb2f1072790}
+   instance Attribute0x7fb2f1072730 memberOf Attribute
+      _value hasValue Name0x7fb2f1072760
+      _attr hasValue "append"
+      _ctx hasValue Load0x7fb2f1131100
+   instance Name0x7fb2f1072760 memberOf Name
+      _id hasValue "invalFiles"
+      _ctx hasValue Load0x7fb2f1131100
+   instance Load0x7fb2f1131100 memberOf Load
+   instance Load0x7fb2f1131100 memberOf Load
+   instance Name0x7fb2f1072790 memberOf Name
+      _id hasValue "arg"
+      _ctx hasValue Load0x7fb2f1131100
+   instance Load0x7fb2f1131100 memberOf Load
+   instance For0x7fb2f1072340 memberOf For
+      _target hasValue Name0x7fb2f10724f0
+      _iter hasValue Name0x7fb2f10727f0
+      _body hasValue {Expr0x7fb2f1072820}
+   instance Name0x7fb2f10724f0 memberOf Name
+      _id hasValue "file"
+      _ctx hasValue Store0x7fb2f1131160
+   instance Store0x7fb2f1131160 memberOf Store
+   instance Name0x7fb2f10727f0 memberOf Name
+      _id hasValue "invalFiles"
+      _ctx hasValue Load0x7fb2f1131100
+   instance Load0x7fb2f1131100 memberOf Load
+   instance Expr0x7fb2f1072820 memberOf Expr
+      _value hasValue Call0x7fb2f1072850
+   instance Call0x7fb2f1072850 memberOf Call
+      _func hasValue Name0x7fb2f1072880
+      _args hasValue {JoinedStr0x7fb2f10728b0}
+   instance Name0x7fb2f1072880 memberOf Name
+      _id hasValue "print"
+      _ctx hasValue Load0x7fb2f1131100
+   instance Load0x7fb2f1131100 memberOf Load
+   instance JoinedStr0x7fb2f10728b0 memberOf JoinedStr
+      _values hasValue {Constant0x7fb2f1072910, FormattedValue0x7fb2f1072940, Constant0x7fb2f10729a0, FormattedValue0x7fb2f10729d0, Constant0x7fb2f1072a60}
+   instance Constant0x7fb2f1072910 memberOf Constant
+      _value hasValue "The ontology for the "
+   instance FormattedValue0x7fb2f1072940 memberOf FormattedValue
+      _value hasValue Name0x7fb2f1072970
+      _conversion hasValue int0x955de0
+   instance Name0x7fb2f1072970 memberOf Name
+      _id hasValue "file"
+      _ctx hasValue Load0x7fb2f1131100
+   instance Load0x7fb2f1131100 memberOf Load
+   instance Constant0x7fb2f10729a0 memberOf Constant
+      _value hasValue " could not be generated. The "
+   instance FormattedValue0x7fb2f10729d0 memberOf FormattedValue
+      _value hasValue Name0x7fb2f1072a30
+      _conversion hasValue int0x955de0
+   instance Name0x7fb2f1072a30 memberOf Name
+      _id hasValue "file"
+      _ctx hasValue Load0x7fb2f1131100
+   instance Load0x7fb2f1131100 memberOf Load
+   instance Constant0x7fb2f1072a60 memberOf Constant
+      _value hasValue " does not exist."

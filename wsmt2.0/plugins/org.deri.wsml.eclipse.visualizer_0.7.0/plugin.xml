@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="org.deri.wsml.eclipse.visualizer"
+   name="WSML Vizualizer"
+   version="0.7"
+   provider-name="STI Innsbruck"
+   class="org.deri.wsml.eclipse.visualizer.WSML_VisualizerPlugin">
+   <runtime>
+      <library name="wsmlviz.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/powerswing-0.3.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+   <requires>
+      <import plugin="net.sourceforge.wsmo4j"/>
+      <import plugin="org.deri.wsml.eclipse"/>
+      <import plugin="org.deri.wsml.eclipse.ui"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.jface.text"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.ui.editors"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.ui.views"/>
+      <import plugin="org.eclipse.ui.workbench.texteditor"/>
+      <import plugin="net.sourceforge.jpowergraph"/>
+      <!--<import plugin="org.deri.wsml.eclipse.ui"/>-->
+   </requires>
+   
+   <extension point="org.eclipse.core.runtime.preferences">
+		<initializer class="org.deri.wsml.eclipse.visualizer.WSMLPreferenceInitializer"/>
+	</extension>
+   
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="org.deri.wsml.eclipse.visualizer.editors.WSMLViz"
+            default="true"
+            extensions="wsml"
+            filenames="wsml"
+            icon="icons/icon.gif"
+            id="org.deri.wsml.eclipse.visualizer.WSMLViz"
+            name="WSML Visualizer">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+      		category="org.deri.wsml.eclipse.preferences.WSMLPreferences"
+            class="org.deri.wsml.eclipse.visualizer.preferences.VisualizerPreferences"
+            id="org.deri.wsml.eclipse.visualizer.preferences.VisualizerPreferences"
+            name="Visualizer"/>
+      <page
+      		category="org.deri.wsml.eclipse.visualizer.preferences.VisualizerPreferences"
+            class="org.deri.wsml.eclipse.visualizer.preferences.VisualizerColorPreferences"
+            id="org.deri.wsml.eclipse.visualizer.preferences.VisualizerColorPreferences"
+            name="Node Colors"/>
+      <page
+      		category="org.deri.wsml.eclipse.visualizer.preferences.VisualizerPreferences"
+            class="org.deri.wsml.eclipse.visualizer.preferences.VisualizerErrorsAndWarningsPreferences"
+            id="org.deri.wsml.eclipse.visualizer.preferences.VisualizerErrorsAndWarningsPreferences"
+            name="Errors And Warnings"/>
+      <page
+      		category="org.deri.wsml.eclipse.visualizer.preferences.VisualizerPreferences"
+            class="org.deri.wsml.eclipse.visualizer.preferences.VisualizerInstanceClusteringPreferences"
+            id="org.deri.wsml.eclipse.visualizer.preferences.VisualizerInstanceClusteringPreferences"
+            name="Instance Clustering"/>
+   </extension>
+
+</plugin>

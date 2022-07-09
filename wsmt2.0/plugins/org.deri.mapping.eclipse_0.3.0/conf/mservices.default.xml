@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<MediationServices>
+    <Service>
+        <id>http://examples.org/services/stringManipulation/plain_copy</id>
+        <noOfParam>1</noOfParam>
+        <description>Returns the parameter unmodified as output.</description>
+        <built-in>true</built-in>
+    </Service>
+    <Service>
+        <id>http://examples.org/services/stringManipulation/concat_2</id>
+        <noOfParam>2</noOfParam>
+        <description>Concatenates the two input strings with a space in between and returns the result.</description>
+        <built-in>true</built-in>
+    </Service>
+    <Service>
+        <id>http://examples.org/services/stringManipulation/concat_3</id>
+        <noOfParam>3</noOfParam>
+        <description>Concatenates the three input strings with a space in between and returns the result.</description>
+        <built-in>true</built-in>
+    </Service>
+    <Service>
+        <id>http://examples.org/services/stringManipulation/concat_4</id>
+        <noOfParam>4</noOfParam>
+        <description>Concatenates the four input strings with a space in between and returns the result.</description>
+        <built-in>true</built-in>
+    </Service>
+    <Service>
+        <id>http://examples.org/services/stringManipulation/space_split#first</id>
+        <noOfParam>1</noOfParam>
+        <description>Splits the input using a space and returns the first part as result.</description>
+        <built-in>true</built-in>
+    </Service>
+    <Service>
+        <id>http://examples.org/services/stringManipulation/space_split#second</id>
+        <noOfParam>1</noOfParam>
+        <description>Splits the input using a space and returns the second part as result.</description>
+        <built-in>true</built-in>
+    </Service>
+</MediationServices>

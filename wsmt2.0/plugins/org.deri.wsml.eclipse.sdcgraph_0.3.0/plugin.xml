@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="org.deri.wsml.eclipse.sdcgraph"
+   name="SDC Graph Plugin"
+   version="0.3"
+   provider-name="STI Innsbruck"
+   class="org.deri.wsml.eclipse.sdcgraph.SDCGraphPlugin">
+
+   <runtime>
+      <library name="sdcgraph.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/powerswing-0.3.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.ui.editors"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="net.sourceforge.jpowergraph"/>
+      <import plugin="org.deri.wsml.eclipse"/>
+      <import plugin="net.sourceforge.wsmo4j"/>
+   </requires>
+   <extension point = "org.eclipse.ui.viewActions">
+      <viewContribution id="org.deri.wsml.eclipse.sdcgraph.showcontributioncache" 
+         targetID="org.deri.wsml.eclipse.view.WSMLCacheView">        
+	   <action
+          class="org.deri.wsml.eclipse.sdcgraph.action.VisualizeCacheAction"
+          icon="icons/icon.gif"
+          id="org.deri.wsml.eclipse.sdcgraph.showcache"
+          label="Show SDC Graph for Workspace"
+          menubarPath="additions"
+          toolbarPath="additions"
+          tooltip="Visualize the Workspace as an SDC Graph">
+	   </action>
+      </viewContribution>
+      <viewContribution id="org.deri.wsml.eclipse.sdcgraph.showcontributionnavigator" 
+         targetID="org.eclipse.ui.views.ResourceNavigator">        
+	   <action
+          class="org.deri.wsml.eclipse.sdcgraph.action.VisualizeCacheAction"
+          icon="icons/icon.gif"
+          id="org.deri.wsml.eclipse.sdcgraph.shownavigator"
+          label="Show SDC Graph for Workspace"
+          menubarPath="additions"
+          toolbarPath="additions"
+          tooltip="Visualize the Workspace as an SDC Graph">
+	   </action>
+      </viewContribution>
+      <viewContribution
+            id="org.deri.wsml.eclipse.sdcgraph.showcontributionwsmlnavigator"
+            targetID="org.deri.wsml.eclipse.ui.navigator">
+         <action
+               class="org.deri.wsml.eclipse.sdcgraph.action.VisualizeCacheAction"
+               icon="icons/icon.gif"
+               id="org.deri.wsml.eclipse.sdcgraph.showwsmlnavigator"
+               label="Show SDC Graph for Workspace"
+               menubarPath="additions"
+               toolbarPath="additions"
+               tooltip="Visualize the Workspace as an SDC Graph">
+         </action>
+      </viewContribution>
+    </extension>
+    
+    <extension point="org.eclipse.ui.editors">
+      <editor
+            class="org.deri.wsml.eclipse.sdcgraph.ui.SDCGraphVisualizer"
+            icon="icons/icon.gif"
+            id="org.deri.wsml.eclipse.sdcgraph.Visualizer"
+            name="SDC Graph Visualizer">
+      </editor>
+   </extension>
+ 
+
+</plugin>

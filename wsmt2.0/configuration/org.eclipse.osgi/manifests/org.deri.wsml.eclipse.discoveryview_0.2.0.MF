@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Generated-from: 1653679010000;type=2
+Bundle-ManifestVersion: 2
+Bundle-Name: Discovery View
+Bundle-SymbolicName: org.deri.wsml.eclipse.discoveryview; singleton:=true
+Bundle-Version: 0.2
+Bundle-ClassPath: DiscoveryView.jar
+Bundle-Activator: org.deri.wsml.eclipse.discoveryview.DiscoveryViewPlugin
+Bundle-Vendor: STI Innsbruck
+Bundle-Localization: plugin
+Export-Package: org.deri.wsml.eclipse.discoveryview,
+ org.deri.wsml.eclipse.discoveryview.composite,
+ org.deri.wsml.eclipse.discoveryview.contentprovider,
+ org.deri.wsml.eclipse.discoveryview.controler,
+ org.deri.wsml.eclipse.discoveryview.extension,
+ org.deri.wsml.eclipse.discoveryview.job,
+ org.deri.wsml.eclipse.discoveryview.labelprovider,
+ org.deri.wsml.eclipse.discoveryview.treeList,
+ org.deri.wsml.eclipse.discoveryview.treetable,
+ org.deri.wsml.eclipse.discoveryview.views,
+ org.deri.wsml.eclipse.discoveryview.visitor,
+ org.deri.wsml.eclipse.treelist
+Require-Bundle: org.deri.wsml.eclipse.discovery,
+ org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.deri.wsml.eclipse,
+ net.sourceforge.wsmo4j,
+ org.eclipse.jface.text,
+ org.eclipse.ui.ide,
+ org.eclipse.core.resources,
+ org.deri.wsml.eclipse.texteditor,
+ org.eclipse.ui.forms,
+ org.deri.wsml.eclipse.reasoner
+Eclipse-LazyStart: true

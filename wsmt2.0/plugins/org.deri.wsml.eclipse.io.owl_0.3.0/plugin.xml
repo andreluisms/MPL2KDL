@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="org.deri.wsml.eclipse.io.owl"
+   name="Owl Plug-in"
+   version="0.3"
+   provider-name="STI Innsbruck"
+   class="org.deri.wsml.eclipse.io.owl.OwlPlugin">
+
+   <runtime>
+      <library name="owl.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/dl-pellet/owl-api/1.4.3/io.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/dl-pellet/owl-api/1.4.3/rdfparser.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/dl-pellet/owl-api/1.4.3/validation.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/dl-pellet/owl-api/owl-api-econn/2006-04-27/api.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/dl-pellet/owl-api/owl-api-econn/2006-04-27/impl.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/wsml2reasoner-v0_2.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/dl-pellet/owl-api/1.4.3/abstractparser.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/dl-pellet/pellet/pellet.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/dl-pellet/log4j/1.2.7/log4j.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/dl-pellet/kaon/1.2.9/rdfapi.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/dl-pellet/xsdlib/xsdlib.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/antlr.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="net.sourceforge.wsmo4j"/>
+      <import plugin="org.deri.wsml.eclipse"/>
+      <import plugin="org.deri.wsml.eclipse.io"/>
+      <import plugin="org.eclipse.core.resources"/>
+   </requires>
+   <extension
+         point="org.deri.wsml.eclipse.io.translation">
+      <Import
+            File-Extension="owl"
+            Translator="org.deri.wsml.eclipse.io.owl.Owl2WsmlTranslator"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="false"
+            id="org.deri.wsml.eclipse.io.owl.converter.contribution"
+            nameFilter="*.owl"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               class="org.deri.wsml.eclipse.io.owl.Owl2WsmlConvertAction"
+               enablesFor="1"
+               icon="icons/wsml_logo.png"
+               id="org.deri.wsml.eclipse.io.owl.converter.contribution.toWsmlAction"
+               label="WSML DL"
+               menubarPath="org.deri.eclipse.ResourceNavigator.contribution.converter.menu/conversionGroup"/>
+         <menu
+               id="org.deri.eclipse.ResourceNavigator.contribution.converter.menu"
+               label="Convert To"
+               path="additions"/>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="org.deri.wsml.eclipse.io.owl.converter.wsml2owlXml.contribution"
+            nameFilter="*.wsml"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               class="org.deri.wsml.eclipse.io.owl.Wsml2OwlXmlConvertAction"
+               enablesFor="1"
+               id="org.deri.wsml.eclipse.io.owl.converter.wsml2owlXml.action"
+               label="OWL DL (XML-Syntax)"
+               menubarPath="org.deri.eclipse.ResourceNavigator.contribution.converter.menu/conversionGroup"/>
+         <menu
+               id="org.deri.eclipse.ResourceNavigator.contribution.converter.menu"
+               label="Convert To"
+               path="additions"/>
+         <action
+               class="org.deri.wsml.eclipse.io.owl.Wsml2OwlASConvertAction"
+               enablesFor="1"
+               id="org.deri.wsml.eclipse.io.owl.converter.wsml2owlAS.action"
+               label="OWL DL (Abstract Syntax)"
+               menubarPath="org.deri.eclipse.ResourceNavigator.contribution.converter.menu/conversionGroup"/>
+      </objectContribution>
+   </extension>
+
+</plugin>

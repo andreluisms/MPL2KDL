@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            category="org.deri.wsml.views"
+            class="org.deri.wsml.eclipse.internal.ui.navigator.WSMLNavigator"
+            icon="icons/wsml_logo.png"
+            id="org.deri.wsml.eclipse.ui.navigator"
+            name="WSML Navigator"/>
+      <!--<view
+            allowMultiple="false"
+            category="org.deri.wsml.views"
+            class="org.deri.wsml.eclipse.internal.ui.typehierarchy.WSMLTypeHierarchyViewPart"
+            id="org.deri.wsml.eclipse.ui.typehierarchy"
+            name="Type Hierarchy"/>-->
+   </extension>
+   <extension
+         point="org.eclipse.ui.navigator.viewer">
+      <viewer viewerId="org.deri.wsml.eclipse.ui.navigator"/>
+      <viewerContentBinding viewerId="org.deri.wsml.eclipse.ui.navigator">
+         <includes>
+            <contentExtension pattern="org.eclipse.ui.navigator.resourceContent"/>
+            <contentExtension pattern="org.eclipse.ui.navigator.resources.filters.*"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.deri.wsml.eclipse.ui.navigator">
+         <includes>
+            <actionExtension pattern="org.eclipse.ui.navigator.resources.*"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.navigator.navigatorContent">
+      <navigatorContent
+            activeByDefault="true"
+            contentProvider="org.deri.wsml.eclipse.internal.ui.navigator.WSMLContentProvider"
+            icon="icons/wsml_logo.png"
+            id="org.deri.wsml.eclipse.ui.navigator.wsmlContent"
+            labelProvider="org.deri.wsml.eclipse.internal.ui.navigator.WSMLLabelProvider"
+            name="WSML File Content"
+            priority="normal">
+         <triggerPoints>
+            <or>
+               <and>
+                  <instanceof value="org.eclipse.core.resources.IResource"/>
+                  <test
+                        forcePluginActivation="true"
+                        property="org.eclipse.core.resources.extension"
+                        value="wsml"/>
+               </and>
+               <instanceof value="org.deri.wsml.eclipse.ui.wsmlfiletreemodel.IWSMLTreeNode"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+               <instanceof value="org.deri.wsml.eclipse.ui.wsmlfiletreemodel.IWSMLTreeNode"/>
+            </or>
+         </possibleChildren>
+         <commonSorter
+               class="org.deri.wsml.eclipse.internal.ui.sorters.WSMLContentSorter"
+               id="org.deri.wsml.eclipse.ui.navigator.sorters.wsmlDefaultSorter"/>
+      </navigatorContent>
+      <commonFilter
+            id="org.deri.wsml.eclipse.ui.navigator.filters.wsmlFilter"
+            name="*.wsml resources">
+         <filterExpression>
+            <and>
+               <instanceof value="org.eclipse.core.resources.IResource"/>
+               <test
+                     property="org.eclipse.core.resources.name"
+                     value="*.wsml"/>
+            </and>
+         </filterExpression>
+      </commonFilter>
+      <commonFilter
+            class="org.deri.wsml.eclipse.internal.ui.filters.WSMLOntologyFilter"
+            id="org.deri.wsml.eclipse.ui.navigator.filters.ontologyFilter"
+            name="WSML Ontology">
+      </commonFilter>
+      <commonFilter
+            class="org.deri.wsml.eclipse.internal.ui.filters.WSMLWebServiceFilter"
+            id="org.deri.wsml.eclipse.ui.navigator.filters.webServiceFilter"
+            name="WSML Webservice">
+      </commonFilter>
+      <commonFilter
+            class="org.deri.wsml.eclipse.internal.ui.filters.WSMLGoalFilter"
+            id="org.deri.wsml.eclipse.ui.navigator.filters.goalFilter"
+            name="WSML Goal">
+      </commonFilter>
+      <commonFilter
+            class="org.deri.wsml.eclipse.internal.ui.filters.WSMLMediatorFilter"
+            id="org.deri.wsml.eclipse.ui.navigator.filters.mediatorFilter"
+            name="WSML Mediator"/>
+      <commonWizard
+            menuGroupId="group.new"
+            type="new"
+            wizardId="org.deri.wsml.eclipse.wizards.WSMLProjectWizard">
+         <enablement>
+            <instanceof value="java.lang.Object"/>
+         </enablement>
+      </commonWizard>
+      <commonWizard
+            menuGroupId="group.new"
+            type="new"
+            wizardId="org.deri.wsml.eclipse.wizards.OntologyWizard">
+         <enablement>
+            <instanceof value="java.lang.Object"/>
+         </enablement>
+      </commonWizard>
+      <commonWizard
+            menuGroupId="group.new"
+            type="new"
+            wizardId="org.deri.wsml.eclipse.wizards.WebServiceWizard">
+         <enablement>
+            <instanceof value="java.lang.Object"/>
+         </enablement>
+      </commonWizard>
+      <commonWizard
+            menuGroupId="group.new"
+            type="new"
+            wizardId="org.deri.wsml.eclipse.wizards.GoalWizard">
+         <enablement>
+            <instanceof value="java.lang.Object"/>
+         </enablement>
+      </commonWizard>
+      <commonWizard
+            menuGroupId="group.new"
+            type="new"
+            wizardId="org.deri.wsml.eclipse.wizards.MediatorWizard">
+         <enablement>
+            <instanceof value="java.lang.Object"/>
+         </enablement>
+      </commonWizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.navigator.viewer">
+      <viewerContentBinding viewerId="org.deri.wsml.eclipse.ui.navigator">
+         <includes>
+            <contentExtension pattern="org.deri.wsml.eclipse.ui.navigator.wsmlContent"/>
+            <contentExtension pattern="org.deri.wsml.eclipse.ui.navigator.filters.*"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.deri.wsml.eclipse.ui.navigator">
+      </viewerActionBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.viewActions">
+      <viewContribution
+            id="org.deri.wsml.eclipse.ui.outline.viewContribution"
+            targetID="org.eclipse.ui.views.ContentOutline">
+         <action
+               class="org.deri.wsml.eclipse.internal.ui.actions.MediatorFilterActionDelegate"
+               icon="icons/mediators_filter.gif"
+               id="org.deri.wsml.eclipse.ui.actions.outlineMediatorFilterAction"
+               label="Mediator Filter"
+               style="toggle"
+               toolbarPath="filterGroup"
+               tooltip="Hide Mediators"/>
+         <action
+               class="org.deri.wsml.eclipse.internal.ui.actions.GoalFilterActionDelegate"
+               icon="icons/goal_filter.gif"
+               id="org.deri.wsml.eclipse.ui.actions.outlineGoalFilterAction"
+               label="Goal Filter"
+               style="toggle"
+               toolbarPath="filterGroup"
+               tooltip="Hide Goals"/>
+         <action
+               class="org.deri.wsml.eclipse.internal.ui.actions.WebServiceFilterActionDelegate"
+               icon="icons/webservice_filter.gif"
+               id="org.deri.wsml.eclipse.ui.actions.outlineWebServiceFilterAction"
+               label="Web Service Filter"
+               style="toggle"
+               toolbarPath="filterGroup"
+               tooltip="Hide Web Services"/>
+         <action
+               class="org.deri.wsml.eclipse.internal.ui.actions.OntologyFilterActionDelegate"
+               icon="icons/ontology_filter.gif"
+               id="org.deri.wsml.eclipse.ui.actions.outlineOntologyFilterAction"
+               label="Ontology Filter"
+               style="toggle"
+               toolbarPath="filterGroup"
+               tooltip="Hide Ontologies">
+         </action>
+         <action
+               class="org.deri.wsml.eclipse.internal.ui.actions.WSMLFiltersActionDelegate"
+               id="org.deri.wsml.eclipse.ui.actions.customFiltersAction"
+               label="Filters..."
+               menubarPath="additions"
+               style="push"/>
+      </viewContribution>
+      <viewContribution
+            id="org.deri.wsml.eclipse.ui.navigator.viewContribution.goUp"
+            targetID="org.deri.wsml.eclipse.ui.navigator">
+         <action
+               class="org.deri.wsml.eclipse.internal.ui.actions.GoUpActionDelegate"
+               icon="icons/goout.gif"
+               id="org.deri.wsml.eclipse.ui.actions.goUpAction"
+               label="Back"
+               menubarPath="additions"
+               style="push"
+               toolbarPath="additions"
+               tooltip="Back">
+         </action>
+      </viewContribution>
+   </extension>
+   <!--
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="org.deri.wsml.eclipse.ui.actionSets.navigation"
+            label="WSML Navigation"
+            visible="true">
+         <action
+               class="org.deri.wsml.eclipse.internal.ui.actions.OpenTypeHierarchyAction"
+               definitionId="org.deri.wsml.eclipse.ui.typehierarchy.commands.openTypeHierarchy"
+               icon="icons/hierarchy.gif"
+               id="org.deri.wsml.eclipse.ui.typehierarchy.actions.openTypeHierarchy"
+               label="Open Type Hierarchy"
+               menubarPath="navigate/open"
+               style="push"
+               tooltip="Opens the Type Hierarchy"/>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="org.eclipse.ui.category.navigate"
+            description="Opens the Type Hierarchy"
+            id="org.deri.wsml.eclipse.ui.typehierarchy.commands.openTypeHierarchy"
+            name="Open Type Hierarchy"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="org.deri.wsml.eclipse.ui.typehierarchy.commands.openTypeHierarchy"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="F4"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension targetID="org.deri.wsml.eclipse.perspective">
+         <view
+               id="org.deri.wsml.eclipse.ui.typehierarchy"
+               relationship="stack"
+               relative="org.deri.wsml.eclipse.ui.navigator"
+               visible="false"/>
+      </perspectiveExtension>
+   </extension>
+   -->
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="false"
+            id="org.deri.wsml.eclipse.ui.ontologyContribution"
+            objectClass="org.deri.wsml.eclipse.ui.wsmlfiletreemodel.WSMLOntologyTreeNode">
+         <action
+               class="org.deri.wsml.eclipse.internal.ui.actions.ExecutePredefinedQueryAction"
+               id="org.deri.wsml.eclipse.ui.actions.executePredefinedQueryAction"
+               label="Execute Predefined Query"
+               menubarPath="additions"/>
+      </objectContribution>
+      <viewerContribution
+            id="org.deri.wsml.eclipse.ui.navigator.contribution.goInto"
+            targetID="org.deri.wsml.eclipse.ui.navigator">
+         <action
+               class="org.deri.wsml.eclipse.internal.ui.actions.GoIntoActionDelegate"
+               id="org.deri.wsml.eclipse.ui.actions.goIntoAction"
+               label="Go Into"
+               menubarPath="group.new"
+               style="push"
+               tooltip="Go Into">
+         </action>
+      </viewerContribution>
+   </extension>
+   
+   <extension point="org.eclipse.ui.actionSets">
+      <actionSet
+         label="WSML UI Actions"
+         visible="true"
+		 id="org.deri.wsml.eclipse.ui.actions">
+		 
+		<action
+        class="org.deri.wsml.eclipse.internal.ui.actions.OpenEntityAction"
+        definitionId="org.deri.wsml.eclipse.ui.openEntity"
+        id="org.deri.wsml.eclipse.ui.openEntity"
+        label="Open Entity"
+        menubarPath="navigate/">
+        </action>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            category="org.eclipse.ui.category.navigate"
+            id="org.deri.wsml.eclipse.ui.openEntity"
+            name="Open Entity">
+      </command>
+      <keyBinding
+            commandId="org.deri.wsml.eclipse.ui.openEntity"
+            keyConfigurationId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            keySequence="M1+M2+T">
+      </keyBinding>
+   </extension>
+   
+
+</plugin>

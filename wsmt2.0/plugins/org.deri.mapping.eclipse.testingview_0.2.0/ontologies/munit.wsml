@@ -1,0 +1,32 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-rule"
+namespace { _"wsmt://munit#",
+	dc _"http://purl.org/dc/elements/1.1#"
+ }
+
+ontology munit
+
+concept testsuite
+	nonFunctionalProperties
+		dc#title hasValue "MUnit Test Suite"
+		dc#description hasValue "A collection of tests between two ontologies"
+		dc#creator hasValue "Mick Kerrigan"
+	endNonFunctionalProperties
+	sourceOntology ofType ontologyreference
+	targetOntology ofType ontologyreference
+	hasTest ofType test
+	
+concept test
+	nonFunctionalProperties
+		dc#title hasValue "MUnit Test"
+		dc#creator hasValue "Mick Kerrigan"
+	endNonFunctionalProperties
+	hasSourceInstance impliesType anInstance
+	hasTargetInstance impliesType anInstance
+
+concept ontologyreference
+	nonFunctionalProperties
+		dc#title hasValue "MUnit Ontology Reference"
+		dc#description hasValue "A reference to an ontology by string representation"
+		dc#creator hasValue "Mick Kerrigan"
+	endNonFunctionalProperties
+	stringRepresentation ofType _string

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="org.deri.mapping.eclipse.wizards"
+   name="Abstract Mapping Language Wizards"
+   version="0.2"
+   provider-name="STI Innsbruck"
+   class="org.deri.mapping.eclipse.wizards.MappingWizardsPlugin">
+
+   <runtime>
+      <library name="mappingwizards.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/powerswing-0.3.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <requires>
+   	  <import plugin="net.sourceforge.mediation"/>
+      <import plugin="org.deri.mapping.eclipse"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.ui.views"/>
+      <import plugin="org.deri.wsml.eclipse"/>
+      <import plugin="net.sourceforge.wsmo4j"/>
+   </requires>
+
+	<extension point="org.eclipse.ui.perspectiveExtensions">
+        <perspectiveExtension targetID="org.deri.mapping.eclipse.perspective">
+            <newWizardShortcut id="org.deri.mapping.eclipse.wizards.MappingFileWizard"/>
+        </perspectiveExtension>
+    </extension>
+    
+    <extension point="org.eclipse.ui.newWizards">      
+     <category
+            id="org.deri.mapping.eclipse.wizards"
+            name="Mapping"/>
+     <wizard
+           category="org.deri.mapping.eclipse.wizards"
+           class="org.deri.mapping.eclipse.wizards.MappingFileWizard"
+           finalPerspective="org.deri.mapping.eclipse.perspective"
+           icon="icons/mapfile.gif"
+           id="org.deri.mapping.eclipse.wizards.MappingFileWizard"
+           name="Mapping File"
+           project="false">
+        <description>Create a new Mapping File</description>
+     </wizard>
+	</extension>
+</plugin>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.45.1"
+   inkscape:export-filename="C:\workspace\org.deri.wsmt\background-withlogos_Background.png"
+   inkscape:export-xdpi="60.031006"
+   inkscape:export-ydpi="60.031006"
+   sodipodi:docbase="C:\workspace\org.deri.wsmt\images"
+   sodipodi:docname="splash.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient4103">
+      <stop
+         style="stop-color:#960000;stop-opacity:0.84536082;"
+         offset="0"
+         id="stop5096" />
+      <stop
+         id="stop6376"
+         offset="0.5"
+         style="stop-color:#8b0000;stop-opacity:0.51546389;" />
+      <stop
+         id="stop5098"
+         offset="1"
+         style="stop-color:#800000;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4103"
+       id="linearGradient4119"
+       x1="691.42877"
+       y1="166.64789"
+       x2="691.42877"
+       y2="629.92517"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="repeat"
+       gradientTransform="matrix(1.0606056,0,0,0.637973,-133.33323,206.04534)" />
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="97"
+       height="97"
+       patternTransform="translate(-157.59523,423.12963)"
+       id="pattern6452">
+      <image
+         xlink:href="images for splash\wsml_logo_transparent.GIF"
+         sodipodi:absref="C:\workspace\org.deri.wsmt\images\images for splash\wsml_logo_transparent.GIF"
+         width="97"
+         height="97"
+         id="image6439"
+         x="0"
+         y="0" />
+    </pattern>
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="97"
+       height="97"
+       patternTransform="translate(-149.61266,328.00394)"
+       id="pattern6467">
+      <image
+         clip-path="none"
+         xlink:href="images for splash\wsml_logo.gif"
+         sodipodi:absref="C:\workspace\org.deri.wsmt\images\images for splash\wsml_logo.gif"
+         width="97"
+         height="97"
+         id="image6464"
+         x="0"
+         y="0" />
+    </pattern>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.406091"
+     inkscape:cx="346.25761"
+     inkscape:cy="492.57776"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1680"
+     inkscape:window-height="964"
+     inkscape:window-x="1396"
+     inkscape:window-y="-4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:url(#linearGradient4119);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="rect2160"
+       width="500"
+       height="249.72099"
+       x="100"
+       y="312.36218"
+       inkscape:export-filename="C:\workspace\org.deri.wsmt\background-withlogos_Background.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <image
+       y="410.83612"
+       x="123.56015"
+       id="image6531"
+       height="58.436798"
+       width="58.436798"
+       sodipodi:absref="F:\wsmo_logo_transparent.png"
+       xlink:href="images for splash\wsmo_logo_transparent.png"
+       inkscape:export-filename="C:\workspace\org.deri.wsmt\background-withlogos_Background.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <image
+       y="412.00757"
+       x="206.44818"
+       id="image6541"
+       height="58.436798"
+       width="58.436798"
+       sodipodi:absref="F:\wsml_logo_transparent.png"
+       xlink:href="images for splash\wsml_logo_transparent.png"
+       inkscape:export-filename="C:\workspace\org.deri.wsmt\background-withlogos_Background.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <image
+       y="408.99545"
+       x="289.99188"
+       id="image6551"
+       height="60.570377"
+       width="60.570377"
+       sodipodi:absref="F:\wsmx_logo_transparent.png"
+       xlink:href="images for splash\wsmx_logo_transparent.png"
+       inkscape:export-filename="C:\workspace\org.deri.wsmt\background-withlogos_Background.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <image
+       y="485.90247"
+       x="358.08804"
+       id="image6561"
+       height="70.527481"
+       width="124.64558"
+       sodipodi:absref="C:\workspace\org.deri.wsmt\images\kmi_logoCMYK.png"
+       xlink:href="images for splash\kmi_logoCMYK.png"
+       inkscape:export-filename="C:\workspace\org.deri.wsmt\background-withlogos_Background.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <image
+       y="430.27499"
+       x="466.46985"
+       id="image6571"
+       height="25.22472"
+       width="122.06963"
+       sodipodi:absref="C:\workspace\org.deri.wsmt\images\see_tc_rgb.png"
+       xlink:href="images for splash\see_tc_rgb.png"
+       inkscape:export-filename="C:\workspace\org.deri.wsmt\background-withlogos_Background.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <image
+       y="414.56934"
+       x="377.12939"
+       id="image6581"
+       height="55.302998"
+       width="70.135925"
+       sodipodi:absref="C:\workspace\org.deri.wsmt\images\irs3-highres-logo-redraw.png"
+       xlink:href="images for splash\irs3-highres-logo-redraw.png"
+       inkscape:export-filename="C:\workspace\org.deri.wsmt\background-withlogos_Background.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <image
+       y="489.99719"
+       x="236.44943"
+       id="image6601"
+       height="67.38414"
+       width="67.38414"
+       sodipodi:absref="F:\STI-Logomark_CMYK_Layer 1.png"
+       xlink:href="images for splash\STI-Logomark_CMYK_Layer 1.png"
+       inkscape:export-filename="C:\workspace\org.deri.wsmt\background-withlogos_Background.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="117.17441"
+       y="369.35431"
+       id="text6608"
+       inkscape:export-filename="C:\workspace\org.deri.wsmt\background-withlogos_Background.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan6610"
+         x="117.17441"
+         y="369.35431"
+         style="font-size:36px;fill:#ffffff;font-family:Britannic Bold">Web Service Modeling Toolkit</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="543.07788"
+       y="401.95935"
+       id="text6612"
+       inkscape:export-filename="C:\workspace\org.deri.wsmt\background-withlogos_Background.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan6614"
+         x="543.07788"
+         y="401.95935"
+         style="font-size:20px;fill:#ffffff;font-family:Britannic Bold">v1.5</tspan></text>
+  </g>
+</svg>

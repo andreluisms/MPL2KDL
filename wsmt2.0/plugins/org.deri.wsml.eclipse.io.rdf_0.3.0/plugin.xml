@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="org.deri.wsml.eclipse.io.rdf"
+   name="WSML RDF Importation Plug-in"
+   version="0.3"
+   provider-name="STI Innsbruck"
+   class="org.deri.wsml.eclipse.io.rdf.RDFPlugin">
+   <runtime>
+      <library name="rdf.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="net.sourceforge.wsmo4j"/>
+      <import plugin="org.deri.wsml.eclipse.io"/>
+      <import plugin="org.deri.wsml.eclipse"/>
+      <import plugin="org.eclipse.core.resources"/>
+   </requires>
+   <extension
+         point="org.deri.wsml.eclipse.io.translation">
+      <Import
+            File-Extension="rdf"
+            Translator="org.deri.wsml.eclipse.io.rdf.Rdf2WsmlTranslator"/>
+      <Import
+            File-Extension="rdfs"
+            Translator="org.deri.wsml.eclipse.io.rdf.Rdf2WsmlTranslator"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution 
+      id="org.deri.wsml.eclipse.io.rdf.converter.contribution"
+   objectClass="org.eclipse.core.resources.IFile"
+   nameFilter=" *.rdf">
+      <action
+            class="org.deri.wsml.eclipse.io.rdf.Rdf2WsmlConvertAction"
+            enablesFor="1"
+            icon="icons/wsml_logo.png"
+            id="org.deri.wsml.eclipse.io.rdf.converter.contribution.toWsmlAction"
+            label="WSML"
+            menubarPath="org.deri.eclipse.ResourceNavigator.contribution.converter.menu/conversionGroup"
+            > 
+      </action>
+      <menu
+            id="org.deri.eclipse.ResourceNavigator.contribution.converter.menu"
+            label="Convert To"
+            path="addtitions"/>
+   </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="org.deri.wsml.eclipse.io.rdfs.converter.contribution"
+            nameFilter="*.rdfs"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               class="org.deri.wsml.eclipse.io.rdf.Rdf2WsmlConvertAction"
+               enablesFor="1"
+               icon="icons/wsml_logo.png"
+               id="org.deri.wsml.eclipse.io.rdfs.converter.contribution.toWsmlAction"
+               label="WSML"
+               menubarPath="org.deri.eclipse.ResourceNavigator.contribution.converter.menu/conversionGroup"
+               />
+         <menu
+               id="org.deri.eclipse.ResourceNavigator.contribution.converter.menu"
+               label="Convert To"
+               path="addtitions"/>
+      </objectContribution>
+      <objectContribution
+            adaptable="false"
+            id="org.deri.wsml.eclipse.io.rdf.converter.wsml2rdfContribution"
+            nameFilter="*.wsml"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               class="org.deri.wsml.eclipse.io.rdf.Wsml2RdfConvertAction"
+               enablesFor="1"
+               id="org.deri.wsml.eclipse.io.rdf.converter.contribution.toRdfsAction"
+               label="RDFS"
+               menubarPath="org.deri.eclipse.ResourceNavigator.contribution.converter.menu/conversionGroup"
+               style="push"/>
+         <menu
+               id="org.deri.eclipse.ResourceNavigator.contribution.converter.menu"
+               label="Convert To"
+               path="addtitions"/>
+      </objectContribution>
+
+   </extension>
+
+</plugin>

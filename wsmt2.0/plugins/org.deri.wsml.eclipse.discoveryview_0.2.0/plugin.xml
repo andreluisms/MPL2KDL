@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="org.deri.wsml.eclipse.discoveryview"
+   name="Discovery View"
+   version="0.2"
+   provider-name="STI Innsbruck"
+   class="org.deri.wsml.eclipse.discoveryview.DiscoveryViewPlugin">
+   <runtime>
+      <library name="DiscoveryView.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+   <requires>
+	 <import plugin="org.deri.wsml.eclipse.discovery"/>
+     <import plugin="org.eclipse.ui"/>
+	 <import plugin= "org.eclipse.core.runtime"/>
+	 <import plugin="org.deri.wsml.eclipse"/>
+	 <import plugin="net.sourceforge.wsmo4j"/>
+	 <import plugin="org.eclipse.jface.text"/>
+	 <import plugin="org.eclipse.ui.ide"/>
+	 <import plugin="org.eclipse.core.resources"/>
+	 <import plugin="org.deri.wsml.eclipse.texteditor"/>
+	 <import plugin="org.eclipse.ui.forms"/>
+  <import plugin="org.deri.wsml.eclipse.reasoner"/>
+   </requires>
+   <extension-point id="discoveryExtensionPoint" name="org.deri.wsml.eclipse.discoveryview.discoveryExtensionPoint" schema="schema/discoveryExtensionPoint.exsd"/>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="WSML Discovery"
+            id="org.deri.wsml.eclipse.discoveryview">
+      </category>
+      <view
+            name="WSML Discovery"
+            icon="icons/lupe.gif"
+            category="org.deri.wsml.views"
+            class="org.deri.wsml.eclipse.discoveryview.views.WebServiceView"
+            id="org.deri.wsml.eclipse.discoveryview.views.WebServiceView">
+      </view>
+   </extension>
+</plugin>

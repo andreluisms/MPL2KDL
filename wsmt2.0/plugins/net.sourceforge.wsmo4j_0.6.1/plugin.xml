@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="net.sourceforge.wsmo4j"
+   name="WSMO4J"
+   version="0.6.1"
+   provider-name="WSMO4J Working Group"
+   class="net.sourceforge.wsmo4j.Wsmo4j_Plugin">
+
+   <runtime>
+      <library name="wsmo4jplugin.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/choreography-0.0.2RC.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/openrdf-model.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/openrdf-util.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/qname.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/rio.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/sesame.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/wsdl4j.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/WSML-grammar-20081202.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/wsmo-api-0.6.2.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/wsmo4j-0.6.2.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+   </requires>
+
+</plugin>

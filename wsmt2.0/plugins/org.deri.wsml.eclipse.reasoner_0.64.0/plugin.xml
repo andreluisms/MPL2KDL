@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="org.deri.wsml.eclipse.reasoner"
+   name="WSML Reasoner"
+   version="0.64"
+   provider-name="STI Innsbruck"
+   class="org.deri.wsml.eclipse.reasoner.ReasonerPlugin">
+
+   <runtime>
+      <library name="reasoner.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/axis/axis.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/axis/commons-discovery-0.2.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/axis/commons-logging-1.0.4.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/axis/jaxrpc.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/axis/saaj.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/axis/wsdl4j-1.5.1.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/derby/derby.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/derby/derbytools.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/dlv-system/DLVWrapper-3_0_beta4.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/flora2-reasoner/XSBFlora.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/iris-reasoner/iris/iris-0.58.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/iris-reasoner/jgrapht/jgrapht-jdk1.5-0.7.1.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/log4j/log4j-1.2.14.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/mandrax-reasoner/commons-collections-2.1.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/mandrax-reasoner/jdom-b10.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/mandrax-reasoner/log4j-1.2.8.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/mandrax-reasoner/mandarax-3.4.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/xsb-system/interprolog.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/wsml2reasoner-0.6.4.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/pellet-reasoner/aterm/1.6/aterm-java-1.6.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/pellet-reasoner/commons-logging/1.1/commons-logging-1.1.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/pellet-reasoner/kaon/1.2.9/rdfapi.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/pellet-reasoner/owl-api/1.4.3/abstractparser.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/pellet-reasoner/owl-api/1.4.3/io.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/pellet-reasoner/owl-api/1.4.3/rdfparser.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/pellet-reasoner/owl-api/1.4.3/validation.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/pellet-reasoner/owl-api/owl-api-econn/2006-04-27/api.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/pellet-reasoner/owl-api/owl-api-econn/2006-04-27/impl.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/pellet-reasoner/pellet/pellet.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/pellet-reasoner/relaxng/1.0/relaxngDatatype.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/pellet-reasoner/xsdlib/xsdlib.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/performance-tests/JFreeChart/gnujaxp.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/performance-tests/JFreeChart/itext-2.0.2.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/performance-tests/JFreeChart/jcommon-1.0.10.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/performance-tests/JFreeChart/jfreechart-1.0.6.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/performance-tests/JFreeChart/swtgraphics2d.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/servlet/catalina-ant.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/servlet/servlet-api.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/sql-interface/hsqldb.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/wsmo/WSML-grammar-20081202.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/wsmo/wsmo-api-0.6.2.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/wsmo/wsmo4j-0.6.2.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="net.sourceforge.wsmo4j"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+   </requires>
+   
+   <extension point="org.eclipse.core.runtime.preferences">
+		<initializer class="org.deri.wsml.eclipse.reasoner.ReasonerPreferenceInitializer"/>
+	</extension>
+   
+   <extension-point id="reasoners" name="reasoners" schema="schema/reasoners.exsd"/>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.deri.wsml.eclipse.preferences.WSMLPreferences"
+            class="org.deri.wsml.eclipse.reasoner.preferences.ReasonerPrefPage"
+            id="org.deri.wsml.eclipse.reasoner.preferences.ReasonePreferences"
+            name="Reasoner"/>
+   </extension>
+   <extension
+         point="org.deri.wsml.eclipse.reasoner.reasoners">            
+       <wsml_reasoner 
+            class="org.deri.wsml.eclipse.reasoner.pellet.PelletDLReasoner"
+            name="PELLET"
+            wsml_variant="CORE"/>
+     <wsml_reasoner
+            class="org.deri.wsml.eclipse.reasoner.pellet.PelletDLReasoner"
+            name="PELLET"
+            wsml_variant="DL"/>
+     <wsml_reasoner
+            class="org.deri.wsml.eclipse.reasoner.iris.IrisCoreReasoner"
+            name="IRIS"
+            wsml_variant="CORE"/>
+      <wsml_reasoner
+            class="org.deri.wsml.eclipse.reasoner.iris.IrisFlightReasoner"
+            name="IRIS"
+            wsml_variant="FLIGHT"/>
+      <wsml_reasoner
+            class="org.deri.wsml.eclipse.reasoner.iris.IrisRuleReasoner"
+            name="IRIS"
+            wsml_variant="RULE"/> 
+   </extension>
+</plugin>

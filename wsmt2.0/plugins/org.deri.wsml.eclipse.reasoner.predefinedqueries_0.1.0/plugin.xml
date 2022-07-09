@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin id="org.deri.wsml.eclipse.reasoner.predefinedqueries"
+   name="Preferences Plug-in"
+   version="0.1"
+   provider-name="STI Innsbruck"
+   class="org.deri.wsml.eclipse.reasoner.predefinedqueries.PredefinedQueriesPlugin">
+   
+   <runtime>
+      <library name="predprefs.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/wslet-flight-A.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+   <requires>
+   	  <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+	  <import plugin="org.eclipse.jface.text"/>
+      <import plugin="org.deri.wsml.eclipse"/>
+      <import plugin="net.sourceforge.wsmo4j"/>
+   </requires>
+   
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer class="org.deri.wsml.eclipse.reasoner.internal.predefinedqueries.PredefinedQueryPreferenceInitializer"/>
+   </extension>
+  <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.deri.wsml.eclipse.reasoner.preferences.ReasonePreferences"
+            class="org.deri.wsml.eclipse.reasoner.predefinedqueries.PredefinedQueryTemplatesPreferencePage"
+            id="org.deri.wsml.eclipse.reasoner.predefinedqueries.PredefinedQueriesPreferencePage"
+            name="Query Templates"/>
+   </extension>
+
+</plugin>

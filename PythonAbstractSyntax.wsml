@@ -1,0 +1,275 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-rule"
+namespace { _"http://ufs.br/ontologies#"}
+
+ontology PythonAbstractSyntax
+   concept mod
+   concept Module subConceptOf mod
+      _body ofType (0 *) stmt
+      _type_ignores ofType (0 *) type_ignore
+   concept Interactive subConceptOf mod
+      _body ofType (0 *) stmt
+   concept Expression subConceptOf mod
+      _body ofType expr
+   concept FunctionType subConceptOf mod
+      _argtypes ofType (0 *) expr
+      _returns ofType expr
+   concept Suite subConceptOf mod
+      _body ofType (0 *) stmt
+   concept stmt
+   concept FunctionDef subConceptOf stmt
+      _name ofType _string
+      _args ofType arguments
+      _body ofType (0 *) stmt
+      _decorator_list ofType (0 *) expr
+      _returns ofType (0 1) expr
+      _type_comment ofType (0 1) _string
+   concept AsyncFunctionDef subConceptOf stmt
+      _name ofType _string
+      _args ofType arguments
+      _body ofType (0 *) stmt
+      _decorator_list ofType (0 *) expr
+      _returns ofType (0 1) expr
+      _type_comment ofType (0 1) _string
+   concept ClassDef subConceptOf stmt
+      _name ofType _string
+      _bases ofType (0 *) expr
+      _keywords ofType (0 *) keyword
+      _body ofType (0 *) stmt
+      _decorator_list ofType (0 *) expr
+   concept Return subConceptOf stmt
+      _value ofType (0 1) expr
+   concept Delete subConceptOf stmt
+      _targets ofType (0 *) expr
+   concept Assign subConceptOf stmt
+      _targets ofType (0 *) expr
+      _value ofType expr
+      _type_comment ofType (0 1) _string
+   concept AugAssign subConceptOf stmt
+      _target ofType expr
+      _op ofType operator
+      _value ofType expr
+   concept AnnAssign subConceptOf stmt
+      _target ofType expr
+      _annotation ofType expr
+      _value ofType (0 1) expr
+      _simple ofType _int
+   concept For subConceptOf stmt
+      _target ofType expr
+      _iter ofType expr
+      _body ofType (0 *) stmt
+      _orelse ofType (0 *) stmt
+      _type_comment ofType (0 1) _string
+   concept AsyncFor subConceptOf stmt
+      _target ofType expr
+      _iter ofType expr
+      _body ofType (0 *) stmt
+      _orelse ofType (0 *) stmt
+      _type_comment ofType (0 1) _string
+   concept While subConceptOf stmt
+      _test ofType expr
+      _body ofType (0 *) stmt
+      _orelse ofType (0 *) stmt
+   concept If subConceptOf stmt
+      _test ofType expr
+      _body ofType (0 *) stmt
+      _orelse ofType (0 *) stmt
+   concept With subConceptOf stmt
+      _items ofType (0 *) withitem
+      _body ofType (0 *) stmt
+      _type_comment ofType (0 1) _string
+   concept AsyncWith subConceptOf stmt
+      _items ofType (0 *) withitem
+      _body ofType (0 *) stmt
+      _type_comment ofType (0 1) _string
+   concept Raise subConceptOf stmt
+      _exc ofType (0 1) expr
+      _cause ofType (0 1) expr
+   concept Try subConceptOf stmt
+      _body ofType (0 *) stmt
+      _handlers ofType (0 *) excepthandler
+      _orelse ofType (0 *) stmt
+      _finalbody ofType (0 *) stmt
+   concept Assert subConceptOf stmt
+      _test ofType expr
+      _msg ofType (0 1) expr
+   concept Import subConceptOf stmt
+      _names ofType (0 *) alias
+   concept ImportFrom subConceptOf stmt
+      _module ofType (0 1) _string
+      _names ofType (0 *) alias
+      _level ofType (0 1) _int
+   concept Global subConceptOf stmt
+      _names ofType (0 *) _string
+   concept Nonlocal subConceptOf stmt
+      _names ofType (0 *) _string
+   concept Expr subConceptOf stmt
+      _value ofType expr
+   concept Pass subConceptOf stmt
+   concept Break subConceptOf stmt
+   concept Continue subConceptOf stmt
+   concept expr
+   concept BoolOp subConceptOf expr
+      _op ofType boolop
+      _values ofType (0 *) expr
+   concept NamedExpr subConceptOf expr
+      _target ofType expr
+      _value ofType expr
+   concept BinOp subConceptOf expr
+      _left ofType expr
+      _op ofType operator
+      _right ofType expr
+   concept UnaryOp subConceptOf expr
+      _op ofType unaryop
+      _operand ofType expr
+   concept Lambda subConceptOf expr
+      _args ofType arguments
+      _body ofType expr
+   concept IfExp subConceptOf expr
+      _test ofType expr
+      _body ofType expr
+      _orelse ofType expr
+   concept Dict subConceptOf expr
+      _keys ofType (0 *) expr
+      _values ofType (0 *) expr
+   concept Set subConceptOf expr
+      _elts ofType (0 *) expr
+   concept ListComp subConceptOf expr
+      _elt ofType expr
+      _generators ofType (0 *) comprehension
+   concept SetComp subConceptOf expr
+      _elt ofType expr
+      _generators ofType (0 *) comprehension
+   concept DictComp subConceptOf expr
+      _key ofType expr
+      _value ofType expr
+      _generators ofType (0 *) comprehension
+   concept GeneratorExp subConceptOf expr
+      _elt ofType expr
+      _generators ofType (0 *) comprehension
+   concept Await subConceptOf expr
+      _value ofType expr
+   concept Yield subConceptOf expr
+      _value ofType (0 1) expr
+   concept YieldFrom subConceptOf expr
+      _value ofType expr
+   concept Compare subConceptOf expr
+      _left ofType expr
+      _ops ofType (0 *) cmpop
+      _comparators ofType (0 *) expr
+   concept Call subConceptOf expr
+      _func ofType expr
+      _args ofType (0 *) expr
+      _keywords ofType (0 *) keyword
+   concept FormattedValue subConceptOf expr
+      _value ofType expr
+      _conversion ofType (0 1) _int
+      _format_spec ofType (0 1) expr
+   concept JoinedStr subConceptOf expr
+      _values ofType (0 *) expr
+   concept Constant subConceptOf expr
+      _value ofType _string
+      _kind ofType (0 1) _string
+   concept Attribute subConceptOf expr
+      _value ofType expr
+      _attr ofType _string
+      _ctx ofType expr_context
+   concept Subscript subConceptOf expr
+      _value ofType expr
+      _slice ofType slice
+      _ctx ofType expr_context
+   concept Starred subConceptOf expr
+      _value ofType expr
+      _ctx ofType expr_context
+   concept Name subConceptOf expr
+      _id ofType _string
+      _ctx ofType expr_context
+   concept List subConceptOf expr
+      _elts ofType (0 *) expr
+      _ctx ofType expr_context
+   concept Tuple subConceptOf expr
+      _elts ofType (0 *) expr
+      _ctx ofType expr_context
+   concept expr_context
+   concept Load subConceptOf expr_context
+   concept Store subConceptOf expr_context
+   concept Del subConceptOf expr_context
+   concept AugLoad subConceptOf expr_context
+   concept AugStore subConceptOf expr_context
+   concept Param subConceptOf expr_context
+   concept slice
+   concept Slice subConceptOf slice
+      _lower ofType (0 1) expr
+      _upper ofType (0 1) expr
+      _step ofType (0 1) expr
+   concept ExtSlice subConceptOf slice
+      _dims ofType (0 *) slice
+   concept Index subConceptOf slice
+      _value ofType expr
+   concept boolop
+   concept And subConceptOf boolop
+   concept Or subConceptOf boolop
+   concept operator
+   concept Add subConceptOf operator
+   concept Sub subConceptOf operator
+   concept Mult subConceptOf operator
+   concept MatMult subConceptOf operator
+   concept Div subConceptOf operator
+   concept Mod subConceptOf operator
+   concept Pow subConceptOf operator
+   concept LShift subConceptOf operator
+   concept RShift subConceptOf operator
+   concept BitOr subConceptOf operator
+   concept BitXor subConceptOf operator
+   concept BitAnd subConceptOf operator
+   concept FloorDiv subConceptOf operator
+   concept unaryop
+   concept Invert subConceptOf unaryop
+   concept Not subConceptOf unaryop
+   concept UAdd subConceptOf unaryop
+   concept USub subConceptOf unaryop
+   concept cmpop
+   concept Eq subConceptOf cmpop
+   concept NotEq subConceptOf cmpop
+   concept Lt subConceptOf cmpop
+   concept LtE subConceptOf cmpop
+   concept Gt subConceptOf cmpop
+   concept GtE subConceptOf cmpop
+   concept Is subConceptOf cmpop
+   concept IsNot subConceptOf cmpop
+   concept In subConceptOf cmpop
+   concept NotIn subConceptOf cmpop
+   concept comprehension
+      _target ofType expr
+      _iter ofType expr
+      _ifs ofType (0 *) expr
+      _is_async ofType _int
+   concept excepthandler
+   concept ExceptHandler subConceptOf excepthandler
+      _type ofType (0 1) expr
+      _name ofType (0 1) _string
+      _body ofType (0 *) stmt
+   concept arguments
+      _posonlyargs ofType (0 *) arg
+      _args ofType (0 *) arg
+      _vararg ofType (0 1) arg
+      _kwonlyargs ofType (0 *) arg
+      _kw_defaults ofType (0 *) expr
+      _kwarg ofType (0 1) arg
+      _defaults ofType (0 *) expr
+   concept arg
+      _arg ofType _string
+      _annotation ofType (0 1) expr
+      _type_comment ofType (0 1) _string
+   concept keyword
+      _arg ofType (0 1) _string
+      _value ofType expr
+   concept alias
+      _name ofType _string
+      _asname ofType (0 1) _string
+   concept withitem
+      _context_expr ofType expr
+      _optional_vars ofType (0 1) expr
+   concept type_ignore
+   concept TypeIgnore subConceptOf type_ignore
+      _lineno ofType _int
+      _tag ofType _string

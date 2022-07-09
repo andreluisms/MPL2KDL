@@ -1,0 +1,390 @@
+!SESSION 2009-03-24 20:40:58.322 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.ui.console 4 2 2009-03-24 20:45:01.663
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.console".
+!STACK 0
+org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:3777)
+	at org.eclipse.swt.SWT.error(SWT.java:3695)
+	at org.eclipse.swt.SWT.error(SWT.java:3666)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1142)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:665)
+	at org.eclipse.ui.internal.console.ConsoleDropDownAction.consolesRemoved(ConsoleDropDownAction.java:150)
+	at org.eclipse.ui.internal.console.ConsoleManager$ConsoleNotifier.run(ConsoleManager.java:154)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.ui.internal.console.ConsoleManager$ConsoleNotifier.notify(ConsoleManager.java:174)
+	at org.eclipse.ui.internal.console.ConsoleManager.fireUpdate(ConsoleManager.java:262)
+	at org.eclipse.ui.internal.console.ConsoleManager.removeConsoles(ConsoleManager.java:244)
+	at org.eclipse.ui.console.ConsolePlugin.stop(ConsolePlugin.java:175)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$3.run(BundleContextImpl.java:1050)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:1046)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:457)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:531)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1104)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:655)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:312)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.SystemBundle.suspend(SystemBundle.java:236)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:678)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:576)
+	at org.eclipse.osgi.framework.internal.core.OSGi.close(OSGi.java:41)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:424)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:200)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:549)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:504)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1236)
+
+!ENTRY org.eclipse.ui.console 4 120 2009-03-24 20:45:01.664
+!MESSAGE An exception occurred during console notification
+!STACK 0
+org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:3777)
+	at org.eclipse.swt.SWT.error(SWT.java:3695)
+	at org.eclipse.swt.SWT.error(SWT.java:3666)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1142)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:665)
+	at org.eclipse.ui.internal.console.ConsoleDropDownAction.consolesRemoved(ConsoleDropDownAction.java:150)
+	at org.eclipse.ui.internal.console.ConsoleManager$ConsoleNotifier.run(ConsoleManager.java:154)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.ui.internal.console.ConsoleManager$ConsoleNotifier.notify(ConsoleManager.java:174)
+	at org.eclipse.ui.internal.console.ConsoleManager.fireUpdate(ConsoleManager.java:262)
+	at org.eclipse.ui.internal.console.ConsoleManager.removeConsoles(ConsoleManager.java:244)
+	at org.eclipse.ui.console.ConsolePlugin.stop(ConsolePlugin.java:175)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$3.run(BundleContextImpl.java:1050)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:1046)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:457)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:531)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1104)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:655)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:312)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.SystemBundle.suspend(SystemBundle.java:236)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:678)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:576)
+	at org.eclipse.osgi.framework.internal.core.OSGi.close(OSGi.java:41)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:424)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:200)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:549)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:504)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1236)
+!SESSION 2022-05-02 21:43:11.703 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_45
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY Inconsistency Error 4 4 2022-05-02 21:55:07.307
+!MESSAGE It was not possible to execute the given query.
+!STACK 0
+org.wsml.reasoner.api.inconsistency.InconsistencyException: Consitency Violation detected! (first: AttributeTypeViolation due to instance: booleanexp0x7f5bc2aa7880 expected type: BoolValue found value: "True" at attribute: boolValue)
+	at org.wsml.reasoner.impl.DatalogBasedWSMLReasoner.registerEntities(DatalogBasedWSMLReasoner.java:406)
+	at org.wsml.reasoner.impl.DatalogBasedWSMLReasoner.registerOntologies(DatalogBasedWSMLReasoner.java:394)
+	at org.deri.wsml.eclipse.reasoner.util.ReasonerUtil.registerOntology(ReasonerUtil.java:19)
+	at org.deri.wsml.eclipse.reasonerview.control.jobs.ReasoningJob.executeQuery(ReasoningJob.java:128)
+	at org.deri.wsml.eclipse.reasonerview.control.jobs.ReasoningJob.run(ReasoningJob.java:77)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.307
+!MESSAGE Inconsistency Exception
+!STACK 0
+org.wsml.reasoner.api.inconsistency.InconsistencyException: Consitency Violation detected! (first: AttributeTypeViolation due to instance: booleanexp0x7f5bc2aa7880 expected type: BoolValue found value: "True" at attribute: boolValue)
+	at org.wsml.reasoner.impl.DatalogBasedWSMLReasoner.registerEntities(DatalogBasedWSMLReasoner.java:406)
+	at org.wsml.reasoner.impl.DatalogBasedWSMLReasoner.registerOntologies(DatalogBasedWSMLReasoner.java:394)
+	at org.deri.wsml.eclipse.reasoner.util.ReasonerUtil.registerOntology(ReasonerUtil.java:19)
+	at org.deri.wsml.eclipse.reasonerview.control.jobs.ReasoningJob.executeQuery(ReasoningJob.java:128)
+	at org.deri.wsml.eclipse.reasonerview.control.jobs.ReasoningJob.run(ReasoningJob.java:77)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.307
+!MESSAGE AttributeTypeViolation due to instance: booleanexp0x7f5bc2aa7880 expected type: BoolValue found value: "True" at attribute: boolValue
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.307
+!MESSAGE AttributeTypeViolation due to instance: singleclass0x7f5bc2b223a0 expected type: ID found value: "AlunoUFS" at attribute: className
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.307
+!MESSAGE AttributeTypeViolation due to instance: callwithparameters0x7f5bc2aa96a0 expected type: ID found value: "print" at attribute: nameFunction
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.307
+!MESSAGE AttributeTypeViolation due to instance: idexp0x7f5bc2aa7520 expected type: ID found value: "p" at attribute: id
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.307
+!MESSAGE AttributeTypeViolation due to instance: idexp0x7f5bc2b23910 expected type: ID found value: "Expression2" at attribute: id
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.307
+!MESSAGE AttributeTypeViolation due to instance: singlesigparameter0x7f5bc2aa7df0 expected type: ID found value: "visitor" at attribute: nameParameter
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.308
+!MESSAGE AttributeTypeViolation due to instance: accessexp0x7f5bc2b23550 expected type: name found value: selfexp0x7f5bc2b222e0 at attribute: name
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.308
+!MESSAGE AttributeTypeViolation due to instance: compoundsigparameter0x7f5bc2b22760 expected type: ID found value: "Expression1" at attribute: nameParameter
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.308
+!MESSAGE AttributeTypeViolation due to instance: accessexp0x7f5bc2aa7be0 expected type: name found value: selfexp0x7f5bc2b239a0 at attribute: name
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.308
+!MESSAGE AttributeTypeViolation due to instance: compoundsigparameter0x7f5bc2aad3a0 expected type: ID found value: "self" at attribute: nameParameter
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.308
+!MESSAGE AttributeTypeViolation due to instance: singleclass0x7f5bc2b223a0 expected type: ID found value: "Estudante" at attribute: fatherName
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.308
+!MESSAGE AttributeTypeViolation due to instance: signature0x7f5bc2aab760 expected type: ID found value: "accept" at attribute: nameFunction
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.308
+!MESSAGE AttributeTypeViolation due to instance: selfexp0x7f5bc2b222e0 expected type: ID found value: list0x7f5bc2aacac0 at attribute: id
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.308
+!MESSAGE AttributeTypeViolation due to instance: selfexp0x7f5bc2b239a0 expected type: ID found value: list0x7f5bc2aacb40 at attribute: id
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.308
+!MESSAGE AttributeTypeViolation due to instance: accessexp0x7f5bc2aaf5b0 expected type: name found value: idexp0x7f5bc2aad700 at attribute: name
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.308
+!MESSAGE AttributeTypeViolation due to instance: signature0x7f5bc2b223d0 expected type: Parameters found value: compoundsigparameter0x7f5bc2afceb0 at attribute: parameters
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.308
+!MESSAGE AttributeTypeViolation due to instance: idexp0x7f5bc2b22190 expected type: ID found value: "Expression1" at attribute: id
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.308
+!MESSAGE AttributeTypeViolation due to instance: selfexp0x7f5bc2aa9b80 expected type: ID found value: "self" at attribute: id
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.309
+!MESSAGE AttributeTypeViolation due to instance: signature0x7f5bc2b223d0 expected type: ID found value: "__shop__" at attribute: nameFunction
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.309
+!MESSAGE AttributeTypeViolation due to instance: idexp0x7f5bc2aad700 expected type: ID found value: "visitor" at attribute: id
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.309
+!MESSAGE AttributeTypeViolation due to instance: idexp0x7f5bc2b22730 expected type: ID found value: "leftExpression" at attribute: id
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.309
+!MESSAGE AttributeTypeViolation due to instance: compoundsigparameter0x7f5bc2afceb0 expected type: ID found value: "self" at attribute: nameParameter
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.309
+!MESSAGE AttributeTypeViolation due to instance: callwithparameters0x7f5bc2aabaf0 expected type: ID found value: "visitMulExp" at attribute: nameFunction
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.309
+!MESSAGE AttributeTypeViolation due to instance: signature0x7f5bc2aab760 expected type: Parameters found value: compoundsigparameter0x7f5bc2aad3a0 at attribute: parameters
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.309
+!MESSAGE AttributeTypeViolation due to instance: idexp0x7f5bc2b255b0 expected type: ID found value: "rightExpression" at attribute: id
+!SUBENTRY 2 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.309
+!MESSAGE AttributeTypeViolation due to instance: singlesigparameter0x7f5bc2b22910 expected type: ID found value: "Expression2" at attribute: nameParameter
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.309
+!MESSAGE AttributeTypeViolation due to instance: booleanexp0x7f5bc2aa7880 expected type: BoolValue found value: "True" at attribute: boolValue
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.309
+!MESSAGE AttributeTypeViolation due to instance: singleclass0x7f5bc2b223a0 expected type: ID found value: "AlunoUFS" at attribute: className
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.310
+!MESSAGE AttributeTypeViolation due to instance: callwithparameters0x7f5bc2aa96a0 expected type: ID found value: "print" at attribute: nameFunction
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.310
+!MESSAGE AttributeTypeViolation due to instance: idexp0x7f5bc2aa7520 expected type: ID found value: "p" at attribute: id
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.310
+!MESSAGE AttributeTypeViolation due to instance: idexp0x7f5bc2b23910 expected type: ID found value: "Expression2" at attribute: id
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.310
+!MESSAGE AttributeTypeViolation due to instance: singlesigparameter0x7f5bc2aa7df0 expected type: ID found value: "visitor" at attribute: nameParameter
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.310
+!MESSAGE AttributeTypeViolation due to instance: accessexp0x7f5bc2b23550 expected type: name found value: selfexp0x7f5bc2b222e0 at attribute: name
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.310
+!MESSAGE AttributeTypeViolation due to instance: compoundsigparameter0x7f5bc2b22760 expected type: ID found value: "Expression1" at attribute: nameParameter
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.310
+!MESSAGE AttributeTypeViolation due to instance: accessexp0x7f5bc2aa7be0 expected type: name found value: selfexp0x7f5bc2b239a0 at attribute: name
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.310
+!MESSAGE AttributeTypeViolation due to instance: compoundsigparameter0x7f5bc2aad3a0 expected type: ID found value: "self" at attribute: nameParameter
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.310
+!MESSAGE AttributeTypeViolation due to instance: singleclass0x7f5bc2b223a0 expected type: ID found value: "Estudante" at attribute: fatherName
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.310
+!MESSAGE AttributeTypeViolation due to instance: signature0x7f5bc2aab760 expected type: ID found value: "accept" at attribute: nameFunction
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.310
+!MESSAGE AttributeTypeViolation due to instance: selfexp0x7f5bc2b222e0 expected type: ID found value: list0x7f5bc2aacac0 at attribute: id
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.310
+!MESSAGE AttributeTypeViolation due to instance: selfexp0x7f5bc2b239a0 expected type: ID found value: list0x7f5bc2aacb40 at attribute: id
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.310
+!MESSAGE AttributeTypeViolation due to instance: accessexp0x7f5bc2aaf5b0 expected type: name found value: idexp0x7f5bc2aad700 at attribute: name
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.311
+!MESSAGE AttributeTypeViolation due to instance: signature0x7f5bc2b223d0 expected type: Parameters found value: compoundsigparameter0x7f5bc2afceb0 at attribute: parameters
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.311
+!MESSAGE AttributeTypeViolation due to instance: idexp0x7f5bc2b22190 expected type: ID found value: "Expression1" at attribute: id
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.311
+!MESSAGE AttributeTypeViolation due to instance: selfexp0x7f5bc2aa9b80 expected type: ID found value: "self" at attribute: id
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.311
+!MESSAGE AttributeTypeViolation due to instance: signature0x7f5bc2b223d0 expected type: ID found value: "__shop__" at attribute: nameFunction
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.311
+!MESSAGE AttributeTypeViolation due to instance: idexp0x7f5bc2aad700 expected type: ID found value: "visitor" at attribute: id
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.311
+!MESSAGE AttributeTypeViolation due to instance: idexp0x7f5bc2b22730 expected type: ID found value: "leftExpression" at attribute: id
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.311
+!MESSAGE AttributeTypeViolation due to instance: compoundsigparameter0x7f5bc2afceb0 expected type: ID found value: "self" at attribute: nameParameter
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.311
+!MESSAGE AttributeTypeViolation due to instance: callwithparameters0x7f5bc2aabaf0 expected type: ID found value: "visitMulExp" at attribute: nameFunction
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.311
+!MESSAGE AttributeTypeViolation due to instance: signature0x7f5bc2aab760 expected type: Parameters found value: compoundsigparameter0x7f5bc2aad3a0 at attribute: parameters
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.311
+!MESSAGE AttributeTypeViolation due to instance: idexp0x7f5bc2b255b0 expected type: ID found value: "rightExpression" at attribute: id
+!SUBENTRY 1 org.deri.wsml.eclipse.reasonerview 4 0 2022-05-02 21:55:07.311
+!MESSAGE AttributeTypeViolation due to instance: singlesigparameter0x7f5bc2b22910 expected type: ID found value: "Expression2" at attribute: nameParameter
+
+!ENTRY org.eclipse.jface 4 0 2022-05-02 21:55:30.597
+!MESSAGE Unhandled event loop exception during blocked modal context.
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NullPointerException)
+	at org.eclipse.swt.SWT.error(SWT.java:3777)
+	at org.eclipse.swt.SWT.error(SWT.java:3695)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3378)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3036)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:173)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:388)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:507)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:275)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.disconnectFromWorkspace(IDEWorkbenchAdvisor.java:398)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.postShutdown(IDEWorkbenchAdvisor.java:315)
+	at org.eclipse.ui.internal.Workbench.shutdown(Workbench.java:2711)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:923)
+	at org.eclipse.ui.internal.Workbench.access$15(Workbench.java:840)
+	at org.eclipse.ui.internal.Workbench$23.run(Workbench.java:1084)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1082)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1054)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:719)
+	at org.eclipse.ui.internal.WorkbenchWindow.access$0(WorkbenchWindow.java:698)
+	at org.eclipse.ui.internal.WorkbenchWindow$3.run(WorkbenchWindow.java:814)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:812)
+	at org.eclipse.jface.window.Window.handleShellCloseEvent(Window.java:741)
+	at org.eclipse.jface.window.Window$3.shellClosed(Window.java:687)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:92)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1158)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1182)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1167)
+	at org.eclipse.swt.widgets.Shell.closeWidget(Shell.java:562)
+	at org.eclipse.swt.widgets.Shell.gtk_delete_event(Shell.java:1021)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1535)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4506)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4099)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:5792)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1177)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:1550)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3031)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2384)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2348)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2200)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:495)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:288)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:490)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:193)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:386)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:549)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:504)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1236)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1212)
+Caused by: java.lang.NullPointerException
+	at org.deri.wsml.eclipse.nature.WSMTFileValidator$1.run(WSMTFileValidator.java:139)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:133)
+	... 59 more
+
+!ENTRY org.eclipse.jface 4 0 2022-05-02 21:55:30.659
+!MESSAGE Unhandled event loop exception during blocked modal context.
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NullPointerException)
+	at org.eclipse.swt.SWT.error(SWT.java:3777)
+	at org.eclipse.swt.SWT.error(SWT.java:3695)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3378)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3036)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.block(ModalContext.java:173)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:388)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:507)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:275)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.disconnectFromWorkspace(IDEWorkbenchAdvisor.java:398)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.postShutdown(IDEWorkbenchAdvisor.java:315)
+	at org.eclipse.ui.internal.Workbench.shutdown(Workbench.java:2711)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:923)
+	at org.eclipse.ui.internal.Workbench.access$15(Workbench.java:840)
+	at org.eclipse.ui.internal.Workbench$23.run(Workbench.java:1084)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1082)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1054)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:719)
+	at org.eclipse.ui.internal.WorkbenchWindow.access$0(WorkbenchWindow.java:698)
+	at org.eclipse.ui.internal.WorkbenchWindow$3.run(WorkbenchWindow.java:814)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:812)
+	at org.eclipse.jface.window.Window.handleShellCloseEvent(Window.java:741)
+	at org.eclipse.jface.window.Window$3.shellClosed(Window.java:687)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:92)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1158)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1182)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1167)
+	at org.eclipse.swt.widgets.Shell.closeWidget(Shell.java:562)
+	at org.eclipse.swt.widgets.Shell.gtk_delete_event(Shell.java:1021)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1535)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4506)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4099)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:5792)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1177)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:1550)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3031)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2384)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2348)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2200)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:495)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:288)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:490)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:193)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:386)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:549)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:504)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1236)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1212)
+Caused by: java.lang.NullPointerException
+	at org.deri.wsml.eclipse.nature.WSMTFileValidator$1.run(WSMTFileValidator.java:139)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:133)
+	... 59 more
+
+!ENTRY org.eclipse.osgi 4 0 2022-05-02 21:55:30.789
+!MESSAGE Application error
+!STACK 1
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.NullPointerException)
+	at org.eclipse.swt.SWT.error(SWT.java:3777)
+	at org.eclipse.swt.SWT.error(SWT.java:3695)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3378)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3036)
+	at org.eclipse.swt.widgets.Display.release(Display.java:3087)
+	at org.eclipse.swt.graphics.Device.dispose(Device.java:237)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:129)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:193)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:386)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:549)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:504)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1236)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1212)
+Caused by: java.lang.NullPointerException
+	at org.deri.wsml.eclipse.nature.WSMTFileValidator$1.run(WSMTFileValidator.java:139)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:133)
+	... 18 more

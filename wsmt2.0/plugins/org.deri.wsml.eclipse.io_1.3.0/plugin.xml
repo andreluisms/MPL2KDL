@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="org.deri.wsml.eclipse.io"
+   name="WSML Importation Plug-in"
+   version="1.3"
+   provider-name="STI Innsbruck"
+   class="org.deri.wsml.eclipse.io.IOPlugin">
+
+   <runtime>
+      <library name="probePlugin.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="net.sourceforge.wsmo4j"/>
+      <import plugin="org.deri.wsml.eclipse"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.ui.ide"/>
+   </requires>
+   
+   <extension-point id="translation" name="translation" schema="schema/IO.exsd"/>
+	<!--<extension
+         point="org.eclipse.ui.importWizards">
+      <wizard
+            class="org.deri.wsml.eclipse.io.wizards.ImportWizard"
+            id="org.deri.wsml.io.semantic"
+            name="File System (semantic)">
+      </wizard>
+   </extension>
+   -->
+ <extension
+       point="org.eclipse.ui.popupMenus">
+    <viewerContribution
+          id="org.deri.eclipse.converter.viewercontribution"
+          targetID="org.eclipse.ui.views.ResourceNavigator">
+       <menu
+             id="org.deri.eclipse.ResourceNavigator.contribution.converter.menu"
+             label="Convert To"
+             path="additions">
+          <groupMarker name="conversionGroup"/>
+       </menu>
+    </viewerContribution>
+ </extension>
+   
+</plugin>

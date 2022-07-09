@@ -1,0 +1,40 @@
+Manifest-Version: 1.0
+Generated-from: 1653679009000;type=2
+Bundle-ManifestVersion: 2
+Bundle-Name: Runtime Plug-in
+Bundle-SymbolicName: org.deri.mapping.eclipse.runtime; singleton:=true
+Bundle-Version: 0.2
+Bundle-ClassPath: runtime.jar
+Bundle-Activator: org.deri.mapping.eclipse.runtime.RuntimePlugin
+Bundle-Vendor: STI Innsbruck
+Bundle-Localization: plugin
+Export-Package: ie.deri.wsmx.core.configuration.annotation,
+ org.deri.mapping.eclipse.runtime,
+ org.deri.mapping.eclipse.runtime.preferences,
+ org.deri.wsmx.eclipse.datamediation.ooMediator.items,
+ org.deri.wsmx.mediation.beans,
+ org.deri.wsmx.mediation.ooMediator,
+ org.deri.wsmx.mediation.ooMediator.beans,
+ org.deri.wsmx.mediation.ooMediator.functoids,
+ org.deri.wsmx.mediation.ooMediator.functoids.lookup,
+ org.deri.wsmx.mediation.ooMediator.functoids.string,
+ org.deri.wsmx.mediation.ooMediator.gui,
+ org.deri.wsmx.mediation.ooMediator.gui.loader,
+ org.deri.wsmx.mediation.ooMediator.gui.loader.wsml,
+ org.deri.wsmx.mediation.ooMediator.instancecompare,
+ org.deri.wsmx.mediation.ooMediator.instancecompare.errors,
+ org.deri.wsmx.mediation.ooMediator.instancecompare.id,
+ org.deri.wsmx.mediation.ooMediator.instancecompare.result,
+ org.deri.wsmx.mediation.ooMediator.logging,
+ org.deri.wsmx.mediation.ooMediator.mapper,
+ org.deri.wsmx.mediation.ooMediator.mapper.mappings,
+ org.deri.wsmx.mediation.ooMediator.storage,
+ org.deri.wsmx.mediation.ooMediator.util,
+ org.deri.wsmx.mediation.ooMediator.wsml
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ net.sourceforge.mediation,
+ net.sourceforge.wsmo4j,
+ org.deri.wsml.eclipse.reasoner,
+ org.openoasis.see.integration
+Eclipse-LazyStart: true

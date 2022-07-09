@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="net.sourceforge.jpowergraph"
+   name="JPowerGraph Plug-in"
+   version="0.4"
+   provider-name="Mick Kerrigan"
+   class="net.sourceforge.jpowergraph.JPowerGraphPlugin">
+
+   <runtime>
+      <library name="jpowergraph.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/jpowergraph-0.4-common.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+      <library name="lib/jpowergraph-0.4-swt.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.swt"/>
+   </requires>
+
+</plugin>

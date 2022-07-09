@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="org.deri.mapping.eclipse.viewbasededitor"
+   name="Abstract Mapping Language View Based Mapping Editor"
+   version="0.2"
+   provider-name="STI Innsbruck"
+   class="org.deri.mapping.eclipse.viewbasededitor.ViewbasededitorPlugin">
+
+   <runtime>
+      <library name="viewbasededitor.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/jwnl.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/lexical-algorithms.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/commons-logging.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/log4j-1.2.9.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.jface.text"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.ui.editors"/>
+      <import plugin="org.eclipse.ui.workbench.texteditor"/>
+      <import plugin="net.sourceforge.mediation"/>
+      <import plugin="org.deri.mapping.eclipse"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="net.sourceforge.wsmo4j"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.ui.views"/>
+      <import plugin="org.deri.wsml.eclipse"/>
+   </requires>
+   
+   <extension point="org.eclipse.core.runtime.preferences">
+		<initializer class="org.deri.mapping.eclipse.viewbasededitor.ViewBasedEditorPreferenceInitializer"/>
+	</extension>
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="org.deri.mapping.eclipse.viewbasededitor.editor.ViewBasedEditor"
+            default="false"
+            extensions="map"
+            icon="icons/eview16/mapping.png"
+            id="org.deri.mapping.eclipse.viewbasededitor.ViewBasedEditor"
+            name="View Based Mapping Editor"/>
+   </extension>
+   <extension point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.deri.mapping.eclipse.preferences.MappingPreferences"
+            class="org.deri.mapping.eclipse.viewbasededitor.preferences.ViewBasedEditorPreferences"
+            id="org.deri.mapping.eclipse.viewbasededitor.preferences.ViewBasedEditorPreferences"
+            name="View based Editor"/>
+   </extension>
+</plugin>

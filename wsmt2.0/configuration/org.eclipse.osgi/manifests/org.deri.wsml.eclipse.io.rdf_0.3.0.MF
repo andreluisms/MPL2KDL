@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Generated-from: 1653679010000;type=2
+Bundle-ManifestVersion: 2
+Bundle-Name: WSML RDF Importation Plug-in
+Bundle-SymbolicName: org.deri.wsml.eclipse.io.rdf; singleton:=true
+Bundle-Version: 0.3
+Bundle-ClassPath: rdf.jar
+Bundle-Activator: org.deri.wsml.eclipse.io.rdf.RDFPlugin
+Bundle-Vendor: STI Innsbruck
+Bundle-Localization: plugin
+Export-Package: org.deri.wsml.eclipse.io.rdf
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ net.sourceforge.wsmo4j,
+ org.deri.wsml.eclipse.io,
+ org.deri.wsml.eclipse,
+ org.eclipse.core.resources
+Eclipse-LazyStart: true

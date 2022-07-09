@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="net.sourceforge.mediation"
+   name="Abstract Mapping Language"
+   version="0.5"
+   provider-name="Mediation Working Group"
+   class="org.omwg.mediation.AbstractMappingLanguagePlugin">
+
+   <runtime>
+      <library name="lib/mapping_language_exporter.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/mapping_language_parser.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/mapping_language.jar">
+         <export name="*"/>
+      </library>
+      <library name="mappinglanguageplugin.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+   </requires>
+
+</plugin>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="uk.ac.open.kmi.irsIII.integration"
+   name="IRSIII Integration Plug-in"
+   version="0.2"
+   provider-name="Knowledge Media Institute - The Open University"
+   class="uk.ac.open.kmi.irsIII.integration.IRSIII_IntegrationPlugin">
+
+   <runtime>
+      <library name="irsIII-integration.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/common/commons-dbcp.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/saaj/saaj-api.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/shared/activation.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/wsdl4j/qname.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/axis.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/wsdl4j/wsdl4j.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/shared/mail.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/shared/xsdlib.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/saaj/saaj-impl.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/jaxp/endorsed/dom.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/jaxp/jaxp-api.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/common/commons-el.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/common/commons-lang-2.1.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/common/commons-logging-api.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/common/commons-pool.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/common/naming-common.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/common/naming-factory.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/common/naming-java.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/common/naming-resources.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/jaxp/endorsed/sax.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/irsIII-2.4.0.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/jaxp/endorsed/xalan.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/jaxp/endorsed/xercesImpl.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/jaxp/endorsed/xsltc.jar">
+         <export name="*"/>
+         
+      </library>
+      <library name="lib/ocmlservice-2.0.1.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="uk.ac.open.kmi.ocml2wsml"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="net.sourceforge.wsmo4j"/>
+      <import plugin="org.openoasis.see.integration"/>
+   </requires>
+
+</plugin>

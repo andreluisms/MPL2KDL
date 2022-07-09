@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: WSML-UI Plug-in
+Bundle-SymbolicName: org.deri.wsml.eclipse.ui;singleton:=true
+Bundle-Version: 0.1
+Bundle-Activator: org.deri.wsml.eclipse.ui.Activator
+Bundle-Vendor: STI Innsbruck
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.ui,
+ org.eclipse.ui.ide,
+ org.eclipse.ui.views,
+ org.eclipse.ui.navigator,
+ org.eclipse.ui.navigator.resources,
+ net.sourceforge.wsmo4j,
+ org.deri.wsml.eclipse.wizards,
+ org.deri.wsml.eclipse.reasoner.predefinedqueries,
+ org.deri.wsml.eclipse;bundle-version="1.4.0"
+Eclipse-LazyStart: true
+Export-Package: org.deri.wsml.eclipse.internal.ui;x-internal:=true,
+ org.deri.wsml.eclipse.internal.ui.actions;x-internal:=true,
+ org.deri.wsml.eclipse.internal.ui.filters;x-internal:=true,
+ org.deri.wsml.eclipse.internal.ui.navigator;x-internal:=true,
+ org.deri.wsml.eclipse.internal.ui.outline;x-friends:="org.deri.wsml.eclipse.texteditor,org.deri.wsml.eclipse.visualizer,org.deri.wsml.eclipse.formbasededitor",
+ org.deri.wsml.eclipse.internal.ui.sorters;x-internal:=true,
+ org.deri.wsml.eclipse.internal.ui.typehierarchy;x-internal:=true,
+ org.deri.wsml.eclipse.internal.ui.util;x-internal:=true,
+ org.deri.wsml.eclipse.ui,
+ org.deri.wsml.eclipse.ui.wsmlfiletreemodel
+Bundle-ClassPath: ui.jar

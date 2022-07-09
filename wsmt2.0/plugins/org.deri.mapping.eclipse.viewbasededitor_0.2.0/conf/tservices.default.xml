@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<TransformationServices>
+    <Service>
+        <id>http://examples.org/services/plain/copy</id>
+        <noOfParam>1</noOfParam>
+        <description>Returns the parameter unmodified as ouput.</description>
+    </Service>
+    <Service>
+        <id>http://examples.org/services/stringManipulator/cancat2</id>
+        <noOfParam>2</noOfParam>
+        <description>Concatenates the two input strings and returns the result.</description>
+    </Service>
+    <Service>
+        <id>http://examples.org/services/stringManipulator/cancat2withSeparator</id>
+        <noOfParam>2</noOfParam>
+        <description>Concatenates the two input strings and returns the result. The two original strings are separated by one space.</description>
+    </Service>
+</TransformationServices>

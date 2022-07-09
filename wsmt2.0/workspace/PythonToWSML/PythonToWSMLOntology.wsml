@@ -1,0 +1,496 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-rule"
+namespace { _"http://ufs.br/ontologies#"
+ }
+
+ontology PythonAbstractSyntax
+
+concept COMMA
+     value ofType _string
+
+concept SOMA
+     value ofType _string
+
+concept ID
+     value ofType _string
+
+concept NUMBER
+     value ofType _string
+
+concept VEZES
+     value ofType _string
+
+concept POT
+     value ofType _string
+
+concept LPAREN
+     value ofType _string
+
+concept RPAREN
+     value ofType _string
+
+concept IGUAL
+     value ofType _string
+
+concept LCHAV
+     value ofType _string
+
+concept RCHAV
+     value ofType _string
+
+concept PV
+     value ofType _string
+
+concept P
+     value ofType _string
+
+concept DP
+     value ofType _string
+
+concept IDENT
+     value ofType _string
+
+concept DEDENT
+     value ofType _string
+
+concept STRING
+     value ofType _string
+
+concept LBRACKETS
+     value ofType _string
+
+concept RBRACKETS
+     value ofType _string
+
+concept LESS
+     value ofType _string
+
+concept NEWLINE
+     value ofType _string
+
+concept WHILE
+     value ofType _string
+
+concept IF
+     value ofType _string
+
+concept TRUE
+     value ofType _string
+
+concept FALSE
+     value ofType _string
+
+concept RETURN
+     value ofType _string
+
+concept CLASS
+     value ofType _string
+
+concept DEF
+     value ofType _string
+
+concept PASS
+     value ofType _string
+
+concept SELF
+     value ofType _string
+
+concept FOR
+     value ofType _string
+
+concept IN
+     value ofType _string
+
+concept Program
+
+concept SingleClass subConceptOf Program
+     className ofType ID
+     fatherName ofType ID
+     classBody ofType ClassBody
+
+concept CompoundClass subConceptOf Program
+     className ofType ID
+     fatherName ofType ID
+     classBody ofType ClassBody
+     classes ofType Program
+
+concept ClassBody
+     declarations ofType Declarations
+
+concept Declarations
+
+concept SingleDeclaration subConceptOf Declarations
+     declaration ofType Declaration
+
+concept CompoundDeclaration subConceptOf Declarations
+     declaration ofType Declaration
+     declarations ofType Declarations
+
+concept Declaration
+
+concept AttributeDeclaration subConceptOf Declaration
+     nameAttribute ofType ID
+     expression ofType Expression
+
+concept FunctionDeclaration subConceptOf Declaration
+     signature ofType Signature
+     functionBody ofType Body
+
+concept Signature
+     nameFunction ofType ID
+     parameters ofType Parameters
+
+concept SigParameters
+
+concept SingleSigParameter subConceptOf SigParameters
+     nameParameter ofType ID
+
+concept CompoundSigParameter subConceptOf SigParameters
+     nameParameter ofType ID
+     parameters ofType SigParameters
+
+concept Body
+     statements ofType Statements
+
+concept Statements
+
+concept SingleStatement subConceptOf Statements
+     statement ofType Statement
+
+concept CompoundStatement subConceptOf Statements
+     statement ofType Statement
+     statements ofType Statements
+
+concept Statement
+
+concept ExpressionStm subConceptOf Statement
+     expression ofType Expression
+
+concept WhileStm subConceptOf Statement
+     expression ofType Expression
+     block ofType Body
+
+concept ReturnStm subConceptOf Statement
+     expression ofType Expression
+
+concept PassStm subConceptOf Statement
+
+concept Expression
+
+concept AssignExp subConceptOf Expression
+     leftExpression ofType Expression
+     rightExpression ofType Expression
+
+concept SomaExp subConceptOf Expression
+     leftExpression ofType Expression
+     rightExpression ofType Expression
+
+concept MulExp subConceptOf Expression
+     leftExpression ofType Expression
+     rightExpression ofType Expression
+
+concept PotExp subConceptOf Expression
+     leftExpression ofType Expression
+     rightExpression ofType Expression
+
+concept CallExp subConceptOf Expression
+     call ofType Call
+
+concept NumExp subConceptOf Expression
+     number ofType Number
+
+concept IdExp subConceptOf Expression
+     id ofType ID
+
+concept SelfExp subConceptOf Expression
+     id ofType ID
+
+concept StarIDExp subConceptOf Expression
+     id ofType ID
+
+concept DStarIDExp subConceptOf Expression
+     id ofType ID
+
+concept BooleanExp subConceptOf Expression
+     boolValue ofType BoolValue
+
+concept AccessExp subConceptOf Expression
+     name ofType name
+     expression ofType Expression
+
+concept Call
+
+concept CallWithParameters subConceptOf Call
+     nameFunction ofType ID
+     parameters ofType Parameters
+
+concept CallWithoutParameters subConceptOf Call
+     nameFunction ofType ID
+
+concept Parameters
+
+concept CompoundParameter subConceptOf Parameters
+     expression ofType Expression
+     parameters ofType Parameters
+
+concept SingleParameter subConceptOf Parameters
+     expression ofType Expression
+
+instance class0x7f5bc2afceb0 memberOf CLASS
+     value hasValue "class"
+
+instance id0x7f5bc2afc4f0 memberOf ID
+     value hasValue {"AlunoUFS", "Expression1", "leftExpression", "rightExpression", "print", "visitor" }
+
+instance lparen0x7f5bc2afce80 memberOf LPAREN
+     value hasValue "("
+
+instance id0x7f5bc2afceb0 memberOf ID
+     value hasValue {"Estudante", "__shop__", "Expression2", "Expression1", "p", "accept", "visitMulExp" }
+
+instance rparen0x7f5bc2afc4f0 memberOf RPAREN
+     value hasValue ")"
+
+instance dp0x7f5bc2afce80 memberOf DP
+     value hasValue ":"
+
+instance newline0x7f5bc2afceb0 memberOf NEWLINE
+     value hasValue "
+"
+
+instance ident0x7f5bc2afc4f0 memberOf IDENT
+     value hasValue {"    ", "        " }
+
+instance def0x7f5bc2afce80 memberOf DEF
+     value hasValue "def"
+
+instance lparen0x7f5bc2afc4f0 memberOf LPAREN
+     value hasValue "("
+
+instance self0x7f5bc2afce80 memberOf SELF
+     value hasValue "self"
+
+instance comma0x7f5bc2afceb0 memberOf COMMA
+     value hasValue ","
+
+instance comma0x7f5bc2afce80 memberOf COMMA
+     value hasValue ","
+
+instance p0x7f5bc2afceb0 memberOf P
+     value hasValue "."
+
+instance igual0x7f5bc2afce80 memberOf IGUAL
+     value hasValue "="
+
+instance newline0x7f5bc2afc4f0 memberOf NEWLINE
+     value hasValue "
+"
+
+instance self0x7f5bc2afc460 memberOf SELF
+     value hasValue "self"
+
+instance igual0x7f5bc2afc460 memberOf IGUAL
+     value hasValue "="
+
+instance while0x7f5bc2afce80 memberOf WHILE
+     value hasValue "while"
+
+instance true0x7f5bc2afceb0 memberOf TRUE
+     value hasValue "True"
+
+instance dp0x7f5bc2afc4f0 memberOf DP
+     value hasValue ":"
+
+instance newline0x7f5bc2afce80 memberOf NEWLINE
+     value hasValue "
+"
+
+instance ident0x7f5bc2afceb0 memberOf IDENT
+     value hasValue "            "
+
+instance dedent0x7f5bc2afceb0 memberOf DEDENT
+     value hasValue {"    ", "" }
+
+instance dedent0x7f5bc2afc4f0 memberOf DEDENT
+     value hasValue {"    ", "" }
+
+instance def0x7f5bc2afc460 memberOf DEF
+     value hasValue "def"
+
+instance rparen0x7f5bc2afc460 memberOf RPAREN
+     value hasValue ")"
+
+instance dp0x7f5bc2afceb0 memberOf DP
+     value hasValue ":"
+
+instance ident0x7f5bc2afc460 memberOf IDENT
+     value hasValue "        "
+
+instance return0x7f5bc2afceb0 memberOf RETURN
+     value hasValue "return"
+
+instance p0x7f5bc2afc460 memberOf P
+     value hasValue "."
+
+instance rparen0x7f5bc2afceb0 memberOf RPAREN
+     value hasValue ")"
+
+instance singleclass0x7f5bc2b223a0 memberOf SingleClass
+     classBody hasValue classbody0x7f5bc2aa9b50
+     className hasValue "AlunoUFS"
+     fatherName hasValue "Estudante"
+
+instance classbody0x7f5bc2aa9b50 memberOf ClassBody
+     declarations hasValue compounddeclaration0x7f5bc2aad5e0
+
+instance compounddeclaration0x7f5bc2aad5e0 memberOf CompoundDeclaration
+     declaration hasValue functiondeclaration0x7f5bc2b229a0
+     declarations hasValue singledeclaration0x7f5bc2aafa30
+
+instance functiondeclaration0x7f5bc2b229a0 memberOf FunctionDeclaration
+     functionBody hasValue body0x7f5bc2b255e0
+     signature hasValue signature0x7f5bc2b223d0
+
+instance signature0x7f5bc2b223d0 memberOf Signature
+     nameFunction hasValue "__shop__"
+     parameters hasValue compoundsigparameter0x7f5bc2afceb0
+
+instance compoundsigparameter0x7f5bc2afceb0 memberOf CompoundSigParameter
+     nameParameter hasValue "self"
+     parameters hasValue compoundsigparameter0x7f5bc2b22760
+
+instance compoundsigparameter0x7f5bc2b22760 memberOf CompoundSigParameter
+     nameParameter hasValue "Expression1"
+     parameters hasValue singlesigparameter0x7f5bc2b22910
+
+instance singlesigparameter0x7f5bc2b22910 memberOf SingleSigParameter
+     nameParameter hasValue "Expression2"
+
+instance body0x7f5bc2b255e0 memberOf Body
+     statements hasValue compoundstatement0x7f5bc2aa7c40
+
+instance compoundstatement0x7f5bc2aa7c40 memberOf CompoundStatement
+     statement hasValue expressionstm0x7f5bc2b22970
+     statements hasValue compoundstatement0x7f5bc2aabb20
+
+instance expressionstm0x7f5bc2b22970 memberOf ExpressionStm
+     expression hasValue assignexp0x7f5bc2b234f0
+
+instance assignexp0x7f5bc2b234f0 memberOf AssignExp
+     leftExpression hasValue accessexp0x7f5bc2b23550
+     rightExpression hasValue idexp0x7f5bc2b22190
+
+instance accessexp0x7f5bc2b23550 memberOf AccessExp
+     expression hasValue idexp0x7f5bc2b22730
+     name hasValue selfexp0x7f5bc2b222e0
+
+instance selfexp0x7f5bc2b222e0 memberOf SelfExp
+     id hasValue list0x7f5bc2aacac0
+
+instance idexp0x7f5bc2b22730 memberOf IdExp
+     id hasValue "leftExpression"
+
+instance idexp0x7f5bc2b22190 memberOf IdExp
+     id hasValue "Expression1"
+
+instance compoundstatement0x7f5bc2aabb20 memberOf CompoundStatement
+     statement hasValue expressionstm0x7f5bc2b25970
+     statements hasValue singlestatement0x7f5bc2aa7400
+
+instance expressionstm0x7f5bc2b25970 memberOf ExpressionStm
+     expression hasValue assignexp0x7f5bc2b23970
+
+instance assignexp0x7f5bc2b23970 memberOf AssignExp
+     leftExpression hasValue accessexp0x7f5bc2aa7be0
+     rightExpression hasValue idexp0x7f5bc2b23910
+
+instance accessexp0x7f5bc2aa7be0 memberOf AccessExp
+     expression hasValue idexp0x7f5bc2b255b0
+     name hasValue selfexp0x7f5bc2b239a0
+
+instance selfexp0x7f5bc2b239a0 memberOf SelfExp
+     id hasValue list0x7f5bc2aacb40
+
+instance idexp0x7f5bc2b255b0 memberOf IdExp
+     id hasValue "rightExpression"
+
+instance idexp0x7f5bc2b23910 memberOf IdExp
+     id hasValue "Expression2"
+
+instance singlestatement0x7f5bc2aa7400 memberOf SingleStatement
+     statement hasValue whilestm0x7f5bc2aa7e20
+
+instance whilestm0x7f5bc2aa7e20 memberOf WhileStm
+     block hasValue body0x7f5bc2aa9b20
+     expression hasValue booleanexp0x7f5bc2aa7880
+
+instance booleanexp0x7f5bc2aa7880 memberOf BooleanExp
+     boolValue hasValue "True"
+
+instance body0x7f5bc2aa9b20 memberOf Body
+     statements hasValue singlestatement0x7f5bc2aa9700
+
+instance singlestatement0x7f5bc2aa9700 memberOf SingleStatement
+     statement hasValue expressionstm0x7f5bc2aa9be0
+
+instance expressionstm0x7f5bc2aa9be0 memberOf ExpressionStm
+     expression hasValue callexp0x7f5bc2aa7e80
+
+instance callexp0x7f5bc2aa7e80 memberOf CallExp
+     call hasValue callwithparameters0x7f5bc2aa96a0
+
+instance callwithparameters0x7f5bc2aa96a0 memberOf CallWithParameters
+     nameFunction hasValue "print"
+     parameters hasValue singleparameter0x7f5bc2aa75e0
+
+instance singleparameter0x7f5bc2aa75e0 memberOf SingleParameter
+     expression hasValue idexp0x7f5bc2aa7520
+
+instance idexp0x7f5bc2aa7520 memberOf IdExp
+     id hasValue "p"
+
+instance singledeclaration0x7f5bc2aafa30 memberOf SingleDeclaration
+     declaration hasValue functiondeclaration0x7f5bc2aadc40
+
+instance functiondeclaration0x7f5bc2aadc40 memberOf FunctionDeclaration
+     functionBody hasValue body0x7f5bc2aad2b0
+     signature hasValue signature0x7f5bc2aab760
+
+instance signature0x7f5bc2aab760 memberOf Signature
+     nameFunction hasValue "accept"
+     parameters hasValue compoundsigparameter0x7f5bc2aad3a0
+
+instance compoundsigparameter0x7f5bc2aad3a0 memberOf CompoundSigParameter
+     nameParameter hasValue "self"
+     parameters hasValue singlesigparameter0x7f5bc2aa7df0
+
+instance singlesigparameter0x7f5bc2aa7df0 memberOf SingleSigParameter
+     nameParameter hasValue "visitor"
+
+instance body0x7f5bc2aad2b0 memberOf Body
+     statements hasValue singlestatement0x7f5bc2aadaf0
+
+instance singlestatement0x7f5bc2aadaf0 memberOf SingleStatement
+     statement hasValue returnstm0x7f5bc2aadcd0
+
+instance returnstm0x7f5bc2aadcd0 memberOf ReturnStm
+     expression hasValue accessexp0x7f5bc2aaf5b0
+
+instance accessexp0x7f5bc2aaf5b0 memberOf AccessExp
+     expression hasValue callexp0x7f5bc2aadc70
+     name hasValue idexp0x7f5bc2aad700
+
+instance idexp0x7f5bc2aad700 memberOf IdExp
+     id hasValue "visitor"
+
+instance callexp0x7f5bc2aadc70 memberOf CallExp
+     call hasValue callwithparameters0x7f5bc2aabaf0
+
+instance callwithparameters0x7f5bc2aabaf0 memberOf CallWithParameters
+     nameFunction hasValue "visitMulExp"
+     parameters hasValue singleparameter0x7f5bc2b22790
+
+instance singleparameter0x7f5bc2b22790 memberOf SingleParameter
+     expression hasValue selfexp0x7f5bc2aa9b80
+
+instance selfexp0x7f5bc2aa9b80 memberOf SelfExp
+     id hasValue "self"

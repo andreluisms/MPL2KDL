@@ -1,0 +1,47 @@
+Manifest-Version: 1.0
+Generated-from: 1653679010000;type=2
+Bundle-ManifestVersion: 2
+Bundle-Name: Abstract Mapping Language Wizards
+Bundle-SymbolicName: org.deri.mapping.eclipse.wizards; singleton:=true
+Bundle-Version: 0.2
+Bundle-ClassPath: mappingwizards.jar,
+ lib/powerswing-0.3.jar
+Bundle-Activator: org.deri.mapping.eclipse.wizards.MappingWizardsPlugin
+Bundle-Vendor: STI Innsbruck
+Bundle-Localization: plugin
+Export-Package: .,
+ net.sourceforge.powerswing,
+ net.sourceforge.powerswing.date,
+ net.sourceforge.powerswing.dialogs,
+ net.sourceforge.powerswing.focus,
+ net.sourceforge.powerswing.handypanels,
+ net.sourceforge.powerswing.icons,
+ net.sourceforge.powerswing.label,
+ net.sourceforge.powerswing.localization,
+ net.sourceforge.powerswing.menu,
+ net.sourceforge.powerswing.menu.history,
+ net.sourceforge.powerswing.panel,
+ net.sourceforge.powerswing.preferences,
+ net.sourceforge.powerswing.preferences.panel,
+ net.sourceforge.powerswing.preferences.tree,
+ net.sourceforge.powerswing.tabbedpane,
+ net.sourceforge.powerswing.tabbedpane.listener,
+ net.sourceforge.powerswing.tabbedpane.ui,
+ net.sourceforge.powerswing.table,
+ net.sourceforge.powerswing.thread,
+ net.sourceforge.powerswing.toolbar,
+ net.sourceforge.powerswing.util,
+ net.sourceforge.powerswing.util.date,
+ net.sourceforge.powerswing.util.multireturn,
+ org.deri.mapping.eclipse.wizards,
+ org.deri.mapping.eclipse.wizards.localisation
+Require-Bundle: net.sourceforge.mediation,
+ org.deri.mapping.eclipse,
+ org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.eclipse.core.resources,
+ org.eclipse.ui.ide,
+ org.eclipse.ui.views,
+ org.deri.wsml.eclipse,
+ net.sourceforge.wsmo4j
+Eclipse-LazyStart: true

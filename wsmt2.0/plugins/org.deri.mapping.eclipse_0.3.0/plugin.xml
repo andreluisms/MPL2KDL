@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="org.deri.mapping.eclipse"
+   name="Abstract Mapping Language Plug-in"
+   version="0.3"
+   provider-name="STI Innsbruck"
+   class="org.deri.mapping.eclipse.MappingPlugin">
+
+   <runtime>
+      <library name="mapping.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.ui.views"/>
+      <import plugin="net.sourceforge.mediation"/>
+      <import plugin="net.sourceforge.wsmo4j"/>
+      <import plugin="org.eclipse.jface.text"/>
+   </requires>
+
+	<extension point="org.eclipse.core.runtime.preferences">
+		<initializer class="org.deri.mapping.eclipse.MappingPreferenceInitializer"/>
+	</extension>
+
+   <extension point="org.eclipse.ui.perspectives">
+      <perspective
+            class="org.deri.mapping.eclipse.perspective.MappingPerspective"
+            fixed="false"
+            icon="icons/mapping.png"
+            id="org.deri.mapping.eclipse.perspective"
+            name="Mapping"/>
+   </extension>
+   <extension
+         id="org.deri.mapping.eclipse.nature.MappingBuilder"
+         name="Mapping Validator"
+         point="org.eclipse.core.resources.builders">
+      <builder>
+         <run class="org.deri.mapping.eclipse.nature.MappingBuilder"/>
+      </builder>
+   </extension>
+   <extension
+         id="org.deri.mapping.eclipse.nature.MappingNature"
+         name="Mapping Nature"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run class="org.deri.mapping.eclipse.nature.MappingNature"/>
+      </runtime>
+      <builder id="org.deri.mapping.eclipse.nature.MappingBuilder"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.deri.mapping.eclipse.preferences.MappingPreferences"
+            id="org.deri.mapping.eclipse.preferences.MappingPreferences"
+            name="Mapping"/>
+      
+      <page
+            category="org.deri.mapping.eclipse.preferences.MappingPreferences"
+            class="org.deri.mapping.eclipse.preferences.services.MediationServicePreferences"
+            id="org.deri.mapping.eclipse.preferences.services.MediationServicePreferences"
+            name="Mediation Services"/>
+   </extension>
+</plugin>

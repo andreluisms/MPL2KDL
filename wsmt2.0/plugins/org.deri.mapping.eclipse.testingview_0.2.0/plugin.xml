@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="org.deri.mapping.eclipse.testingview"
+   name="Abstract Mapping Language Unit Testing View"
+   version="0.2"
+   provider-name="STI Innsbruck"
+   class="org.deri.mapping.eclipse.testingview.TestingviewPlugin">
+
+   <runtime>
+      <library name="testingview.jar">
+         <export name="*"/>
+      </library>
+      <library name="lib/powerswing-0.3.jar">
+         <export
+               name="*">
+         </export>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="net.sourceforge.mediation"/>
+      <import plugin="net.sourceforge.wsmo4j"/>
+      <import plugin="org.deri.mapping.eclipse"/>
+      <import plugin="org.deri.wsml.eclipse"/>
+      <import plugin="org.deri.wsml.eclipse.reasoner"/>
+      <import plugin="org.eclipse.jface.text"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.deri.mapping.eclipse.runtime"/>
+      <import plugin="org.openoasis.see.integration"/>
+      <import plugin="org.eclipse.ui.console"/>
+      <import plugin="org.eclipse.compare"/>
+      <import plugin="org.deri.mapping.eclipse.views"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.deri.wsml.eclipse.texteditor" version="0.4.0"/>
+      <import plugin="org.eclipse.ui.editors" version="3.4.0"/>
+      <import plugin="org.deri.lib.texteditor" version="0.3.0"/>
+   </requires>
+   
+   <extension point="org.eclipse.core.runtime.preferences">
+		<initializer class="org.deri.mapping.eclipse.testingview.TestingViewPreferenceInitializer"/>
+	</extension>
+   
+   <extension point="org.eclipse.ui.views">
+      <category
+            name="Mapping"
+            id="org.deri.mapping">
+      </category>
+	  <view
+         allowMultiple="false"
+         category="org.deri.mapping"
+         class="org.deri.mapping.eclipse.testingview.views.UnitTestingView"
+         icon="icons/mapping.png"
+         id="org.deri.mapping.eclipse.testingview.views.UnitTestingView"
+         name="Mapping Unit Tests"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages">
+      <page category="org.deri.mapping.eclipse.preferences.MappingPreferences"
+            class="org.deri.mapping.eclipse.testingview.preferences.MUnitOntology"
+            id="org.deri.mapping.eclipse.testingview.preferences.MUnitOntology"
+            name="MUnit"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.preferencePages">
+      <page category="org.deri.mapping.eclipse.testingview.preferences.MUnitOntology"
+            class="org.deri.mapping.eclipse.testingview.preferences.InstanceComparePreferences"
+            id="org.deri.mapping.eclipse.testingview.preferences.InstanceComparePreferences"
+            name="Instance Comparison"/>
+   </extension>
+   
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+       <content-type
+             name="DMWSML"
+             id="org.eclipse.compare.dmwsml"
+             file-extensions="dmwsml">
+       </content-type>
+    </extension>
+
+    <extension point="org.eclipse.compare.contentMergeViewers">
+       <viewer
+             class="org.deri.mapping.eclipse.testingview.compare.WSMLViewerCreator"
+             extensions="dmwsml"
+             id="org.eclipse.compare.dmwsmlMergeViewer">
+       </viewer>
+       <contentTypeBinding
+             contentMergeViewerId="org.eclipse.compare.dmwsmlMergeViewer"
+             contentTypeId="org.eclipse.compare.dmwsml">
+       </contentTypeBinding>
+    </extension>
+</plugin>

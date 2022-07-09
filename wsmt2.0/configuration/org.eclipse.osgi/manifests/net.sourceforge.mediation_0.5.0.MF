@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Generated-from: 1653679009000;type=2
+Bundle-ManifestVersion: 2
+Bundle-Name: Abstract Mapping Language
+Bundle-SymbolicName: net.sourceforge.mediation
+Bundle-Version: 0.5
+Bundle-ClassPath: lib/mapping_language_exporter.jar,
+ lib/mapping_language_parser.jar,
+ lib/mapping_language.jar,
+ mappinglanguageplugin.jar
+Bundle-Activator: org.omwg.mediation.AbstractMappingLanguagePlugin
+Bundle-Vendor: Mediation Working Group
+Bundle-Localization: plugin
+Export-Package: org.omwg.mediation,
+ org.omwg.mediation.language.export,
+ org.omwg.mediation.language.export.omwg,
+ org.omwg.mediation.language.objectmodel.api,
+ org.omwg.mediation.language.objectmodel.api.conditions,
+ org.omwg.mediation.language.objectmodel.api.rules,
+ org.omwg.mediation.parser.alignment,
+ org.omwg.mediation.parser.hrsyntax,
+ org.omwg.mediation.parser.hrsyntax.analysis,
+ org.omwg.mediation.parser.hrsyntax.lexer,
+ org.omwg.mediation.parser.hrsyntax.node,
+ org.omwg.mediation.parser.hrsyntax.parser
+Require-Bundle: org.eclipse.core.runtime
+Eclipse-LazyStart: true

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin
+   id="org.deri.mapping.eclipse.runtime"
+   name="Runtime Plug-in"
+   version="0.2"
+   provider-name="STI Innsbruck"
+   class="org.deri.mapping.eclipse.runtime.RuntimePlugin">
+
+   <runtime>
+      <library name="runtime.jar">
+         <export name="*"/>
+      </library>
+   </runtime>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="net.sourceforge.mediation"/>
+      <import plugin="net.sourceforge.wsmo4j"/>
+      <import plugin="org.deri.wsml.eclipse.reasoner"/>
+      <import plugin="org.openoasis.see.integration"/>
+   </requires>
+   
+   <extension point="org.eclipse.core.runtime.preferences">
+		<initializer class="org.deri.mapping.eclipse.runtime.RuntimePreferenceInitializer"/>
+	</extension>
+   
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+      		category="org.deri.mapping.eclipse.preferences.MappingPreferences"
+            class="org.deri.mapping.eclipse.runtime.preferences.RuntimePreferences"
+            id="org.deri.mapping.eclipse.runtime.preferences.RuntimePreferences"
+            name="Runtime"/>
+   </extension>
+
+</plugin>

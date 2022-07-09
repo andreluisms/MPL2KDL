@@ -1,0 +1,5 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-rule"
+namespace { _"http://ufs.br/ontologies#"
+ }
+
+ontology PythonAbstractSyntax

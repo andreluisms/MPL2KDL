@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Generated-from: 1653679010000;type=2
+Bundle-ManifestVersion: 2
+Bundle-Name: Web Services Modeling Toolkit
+Bundle-SymbolicName: org.deri.wsmt; singleton:=true
+Bundle-Version: 1.4.3
+Bundle-ClassPath: wsmt.jar
+Bundle-Activator: org.deri.wsmt.WSMTPlugin
+Bundle-Vendor: STI Innsbruck
+Bundle-Localization: plugin
+Export-Package: org.deri.wsmt
+Require-Bundle: org.eclipse.ui.ide.application,
+ org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.ide,
+ org.eclipse.core.resources
+Eclipse-LazyStart: true
