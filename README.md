@@ -4,6 +4,8 @@ Dependencies: asdl library
 
 How to run: python source-name.py
 
+Em geral, o dono de um repositório não vai permitir que outros criem ramos ou atualizem ramos do repositório, então, para um contribuidor fazer um *pull request*, este deve fazer um fork, atualizar o fork e, no github, fazer o pull request baseado no fork (https://opensource.com/article/19/7/create-pull-request-github). 
+
 
 ## <a id="2022-12-01-173712" href="/home/fabio/Documentos/MPL2KDL-Andre/diario.md#2022-12-01-173712">2022-12-01-173712</a>
 
