@@ -2,12 +2,17 @@ from genericpath import exists
 from asdl import parse, VisitorBase
 from ast import Constant, NodeVisitor, iter_fields
 from ast import parse as astparse
-import sys
+import ast as ast
+import asdl as asdl
+import sys as sys
 import os
 
+
 #Equivalence of Python ADSL types to WSML types
-_DCT_WSMLTYPES={'string': '_string', 'int': '_int', 'identifier':'_string',
+_DCT_WSMLTYPES={'string': '_string', 'int': '_integer', 'identifier':'_string',
                 'constant':'_string'}
+
+_NONESTMT = "NoneStmt"
 
 #Types whose content is to be returned
 # _LST_CNT_TYPES=['str', 'list']
@@ -19,6 +24,45 @@ def print_header(fileName):
           """\n\nontology """ + base + 
           """\n   importsOntology{_"http://ufs.br/ontologies/mpl2kdl#PythonAbstractSyntax"}  \n""")
 
+class ScopeManager:
+    def __init__(self):
+        self.lists = []
+
+    def append(self, list):
+        self.lists.append(list)
+
+    def getParent(self, node):
+        for list in self.lists:
+            if node in list:
+                return list[0]
+        return None
+
+    def getPred(self, node):
+        for list in self.lists:
+            if node in list:
+               pos = list.index(node)
+               if pos == 1:
+                   return None
+               else:
+                   return list[pos-1]
+        return None
+
+
+    def getSucc(self, node):
+        for list in self.lists:
+            if node in list:
+               pos = list.index(node)
+               if list[-1] == node:
+                   return None
+               else:
+                   return list[pos+1]
+        return None
+    
+    def getList(self):
+        return self.lists
+
+stackstmt = ScopeManager()
+
 
 class AstToWsmlVis(NodeVisitor):
 
@@ -26,19 +70,28 @@ class AstToWsmlVis(NodeVisitor):
         super().__init__()
         print_header(fileName)
 
+
     def printWSML(self, node):
+        global stackstmt
         print("   instance ", node.__class__.__name__, 
               hex(id(node)), " memberOf ", node.__class__.__name__, sep='')
         for field, value in iter_fields(node):
             if value:
                 if (type(value).__name__ == 'str'):
                     print("      _", field, ' hasValue "', 
-                         value.replace('"', '\\"'),'"',sep='')  
+                         value.replace('"', '\\"'),'"',sep='')
+                elif (type(value).__name__ == 'int'):
+                    print("      _", field, ' hasValue ', 
+                         value,sep='')  
 
                 elif (type(value).__name__ == 'list'):
                     print("      _", field, ' hasValue {',sep='', end='')
                     size = len(value)
                     cont = 0
+                    if  isinstance(value[0], ast.stmt) :
+                        copylst = value.copy()
+                        copylst.insert(0, node)
+                        stackstmt.append(copylst)
                     for l in value:
                         cont+=1
                         prefix = l.__class__.__name__ + hex(id(l))
@@ -49,6 +102,24 @@ class AstToWsmlVis(NodeVisitor):
                 else:    
                     print("      _", field, " hasValue ", value.__class__.__name__, 
                           hex(id(value)),sep='')  
+        if isinstance(node, ast.stmt):
+            neighbor = (stackstmt.getParent(node), stackstmt.getPred(node), stackstmt.getSucc(node))
+
+            if neighbor[0] != None:
+                print("      _isStepOf hasValue ", neighbor[0].__class__.__name__,  hex(id(neighbor[0])), sep="")
+            else:
+                print("      _isStepOf hasValue", _NONESTMT)
+            if neighbor[1] != None:
+                print("      _isPreceededBy hasValue ", neighbor[1].__class__.__name__,  hex(id(neighbor[1])), sep="")
+            else:
+                print("      _isPreceededBy hasValue", _NONESTMT)
+            if neighbor[2] != None:
+                print("      _isSucceededBy hasValue ", neighbor[2].__class__.__name__,  hex(id(neighbor[2])), sep="")
+            else:
+                print("      _isSucceededBy hasValue", _NONESTMT)
+
+    
+
 
     def printWSMLC(self, node):
         print("   instance ", node.__class__.__name__, 
@@ -80,7 +151,7 @@ class AsdlToWSML(VisitorBase):
 
     def visitModule(self, mod):
         print("""wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-rule\"""" +
-              """\nnamespace { _"http://ufs.br/ontologies#"}""" +
+              """\nnamespace { _"http://ufs.br/ontologies/mpl2kdl#"}""" +
               """\n\nontology """ + mod.name + """AbstractSyntax""")
         for dfn in mod.dfns:
             print("   concept", dfn.name)  
@@ -99,6 +170,10 @@ class AsdlToWSML(VisitorBase):
         print("   concept",key, "subConceptOf", name)  
         for f in cons.fields:
             self.visit(f, key)
+        if name == "stmt":
+            print("      _isPreceededBy ofType stmt")
+            print("      _isSucceededBy ofType stmt")
+            
 
     def visitField(self, field, name):
         key = str(field.type)
@@ -122,6 +197,7 @@ def generate_concepts(fileInput = _PYTHON_ASDL):
     vis = AsdlToWSML()
     r = parse(fileInput)
     vis.visit(r)
+    print("   concept stmtContainer subConceptOf {mod, stmt, excepthandler}")
 
 
 
@@ -130,6 +206,7 @@ def generate_instances(fileInput = _PYTHON_PROGRAM):
     r = open(fileInput, 'r')
     tree = astparse(r.read())
     vis.visit(tree)
+    print ("   instance", _NONESTMT, "memberOf stmt")
 
 
 def generate(fileName, function, fname):
@@ -139,7 +216,7 @@ def generate(fileName, function, fname):
         function(fname)    
         sys.stdout.close()
         sys.stdout = tmp
-
+        
 
 def generate_ontology(srcpath, fileOAS = _PYTHON_ABSTRACT):
     generate(fileOAS, generate_concepts, _PYTHON_ASDL)

@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Generated-from: 1653679009000;type=2
+Generated-from: 1678388584000;type=2
 Bundle-ManifestVersion: 2
 Bundle-Name: Abstract Mapping Language Unit Testing View
 Bundle-SymbolicName: org.deri.mapping.eclipse.testingview; singleton:=true

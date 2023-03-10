@@ -2,7 +2,53 @@
 
 Dependencies: asdl library
 
-How to run: python source-name.py
+Install via pip: `pip3 install asdl`
+
+How to run: `python mpl2kdl.py source-name.py`
+
+Mudanças na nova versão:
+
+Adicionados os seguintes atributos para statement (stmt). Assim para um dado statement, temos:
+-  `_isStepOf`: informa o container (vínculo estático) do statement. Pode ser o módulo, classe, função, comando if, etc, onde foi declarado o statement.  
+- `_isPreceededBy`: stament que antecede
+- `_isSucceededBy`: statement que sucede 
+
+Também foi adicionado a instance `NoneStmt` usada por `_isPreceededBy` e `_isSucceededBy` para indicar a ausência de statement antes ou depois, respectivamente.
+
+Para o seguinte trecho de código:
+
+```
+import sys
+if __name__ == "__main__":
+    invalFiles = []
+```
+
+Temos:
+```
+   instance Import0x7f276708e1d0 memberOf Import
+      _names hasValue {alias0x7f276708e230}
+      _isStepOf hasValue Module0x7f27670a93c0
+      _isPreceededBy hasValue ImportFrom0x7f276708efe0
+      _isSucceededBy hasValue If0x7f276708e140
+
+   instance If0x7f276708e140 memberOf If
+      _test hasValue Compare0x7f276708e7d0
+      _body hasValue {Assign0x7f276708e800}
+      _isStepOf hasValue Module0x7f27670a93c0
+      _isPreceededBy hasValue Import0x7f276708e1d0
+      _isSucceededBy hasValue NoneStmt
+
+    instance Assign0x7f276708e800 memberOf Assign
+      _targets hasValue {Name0x7f276708e2c0}
+      _value hasValue List0x7f276708e6b0
+      _isStepOf hasValue If0x7f276708e140
+      _isPreceededBy hasValue NoneStmt
+      _isSucceededBy hasValue NoneStmt
+
+```
+
+
+
 
 Em geral, o dono de um repositório não vai permitir que outros criem ramos ou atualizem ramos do repositório, então, para um contribuidor fazer um *pull request*, este deve fazer um fork, atualizar o fork e, no github, fazer o pull request baseado no fork (https://opensource.com/article/19/7/create-pull-request-github). 
 
@@ -52,6 +98,6 @@ A parte do vídeo sobre a carga dos arquivos no wsmt começa aos 13 minutos.
 - Clicar com o botão da direita sobre o nome do arquivo wsml que quer converter;
 	- nesse mesmo menu dá para abrir o grafo no Visualizer.
 - Selecionar o ítem ConverTo;
-	- no exemplo, convere para RDFS;
+	- no exemplo, converte para RDFS;
 
 

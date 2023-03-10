@@ -12,3 +12,4 @@ if __name__ == "__main__":
             invalFiles.append(arg)
     for file in invalFiles:
         print(f"The ontology for the {file} could not be generated. The {file} does not exist.")
+

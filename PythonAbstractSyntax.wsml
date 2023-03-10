@@ -1,5 +1,5 @@
 wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-rule"
-namespace { _"http://ufs.br/ontologies#"}
+namespace { _"http://ufs.br/ontologies/mpl2kdl#"}
 
 ontology PythonAbstractSyntax
    concept mod
@@ -23,6 +23,8 @@ ontology PythonAbstractSyntax
       _decorator_list ofType (0 *) expr
       _returns ofType (0 1) expr
       _type_comment ofType (0 1) _string
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept AsyncFunctionDef subConceptOf stmt
       _name ofType _string
       _args ofType arguments
@@ -30,83 +32,131 @@ ontology PythonAbstractSyntax
       _decorator_list ofType (0 *) expr
       _returns ofType (0 1) expr
       _type_comment ofType (0 1) _string
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept ClassDef subConceptOf stmt
       _name ofType _string
       _bases ofType (0 *) expr
       _keywords ofType (0 *) keyword
       _body ofType (0 *) stmt
       _decorator_list ofType (0 *) expr
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept Return subConceptOf stmt
       _value ofType (0 1) expr
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept Delete subConceptOf stmt
       _targets ofType (0 *) expr
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept Assign subConceptOf stmt
       _targets ofType (0 *) expr
       _value ofType expr
       _type_comment ofType (0 1) _string
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept AugAssign subConceptOf stmt
       _target ofType expr
       _op ofType operator
       _value ofType expr
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept AnnAssign subConceptOf stmt
       _target ofType expr
       _annotation ofType expr
       _value ofType (0 1) expr
-      _simple ofType _int
+      _simple ofType _integer
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept For subConceptOf stmt
       _target ofType expr
       _iter ofType expr
       _body ofType (0 *) stmt
       _orelse ofType (0 *) stmt
       _type_comment ofType (0 1) _string
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept AsyncFor subConceptOf stmt
       _target ofType expr
       _iter ofType expr
       _body ofType (0 *) stmt
       _orelse ofType (0 *) stmt
       _type_comment ofType (0 1) _string
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept While subConceptOf stmt
       _test ofType expr
       _body ofType (0 *) stmt
       _orelse ofType (0 *) stmt
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept If subConceptOf stmt
       _test ofType expr
       _body ofType (0 *) stmt
       _orelse ofType (0 *) stmt
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept With subConceptOf stmt
       _items ofType (0 *) withitem
       _body ofType (0 *) stmt
       _type_comment ofType (0 1) _string
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept AsyncWith subConceptOf stmt
       _items ofType (0 *) withitem
       _body ofType (0 *) stmt
       _type_comment ofType (0 1) _string
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept Raise subConceptOf stmt
       _exc ofType (0 1) expr
       _cause ofType (0 1) expr
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept Try subConceptOf stmt
       _body ofType (0 *) stmt
       _handlers ofType (0 *) excepthandler
       _orelse ofType (0 *) stmt
       _finalbody ofType (0 *) stmt
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept Assert subConceptOf stmt
       _test ofType expr
       _msg ofType (0 1) expr
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept Import subConceptOf stmt
       _names ofType (0 *) alias
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept ImportFrom subConceptOf stmt
       _module ofType (0 1) _string
       _names ofType (0 *) alias
-      _level ofType (0 1) _int
+      _level ofType (0 1) _integer
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept Global subConceptOf stmt
       _names ofType (0 *) _string
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept Nonlocal subConceptOf stmt
       _names ofType (0 *) _string
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept Expr subConceptOf stmt
       _value ofType expr
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept Pass subConceptOf stmt
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept Break subConceptOf stmt
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept Continue subConceptOf stmt
+      _isPreceededBy ofType stmt
+      _isSucceededBy ofType stmt
    concept expr
    concept BoolOp subConceptOf expr
       _op ofType boolop
@@ -162,7 +212,7 @@ ontology PythonAbstractSyntax
       _keywords ofType (0 *) keyword
    concept FormattedValue subConceptOf expr
       _value ofType expr
-      _conversion ofType (0 1) _int
+      _conversion ofType (0 1) _integer
       _format_spec ofType (0 1) expr
    concept JoinedStr subConceptOf expr
       _values ofType (0 *) expr
@@ -242,7 +292,7 @@ ontology PythonAbstractSyntax
       _target ofType expr
       _iter ofType expr
       _ifs ofType (0 *) expr
-      _is_async ofType _int
+      _is_async ofType _integer
    concept excepthandler
    concept ExceptHandler subConceptOf excepthandler
       _type ofType (0 1) expr
@@ -271,5 +321,6 @@ ontology PythonAbstractSyntax
       _optional_vars ofType (0 1) expr
    concept type_ignore
    concept TypeIgnore subConceptOf type_ignore
-      _lineno ofType _int
+      _lineno ofType _integer
       _tag ofType _string
+   concept stmtContainer subConceptOf {mod, stmt, excepthandler}
