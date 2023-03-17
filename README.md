@@ -5,6 +5,12 @@ Dependencies: asdl library
 Install via pip: `pip3 install asdl`
 
 How to run: `python mpl2kdl.py source-name.py`
+## <a>2023-03-17-19:40</a>
+Mudanças na nova versão:
+ - Suporte a None
+ - Mudanças no Constant: literal string é gerado no WSML com aspas duplas internas. Ex: "\"var\"". Os demais literais não apresentam aspas duplas internas.   
+
+## <a>2023-03-10-22:15</a>
 
 Mudanças na nova versão:
 

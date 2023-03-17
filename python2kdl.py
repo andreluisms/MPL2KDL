@@ -79,11 +79,9 @@ class AstToWsmlVis(NodeVisitor):
             if value:
                 if (type(value).__name__ == 'str'):
                     print("      _", field, ' hasValue "', 
-                         value.replace('"', '\\"'),'"',sep='')
+                            value.replace('"', '\\"'),'"',sep='')
                 elif (type(value).__name__ == 'int'):
-                    print("      _", field, ' hasValue ', 
-                         value,sep='')  
-
+                    print("      _", field, ' hasValue ', value,sep='')  
                 elif (type(value).__name__ == 'list'):
                     print("      _", field, ' hasValue {',sep='', end='')
                     size = len(value)
@@ -100,8 +98,7 @@ class AstToWsmlVis(NodeVisitor):
                     print('}')
 
                 else:    
-                    print("      _", field, " hasValue ", value.__class__.__name__, 
-                          hex(id(value)),sep='')  
+                    print("      _", field, " hasValue ", value.__class__.__name__, hex(id(value)),sep='')  
         if isinstance(node, ast.stmt):
             neighbor = (stackstmt.getParent(node), stackstmt.getPred(node), stackstmt.getSucc(node))
 
@@ -125,11 +122,10 @@ class AstToWsmlVis(NodeVisitor):
         print("   instance ", node.__class__.__name__, 
               hex(id(node)), " memberOf ", node.__class__.__name__, sep='')
         for field, value in iter_fields(node):
-            if value:
-                r = value
-                if (type(value).__name__=='str'):
-                    r = value.replace('"', '\\"')
-                print("      _", field, ' hasValue "', r,'"',sep='')  
+            r = value
+            if (type(value).__name__=='str'):
+                r = '\\"' + value + '\\"'
+            print("      _", field, ' hasValue "', r,'"',sep='')  
 
     def visit(self, node):
         if not isinstance(node, Constant):  

@@ -4,214 +4,272 @@ namespace { _"http://ufs.br/ontologies/mpl2kdl#"}
 ontology mpl2kdl
    importsOntology{_"http://ufs.br/ontologies/mpl2kdl#PythonAbstractSyntax"}  
 
-   instance Module0x7f416cefa260 memberOf Module
-      _body hasValue {ImportFrom0x7f416cf3f5b0, ImportFrom0x7f416cf3f670, Import0x7f416cf3f8b0, If0x7f416cf3f850}
-   instance ImportFrom0x7f416cf3f5b0 memberOf ImportFrom
+   instance Module0x7f8a97295d80 memberOf Module
+      _body hasValue {ImportFrom0x7f8a97295de0, ImportFrom0x7f8a97295e40, Import0x7f8a97295f30, If0x7f8a97296050, Assign0x7f8a97296320, Assign0x7f8a97178f70, Assign0x7f8a97178ee0, Assign0x7f8a97178e50}
+   instance ImportFrom0x7f8a97295de0 memberOf ImportFrom
       _module hasValue "python2kdl"
-      _names hasValue {alias0x7f416cf3f8e0}
-      _isStepOf hasValue Module0x7f416cefa260
+      _names hasValue {alias0x7f8a97295e70}
+      _isStepOf hasValue Module0x7f8a97295d80
       _isPreceededBy hasValue NoneStmt
-      _isSucceededBy hasValue ImportFrom0x7f416cf3f670
-   instance alias0x7f416cf3f8e0 memberOf alias
+      _isSucceededBy hasValue ImportFrom0x7f8a97295e40
+   instance alias0x7f8a97295e70 memberOf alias
       _name hasValue "generate_ontology"
-   instance ImportFrom0x7f416cf3f670 memberOf ImportFrom
+   instance ImportFrom0x7f8a97295e40 memberOf ImportFrom
       _module hasValue "os.path"
-      _names hasValue {alias0x7f416cf3f910}
-      _isStepOf hasValue Module0x7f416cefa260
-      _isPreceededBy hasValue ImportFrom0x7f416cf3f5b0
-      _isSucceededBy hasValue Import0x7f416cf3f8b0
-   instance alias0x7f416cf3f910 memberOf alias
+      _names hasValue {alias0x7f8a97295f00}
+      _isStepOf hasValue Module0x7f8a97295d80
+      _isPreceededBy hasValue ImportFrom0x7f8a97295de0
+      _isSucceededBy hasValue Import0x7f8a97295f30
+   instance alias0x7f8a97295f00 memberOf alias
       _name hasValue "exists"
-   instance Import0x7f416cf3f8b0 memberOf Import
-      _names hasValue {alias0x7f416cf3f640}
-      _isStepOf hasValue Module0x7f416cefa260
-      _isPreceededBy hasValue ImportFrom0x7f416cf3f670
-      _isSucceededBy hasValue If0x7f416cf3f850
-   instance alias0x7f416cf3f640 memberOf alias
+   instance Import0x7f8a97295f30 memberOf Import
+      _names hasValue {alias0x7f8a97295f60}
+      _isStepOf hasValue Module0x7f8a97295d80
+      _isPreceededBy hasValue ImportFrom0x7f8a97295e40
+      _isSucceededBy hasValue If0x7f8a97296050
+   instance alias0x7f8a97295f60 memberOf alias
       _name hasValue "sys"
-   instance If0x7f416cf3f850 memberOf If
-      _test hasValue Compare0x7f416cf3f7f0
-      _body hasValue {Assign0x7f416cf3f9a0, For0x7f416cf3f790, For0x7f416cf3ff40}
-      _isStepOf hasValue Module0x7f416cefa260
-      _isPreceededBy hasValue Import0x7f416cf3f8b0
-      _isSucceededBy hasValue NoneStmt
-   instance Compare0x7f416cf3f7f0 memberOf Compare
-      _left hasValue Name0x7f416cf3f880
-      _ops hasValue {Eq0x7f416cf3cf40}
-      _comparators hasValue {Constant0x7f416cf3f7c0}
-   instance Name0x7f416cf3f880 memberOf Name
+   instance If0x7f8a97296050 memberOf If
+      _test hasValue Compare0x7f8a97296080
+      _body hasValue {Assign0x7f8a97296380, For0x7f8a972963e0, For0x7f8a97296530}
+      _isStepOf hasValue Module0x7f8a97295d80
+      _isPreceededBy hasValue Import0x7f8a97295f30
+      _isSucceededBy hasValue Assign0x7f8a97296320
+   instance Compare0x7f8a97296080 memberOf Compare
+      _left hasValue Name0x7f8a972960b0
+      _ops hasValue {Eq0x7f8a97295450}
+      _comparators hasValue {Constant0x7f8a97296350}
+   instance Name0x7f8a972960b0 memberOf Name
       _id hasValue "__name__"
-      _ctx hasValue Load0x7f416cf3c610
-   instance Load0x7f416cf3c610 memberOf Load
-   instance Eq0x7f416cf3cf40 memberOf Eq
-   instance Constant0x7f416cf3f7c0 memberOf Constant
-      _value hasValue "__main__"
-   instance Assign0x7f416cf3f9a0 memberOf Assign
-      _targets hasValue {Name0x7f416cf3fa90}
-      _value hasValue List0x7f416cf3fa00
-      _isStepOf hasValue If0x7f416cf3f850
+      _ctx hasValue Load0x7f8a97294490
+   instance Load0x7f8a97294490 memberOf Load
+   instance Eq0x7f8a97295450 memberOf Eq
+   instance Constant0x7f8a97296350 memberOf Constant
+      _value hasValue "\"__main__\""
+      _kind hasValue "None"
+   instance Assign0x7f8a97296380 memberOf Assign
+      _targets hasValue {Name0x7f8a972963b0}
+      _value hasValue List0x7f8a97296410
+      _isStepOf hasValue If0x7f8a97296050
       _isPreceededBy hasValue NoneStmt
-      _isSucceededBy hasValue For0x7f416cf3f790
-   instance Name0x7f416cf3fa90 memberOf Name
+      _isSucceededBy hasValue For0x7f8a972963e0
+   instance Name0x7f8a972963b0 memberOf Name
       _id hasValue "invalFiles"
-      _ctx hasValue Store0x7f416cf3c670
-   instance Store0x7f416cf3c670 memberOf Store
-   instance List0x7f416cf3fa00 memberOf List
-      _ctx hasValue Load0x7f416cf3c610
-   instance Load0x7f416cf3c610 memberOf Load
-   instance For0x7f416cf3f790 memberOf For
-      _target hasValue Tuple0x7f416cf3f730
-      _iter hasValue Call0x7f416cf3ff70
-      _body hasValue {If0x7f416cf3ff10}
-      _isStepOf hasValue If0x7f416cf3f850
-      _isPreceededBy hasValue Assign0x7f416cf3f9a0
-      _isSucceededBy hasValue For0x7f416cf3ff40
-   instance Tuple0x7f416cf3f730 memberOf Tuple
-      _elts hasValue {Name0x7f416cf3ffa0, Name0x7f416cf3ffd0}
-      _ctx hasValue Store0x7f416cf3c670
-   instance Name0x7f416cf3ffa0 memberOf Name
+      _ctx hasValue Store0x7f8a97294430
+   instance Store0x7f8a97294430 memberOf Store
+   instance List0x7f8a97296410 memberOf List
+      _ctx hasValue Load0x7f8a97294490
+   instance Load0x7f8a97294490 memberOf Load
+   instance For0x7f8a972963e0 memberOf For
+      _target hasValue Tuple0x7f8a97296440
+      _iter hasValue Call0x7f8a97296560
+      _body hasValue {If0x7f8a97296830}
+      _isStepOf hasValue If0x7f8a97296050
+      _isPreceededBy hasValue Assign0x7f8a97296380
+      _isSucceededBy hasValue For0x7f8a97296530
+   instance Tuple0x7f8a97296440 memberOf Tuple
+      _elts hasValue {Name0x7f8a97296470, Name0x7f8a97296500}
+      _ctx hasValue Store0x7f8a97294430
+   instance Name0x7f8a97296470 memberOf Name
       _id hasValue "i"
-      _ctx hasValue Store0x7f416cf3c670
-   instance Store0x7f416cf3c670 memberOf Store
-   instance Name0x7f416cf3ffd0 memberOf Name
+      _ctx hasValue Store0x7f8a97294430
+   instance Store0x7f8a97294430 memberOf Store
+   instance Name0x7f8a97296500 memberOf Name
       _id hasValue "arg"
-      _ctx hasValue Store0x7f416cf3c670
-   instance Store0x7f416cf3c670 memberOf Store
-   instance Store0x7f416cf3c670 memberOf Store
-   instance Call0x7f416cf3ff70 memberOf Call
-      _func hasValue Name0x7f416cf3fee0
-      _args hasValue {Attribute0x7f416cf3fe80}
-   instance Name0x7f416cf3fee0 memberOf Name
+      _ctx hasValue Store0x7f8a97294430
+   instance Store0x7f8a97294430 memberOf Store
+   instance Store0x7f8a97294430 memberOf Store
+   instance Call0x7f8a97296560 memberOf Call
+      _func hasValue Name0x7f8a97296590
+      _args hasValue {Attribute0x7f8a97296860}
+   instance Name0x7f8a97296590 memberOf Name
       _id hasValue "enumerate"
-      _ctx hasValue Load0x7f416cf3c610
-   instance Load0x7f416cf3c610 memberOf Load
-   instance Attribute0x7f416cf3fe80 memberOf Attribute
-      _value hasValue Name0x7f416cf3feb0
+      _ctx hasValue Load0x7f8a97294490
+   instance Load0x7f8a97294490 memberOf Load
+   instance Attribute0x7f8a97296860 memberOf Attribute
+      _value hasValue Name0x7f8a972968f0
       _attr hasValue "argv"
-      _ctx hasValue Load0x7f416cf3c610
-   instance Name0x7f416cf3feb0 memberOf Name
+      _ctx hasValue Load0x7f8a97294490
+   instance Name0x7f8a972968f0 memberOf Name
       _id hasValue "sys"
-      _ctx hasValue Load0x7f416cf3c610
-   instance Load0x7f416cf3c610 memberOf Load
-   instance Load0x7f416cf3c610 memberOf Load
-   instance If0x7f416cf3ff10 memberOf If
-      _test hasValue Call0x7f416cf3fd60
-      _body hasValue {If0x7f416cf3fcd0}
-      _orelse hasValue {Expr0x7f416cf893f0}
-      _isStepOf hasValue For0x7f416cf3f790
+      _ctx hasValue Load0x7f8a97294490
+   instance Load0x7f8a97294490 memberOf Load
+   instance Load0x7f8a97294490 memberOf Load
+   instance If0x7f8a97296830 memberOf If
+      _test hasValue Call0x7f8a972b1570
+      _body hasValue {If0x7f8a97179570}
+      _orelse hasValue {Expr0x7f8a971794b0}
+      _isStepOf hasValue For0x7f8a972963e0
       _isPreceededBy hasValue NoneStmt
       _isSucceededBy hasValue NoneStmt
-   instance Call0x7f416cf3fd60 memberOf Call
-      _func hasValue Name0x7f416cf3fd90
-      _args hasValue {Name0x7f416cf3fd00}
-   instance Name0x7f416cf3fd90 memberOf Name
+   instance Call0x7f8a972b1570 memberOf Call
+      _func hasValue Name0x7f8a97179600
+      _args hasValue {Name0x7f8a971795d0}
+   instance Name0x7f8a97179600 memberOf Name
       _id hasValue "exists"
-      _ctx hasValue Load0x7f416cf3c610
-   instance Load0x7f416cf3c610 memberOf Load
-   instance Name0x7f416cf3fd00 memberOf Name
+      _ctx hasValue Load0x7f8a97294490
+   instance Load0x7f8a97294490 memberOf Load
+   instance Name0x7f8a971795d0 memberOf Name
       _id hasValue "arg"
-      _ctx hasValue Load0x7f416cf3c610
-   instance Load0x7f416cf3c610 memberOf Load
-   instance If0x7f416cf3fcd0 memberOf If
-      _test hasValue Compare0x7f416cf3fc40
-      _body hasValue {Expr0x7f416cf893c0}
-      _isStepOf hasValue If0x7f416cf3ff10
+      _ctx hasValue Load0x7f8a97294490
+   instance Load0x7f8a97294490 memberOf Load
+   instance If0x7f8a97179570 memberOf If
+      _test hasValue Compare0x7f8a97179540
+      _body hasValue {Expr0x7f8a97179480}
+      _isStepOf hasValue If0x7f8a97296830
       _isPreceededBy hasValue NoneStmt
       _isSucceededBy hasValue NoneStmt
-   instance Compare0x7f416cf3fc40 memberOf Compare
-      _left hasValue Name0x7f416cf3fbe0
-      _ops hasValue {NotEq0x7f416cf3cfa0}
-      _comparators hasValue {Constant0x7f416cf3fbb0}
-   instance Name0x7f416cf3fbe0 memberOf Name
+   instance Compare0x7f8a97179540 memberOf Compare
+      _left hasValue Name0x7f8a97179510
+      _ops hasValue {NotEq0x7f8a972954b0}
+      _comparators hasValue {Constant0x7f8a971794e0}
+   instance Name0x7f8a97179510 memberOf Name
       _id hasValue "i"
-      _ctx hasValue Load0x7f416cf3c610
-   instance Load0x7f416cf3c610 memberOf Load
-   instance NotEq0x7f416cf3cfa0 memberOf NotEq
-   instance Constant0x7f416cf3fbb0 memberOf Constant
-   instance Expr0x7f416cf893c0 memberOf Expr
-      _value hasValue Call0x7f416cf89390
-      _isStepOf hasValue If0x7f416cf3fcd0
+      _ctx hasValue Load0x7f8a97294490
+   instance Load0x7f8a97294490 memberOf Load
+   instance NotEq0x7f8a972954b0 memberOf NotEq
+   instance Constant0x7f8a971794e0 memberOf Constant
+      _value hasValue "0"
+      _kind hasValue "None"
+   instance Expr0x7f8a97179480 memberOf Expr
+      _value hasValue Call0x7f8a97179450
+      _isStepOf hasValue If0x7f8a97179570
       _isPreceededBy hasValue NoneStmt
       _isSucceededBy hasValue NoneStmt
-   instance Call0x7f416cf89390 memberOf Call
-      _func hasValue Name0x7f416cf89360
-      _args hasValue {Name0x7f416cf89330}
-   instance Name0x7f416cf89360 memberOf Name
+   instance Call0x7f8a97179450 memberOf Call
+      _func hasValue Name0x7f8a97179420
+      _args hasValue {Name0x7f8a971793f0}
+   instance Name0x7f8a97179420 memberOf Name
       _id hasValue "generate_ontology"
-      _ctx hasValue Load0x7f416cf3c610
-   instance Load0x7f416cf3c610 memberOf Load
-   instance Name0x7f416cf89330 memberOf Name
+      _ctx hasValue Load0x7f8a97294490
+   instance Load0x7f8a97294490 memberOf Load
+   instance Name0x7f8a971793f0 memberOf Name
       _id hasValue "arg"
-      _ctx hasValue Load0x7f416cf3c610
-   instance Load0x7f416cf3c610 memberOf Load
-   instance Expr0x7f416cf893f0 memberOf Expr
-      _value hasValue Call0x7f416cf892d0
-      _isStepOf hasValue If0x7f416cf3ff10
+      _ctx hasValue Load0x7f8a97294490
+   instance Load0x7f8a97294490 memberOf Load
+   instance Expr0x7f8a971794b0 memberOf Expr
+      _value hasValue Call0x7f8a97179390
+      _isStepOf hasValue If0x7f8a97296830
       _isPreceededBy hasValue NoneStmt
       _isSucceededBy hasValue NoneStmt
-   instance Call0x7f416cf892d0 memberOf Call
-      _func hasValue Attribute0x7f416cf892a0
-      _args hasValue {Name0x7f416cf89240}
-   instance Attribute0x7f416cf892a0 memberOf Attribute
-      _value hasValue Name0x7f416cf89270
+   instance Call0x7f8a97179390 memberOf Call
+      _func hasValue Attribute0x7f8a97179360
+      _args hasValue {Name0x7f8a97179300}
+   instance Attribute0x7f8a97179360 memberOf Attribute
+      _value hasValue Name0x7f8a97179330
       _attr hasValue "append"
-      _ctx hasValue Load0x7f416cf3c610
-   instance Name0x7f416cf89270 memberOf Name
+      _ctx hasValue Load0x7f8a97294490
+   instance Name0x7f8a97179330 memberOf Name
       _id hasValue "invalFiles"
-      _ctx hasValue Load0x7f416cf3c610
-   instance Load0x7f416cf3c610 memberOf Load
-   instance Load0x7f416cf3c610 memberOf Load
-   instance Name0x7f416cf89240 memberOf Name
+      _ctx hasValue Load0x7f8a97294490
+   instance Load0x7f8a97294490 memberOf Load
+   instance Load0x7f8a97294490 memberOf Load
+   instance Name0x7f8a97179300 memberOf Name
       _id hasValue "arg"
-      _ctx hasValue Load0x7f416cf3c610
-   instance Load0x7f416cf3c610 memberOf Load
-   instance For0x7f416cf3ff40 memberOf For
-      _target hasValue Name0x7f416cf3fd30
-      _iter hasValue Name0x7f416cf891e0
-      _body hasValue {Expr0x7f416cf891b0}
-      _isStepOf hasValue If0x7f416cf3f850
-      _isPreceededBy hasValue For0x7f416cf3f790
+      _ctx hasValue Load0x7f8a97294490
+   instance Load0x7f8a97294490 memberOf Load
+   instance For0x7f8a97296530 memberOf For
+      _target hasValue Name0x7f8a971795a0
+      _iter hasValue Name0x7f8a971792a0
+      _body hasValue {Expr0x7f8a97179270}
+      _isStepOf hasValue If0x7f8a97296050
+      _isPreceededBy hasValue For0x7f8a972963e0
       _isSucceededBy hasValue NoneStmt
-   instance Name0x7f416cf3fd30 memberOf Name
+   instance Name0x7f8a971795a0 memberOf Name
       _id hasValue "file"
-      _ctx hasValue Store0x7f416cf3c670
-   instance Store0x7f416cf3c670 memberOf Store
-   instance Name0x7f416cf891e0 memberOf Name
+      _ctx hasValue Store0x7f8a97294430
+   instance Store0x7f8a97294430 memberOf Store
+   instance Name0x7f8a971792a0 memberOf Name
       _id hasValue "invalFiles"
-      _ctx hasValue Load0x7f416cf3c610
-   instance Load0x7f416cf3c610 memberOf Load
-   instance Expr0x7f416cf891b0 memberOf Expr
-      _value hasValue Call0x7f416cf89180
-      _isStepOf hasValue For0x7f416cf3ff40
+      _ctx hasValue Load0x7f8a97294490
+   instance Load0x7f8a97294490 memberOf Load
+   instance Expr0x7f8a97179270 memberOf Expr
+      _value hasValue Call0x7f8a97179240
+      _isStepOf hasValue For0x7f8a97296530
       _isPreceededBy hasValue NoneStmt
       _isSucceededBy hasValue NoneStmt
-   instance Call0x7f416cf89180 memberOf Call
-      _func hasValue Name0x7f416cf89150
-      _args hasValue {JoinedStr0x7f416cf89540}
-   instance Name0x7f416cf89150 memberOf Name
+   instance Call0x7f8a97179240 memberOf Call
+      _func hasValue Name0x7f8a97179210
+      _args hasValue {JoinedStr0x7f8a971791e0}
+   instance Name0x7f8a97179210 memberOf Name
       _id hasValue "print"
-      _ctx hasValue Load0x7f416cf3c610
-   instance Load0x7f416cf3c610 memberOf Load
-   instance JoinedStr0x7f416cf89540 memberOf JoinedStr
-      _values hasValue {Constant0x7f416cf89750, FormattedValue0x7f416cf896c0, Constant0x7f416cf89660, FormattedValue0x7f416cf89690, Constant0x7f416cf89630}
-   instance Constant0x7f416cf89750 memberOf Constant
-      _value hasValue "The ontology for the "
-   instance FormattedValue0x7f416cf896c0 memberOf FormattedValue
-      _value hasValue Name0x7f416cf896f0
+      _ctx hasValue Load0x7f8a97294490
+   instance Load0x7f8a97294490 memberOf Load
+   instance JoinedStr0x7f8a971791e0 memberOf JoinedStr
+      _values hasValue {Constant0x7f8a97179180, FormattedValue0x7f8a97179150, Constant0x7f8a971790f0, FormattedValue0x7f8a971790c0, Constant0x7f8a97179060}
+   instance Constant0x7f8a97179180 memberOf Constant
+      _value hasValue "\"The ontology for the \""
+      _kind hasValue "None"
+   instance FormattedValue0x7f8a97179150 memberOf FormattedValue
+      _value hasValue Name0x7f8a97179120
       _conversion hasValue -1
-   instance Name0x7f416cf896f0 memberOf Name
+   instance Name0x7f8a97179120 memberOf Name
       _id hasValue "file"
-      _ctx hasValue Load0x7f416cf3c610
-   instance Load0x7f416cf3c610 memberOf Load
-   instance Constant0x7f416cf89660 memberOf Constant
-      _value hasValue " could not be generated. The "
-   instance FormattedValue0x7f416cf89690 memberOf FormattedValue
-      _value hasValue Name0x7f416cf89600
+      _ctx hasValue Load0x7f8a97294490
+   instance Load0x7f8a97294490 memberOf Load
+   instance Constant0x7f8a971790f0 memberOf Constant
+      _value hasValue "\" could not be generated. The \""
+      _kind hasValue "None"
+   instance FormattedValue0x7f8a971790c0 memberOf FormattedValue
+      _value hasValue Name0x7f8a97179090
       _conversion hasValue -1
-   instance Name0x7f416cf89600 memberOf Name
+   instance Name0x7f8a97179090 memberOf Name
       _id hasValue "file"
-      _ctx hasValue Load0x7f416cf3c610
-   instance Load0x7f416cf3c610 memberOf Load
-   instance Constant0x7f416cf89630 memberOf Constant
-      _value hasValue " does not exist."
+      _ctx hasValue Load0x7f8a97294490
+   instance Load0x7f8a97294490 memberOf Load
+   instance Constant0x7f8a97179060 memberOf Constant
+      _value hasValue "\" does not exist.\""
+      _kind hasValue "None"
+   instance Assign0x7f8a97296320 memberOf Assign
+      _targets hasValue {Name0x7f8a97178fd0}
+      _value hasValue Constant0x7f8a97178fa0
+      _isStepOf hasValue Module0x7f8a97295d80
+      _isPreceededBy hasValue If0x7f8a97296050
+      _isSucceededBy hasValue Assign0x7f8a97178f70
+   instance Name0x7f8a97178fd0 memberOf Name
+      _id hasValue "p"
+      _ctx hasValue Store0x7f8a97294430
+   instance Store0x7f8a97294430 memberOf Store
+   instance Constant0x7f8a97178fa0 memberOf Constant
+      _value hasValue "None"
+      _kind hasValue "None"
+   instance Assign0x7f8a97178f70 memberOf Assign
+      _targets hasValue {Name0x7f8a97178f40}
+      _value hasValue Constant0x7f8a97178f10
+      _isStepOf hasValue Module0x7f8a97295d80
+      _isPreceededBy hasValue Assign0x7f8a97296320
+      _isSucceededBy hasValue Assign0x7f8a97178ee0
+   instance Name0x7f8a97178f40 memberOf Name
+      _id hasValue "r"
+      _ctx hasValue Store0x7f8a97294430
+   instance Store0x7f8a97294430 memberOf Store
+   instance Constant0x7f8a97178f10 memberOf Constant
+      _value hasValue "668"
+      _kind hasValue "None"
+   instance Assign0x7f8a97178ee0 memberOf Assign
+      _targets hasValue {Name0x7f8a97178eb0}
+      _value hasValue Constant0x7f8a97178e80
+      _isStepOf hasValue Module0x7f8a97295d80
+      _isPreceededBy hasValue Assign0x7f8a97178f70
+      _isSucceededBy hasValue Assign0x7f8a97178e50
+   instance Name0x7f8a97178eb0 memberOf Name
+      _id hasValue "s"
+      _ctx hasValue Store0x7f8a97294430
+   instance Store0x7f8a97294430 memberOf Store
+   instance Constant0x7f8a97178e80 memberOf Constant
+      _value hasValue "\"668\""
+      _kind hasValue "None"
+   instance Assign0x7f8a97178e50 memberOf Assign
+      _targets hasValue {Name0x7f8a97178e20}
+      _value hasValue Constant0x7f8a97178df0
+      _isStepOf hasValue Module0x7f8a97295d80
+      _isPreceededBy hasValue Assign0x7f8a97178ee0
+      _isSucceededBy hasValue NoneStmt
+   instance Name0x7f8a97178e20 memberOf Name
+      _id hasValue "t"
+      _ctx hasValue Store0x7f8a97294430
+   instance Store0x7f8a97294430 memberOf Store
+   instance Constant0x7f8a97178df0 memberOf Constant
+      _value hasValue "\"668\""
+      _kind hasValue "None"
    instance NoneStmt memberOf stmt

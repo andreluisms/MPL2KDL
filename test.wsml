@@ -1,0 +1,171 @@
+wsmlVariant _"http://www.wsmo.org/wsml/wsml-syntax/wsml-rule"
+namespace { _"http://ufs.br/ontologies/mpl2kdl#"}
+
+ontology test
+   importsOntology{_"http://ufs.br/ontologies/mpl2kdl#PythonAbstractSyntax"}  
+
+   instance Module0x7fa0b9197fd0 memberOf Module
+      _body hasValue {ClassDef0x7fa0b9197fa0, Assign0x7fa0b9197eb0, Assign0x7fa0b9197df0, Assign0x7fa0b9197d30, Assign0x7fa0b9197c70, Assign0x7fa0b9197a60, Assign0x7fa0b91979d0, Assign0x7fa0b9197880, Assign0x7fa0b91d13f0, Assign0x7fa0b91d1330}
+   instance ClassDef0x7fa0b9197fa0 memberOf ClassDef
+      _name hasValue "c"
+      _body hasValue {Pass0x7fa0b9197e80}
+      _isStepOf hasValue Module0x7fa0b9197fd0
+      _isPreceededBy hasValue NoneStmt
+      _isSucceededBy hasValue Assign0x7fa0b9197eb0
+   instance Pass0x7fa0b9197e80 memberOf Pass
+      _isStepOf hasValue ClassDef0x7fa0b9197fa0
+      _isPreceededBy hasValue NoneStmt
+      _isSucceededBy hasValue NoneStmt
+   instance Assign0x7fa0b9197eb0 memberOf Assign
+      _targets hasValue {Name0x7fa0b9197e20}
+      _value hasValue Constant0x7fa0b9197dc0
+      _isStepOf hasValue Module0x7fa0b9197fd0
+      _isPreceededBy hasValue ClassDef0x7fa0b9197fa0
+      _isSucceededBy hasValue Assign0x7fa0b9197df0
+   instance Name0x7fa0b9197e20 memberOf Name
+      _id hasValue "A"
+      _ctx hasValue Store0x7fa0b9194880
+   instance Store0x7fa0b9194880 memberOf Store
+   instance Constant0x7fa0b9197dc0 memberOf Constant
+      _value hasValue "\"356\""
+      _kind hasValue "None"
+   instance Assign0x7fa0b9197df0 memberOf Assign
+      _targets hasValue {Name0x7fa0b9197d90}
+      _value hasValue Constant0x7fa0b9197d60
+      _isStepOf hasValue Module0x7fa0b9197fd0
+      _isPreceededBy hasValue Assign0x7fa0b9197eb0
+      _isSucceededBy hasValue Assign0x7fa0b9197d30
+   instance Name0x7fa0b9197d90 memberOf Name
+      _id hasValue "B"
+      _ctx hasValue Store0x7fa0b9194880
+   instance Store0x7fa0b9194880 memberOf Store
+   instance Constant0x7fa0b9197d60 memberOf Constant
+      _value hasValue "356"
+      _kind hasValue "None"
+   instance Assign0x7fa0b9197d30 memberOf Assign
+      _targets hasValue {Name0x7fa0b9197d00}
+      _value hasValue Call0x7fa0b9197cd0
+      _isStepOf hasValue Module0x7fa0b9197fd0
+      _isPreceededBy hasValue Assign0x7fa0b9197df0
+      _isSucceededBy hasValue Assign0x7fa0b9197c70
+   instance Name0x7fa0b9197d00 memberOf Name
+      _id hasValue "C"
+      _ctx hasValue Store0x7fa0b9194880
+   instance Store0x7fa0b9194880 memberOf Store
+   instance Call0x7fa0b9197cd0 memberOf Call
+      _func hasValue Name0x7fa0b9197ca0
+   instance Name0x7fa0b9197ca0 memberOf Name
+      _id hasValue "c"
+      _ctx hasValue Load0x7fa0b9194820
+   instance Load0x7fa0b9194820 memberOf Load
+   instance Assign0x7fa0b9197c70 memberOf Assign
+      _targets hasValue {Name0x7fa0b9197c40}
+      _value hasValue List0x7fa0b9197c10
+      _isStepOf hasValue Module0x7fa0b9197fd0
+      _isPreceededBy hasValue Assign0x7fa0b9197d30
+      _isSucceededBy hasValue Assign0x7fa0b9197a60
+   instance Name0x7fa0b9197c40 memberOf Name
+      _id hasValue "D"
+      _ctx hasValue Store0x7fa0b9194880
+   instance Store0x7fa0b9194880 memberOf Store
+   instance List0x7fa0b9197c10 memberOf List
+      _elts hasValue {Constant0x7fa0b9197be0, Constant0x7fa0b9197af0, Constant0x7fa0b9197ac0, Name0x7fa0b9197a90}
+      _ctx hasValue Load0x7fa0b9194820
+   instance Constant0x7fa0b9197be0 memberOf Constant
+      _value hasValue "1"
+      _kind hasValue "None"
+   instance Constant0x7fa0b9197af0 memberOf Constant
+      _value hasValue "2.548"
+      _kind hasValue "None"
+   instance Constant0x7fa0b9197ac0 memberOf Constant
+      _value hasValue "\"3\""
+      _kind hasValue "None"
+   instance Name0x7fa0b9197a90 memberOf Name
+      _id hasValue "C"
+      _ctx hasValue Load0x7fa0b9194820
+   instance Load0x7fa0b9194820 memberOf Load
+   instance Load0x7fa0b9194820 memberOf Load
+   instance Assign0x7fa0b9197a60 memberOf Assign
+      _targets hasValue {Name0x7fa0b9197a30}
+      _value hasValue Constant0x7fa0b9197a00
+      _isStepOf hasValue Module0x7fa0b9197fd0
+      _isPreceededBy hasValue Assign0x7fa0b9197c70
+      _isSucceededBy hasValue Assign0x7fa0b91979d0
+   instance Name0x7fa0b9197a30 memberOf Name
+      _id hasValue "E"
+      _ctx hasValue Store0x7fa0b9194880
+   instance Store0x7fa0b9194880 memberOf Store
+   instance Constant0x7fa0b9197a00 memberOf Constant
+      _value hasValue "True"
+      _kind hasValue "None"
+   instance Assign0x7fa0b91979d0 memberOf Assign
+      _targets hasValue {Name0x7fa0b91979a0}
+      _value hasValue Tuple0x7fa0b9197940
+      _isStepOf hasValue Module0x7fa0b9197fd0
+      _isPreceededBy hasValue Assign0x7fa0b9197a60
+      _isSucceededBy hasValue Assign0x7fa0b9197880
+   instance Name0x7fa0b91979a0 memberOf Name
+      _id hasValue "F"
+      _ctx hasValue Store0x7fa0b9194880
+   instance Store0x7fa0b9194880 memberOf Store
+   instance Tuple0x7fa0b9197940 memberOf Tuple
+      _elts hasValue {Constant0x7fa0b9197910, Constant0x7fa0b91978e0, Name0x7fa0b91978b0}
+      _ctx hasValue Load0x7fa0b9194820
+   instance Constant0x7fa0b9197910 memberOf Constant
+      _value hasValue "1.12312"
+      _kind hasValue "None"
+   instance Constant0x7fa0b91978e0 memberOf Constant
+      _value hasValue "22.304"
+      _kind hasValue "None"
+   instance Name0x7fa0b91978b0 memberOf Name
+      _id hasValue "C"
+      _ctx hasValue Load0x7fa0b9194820
+   instance Load0x7fa0b9194820 memberOf Load
+   instance Load0x7fa0b9194820 memberOf Load
+   instance Assign0x7fa0b9197880 memberOf Assign
+      _targets hasValue {Name0x7fa0b9197850}
+      _value hasValue Dict0x7fa0b91977c0
+      _isStepOf hasValue Module0x7fa0b9197fd0
+      _isPreceededBy hasValue Assign0x7fa0b91979d0
+      _isSucceededBy hasValue Assign0x7fa0b91d13f0
+   instance Name0x7fa0b9197850 memberOf Name
+      _id hasValue "G"
+      _ctx hasValue Store0x7fa0b9194880
+   instance Store0x7fa0b9194880 memberOf Store
+   instance Dict0x7fa0b91977c0 memberOf Dict
+      _keys hasValue {Constant0x7fa0b9152500}
+      _values hasValue {Name0x7fa0b91d13c0}
+   instance Constant0x7fa0b9152500 memberOf Constant
+      _value hasValue "\"chave\""
+      _kind hasValue "None"
+   instance Name0x7fa0b91d13c0 memberOf Name
+      _id hasValue "F"
+      _ctx hasValue Load0x7fa0b9194820
+   instance Load0x7fa0b9194820 memberOf Load
+   instance Assign0x7fa0b91d13f0 memberOf Assign
+      _targets hasValue {Name0x7fa0b91d1390}
+      _value hasValue Constant0x7fa0b91d1360
+      _isStepOf hasValue Module0x7fa0b9197fd0
+      _isPreceededBy hasValue Assign0x7fa0b9197880
+      _isSucceededBy hasValue Assign0x7fa0b91d1330
+   instance Name0x7fa0b91d1390 memberOf Name
+      _id hasValue "H"
+      _ctx hasValue Store0x7fa0b9194880
+   instance Store0x7fa0b9194880 memberOf Store
+   instance Constant0x7fa0b91d1360 memberOf Constant
+      _value hasValue "None"
+      _kind hasValue "None"
+   instance Assign0x7fa0b91d1330 memberOf Assign
+      _targets hasValue {Name0x7fa0b91d1300}
+      _value hasValue List0x7fa0b91d12d0
+      _isStepOf hasValue Module0x7fa0b9197fd0
+      _isPreceededBy hasValue Assign0x7fa0b91d13f0
+      _isSucceededBy hasValue NoneStmt
+   instance Name0x7fa0b91d1300 memberOf Name
+      _id hasValue "L"
+      _ctx hasValue Store0x7fa0b9194880
+   instance Store0x7fa0b9194880 memberOf Store
+   instance List0x7fa0b91d12d0 memberOf List
+      _ctx hasValue Load0x7fa0b9194820
+   instance Load0x7fa0b9194820 memberOf Load
+   instance NoneStmt memberOf stmt

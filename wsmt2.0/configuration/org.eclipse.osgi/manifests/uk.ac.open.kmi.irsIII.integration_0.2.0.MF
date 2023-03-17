@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Generated-from: 1678388585000;type=2
+Generated-from: 1678493286000;type=2
 Bundle-ManifestVersion: 2
 Bundle-Name: IRSIII Integration Plug-in
 Bundle-SymbolicName: uk.ac.open.kmi.irsIII.integration

@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Generated-from: 1678388584000;type=2
+Generated-from: 1678493285000;type=2
 Bundle-ManifestVersion: 2
 Bundle-Name: WSMO4J
 Bundle-SymbolicName: net.sourceforge.wsmo4j
