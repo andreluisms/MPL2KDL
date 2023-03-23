@@ -124,7 +124,10 @@ class AstToWsmlVis(NodeVisitor):
         for field, value in iter_fields(node):
             r = value
             if (type(value).__name__=='str'):
-                r = '\\"' + value + '\\"'
+                r = r.replace('"', '\\"')
+                r = '\\"' + r + '\\"'
+                # print('r: ', r, 'value: ', value )
+                sys.stderr.write('r: ' + r + ' value: ' + value + '\n')
             print("      _", field, ' hasValue "', r,'"',sep='')  
 
     def visit(self, node):
