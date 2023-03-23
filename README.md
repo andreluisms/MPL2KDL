@@ -5,6 +5,11 @@ Dependencies: asdl library
 Install via pip: `pip3 install asdl`
 
 How to run: `python mpl2kdl.py source-name.py`
+
+## <a>2023-03-23-19:08</a>
+Correção de bugs:
+ - Suporte a Strings cujo conteúdo apresenta aspas duplas (") 
+ 
 ## <a>2023-03-17-19:40</a>
 Mudanças na nova versão:
  - Suporte a None
