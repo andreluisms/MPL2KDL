@@ -9,10 +9,10 @@ import os
 
 
 #Equivalence of Python ADSL types to WSML types
-_DCT_WSMLTYPES={'string': '_string', 'int': '_integer', 'identifier':'_string',
+DCT_WSMLTYPES={'string': '_string', 'int': '_integer', 'identifier':'_string',
                 'constant':'_string'}
 
-_NONESTMT = "NoneStmt"
+NONESTMT = "NoneStmt"
 
 #Types whose content is to be returned
 # _LST_CNT_TYPES=['str', 'list']
@@ -105,15 +105,15 @@ class AstToWsmlVis(NodeVisitor):
             if neighbor[0] != None:
                 print("      _isStepOf hasValue ", neighbor[0].__class__.__name__,  hex(id(neighbor[0])), sep="")
             else:
-                print("      _isStepOf hasValue", _NONESTMT)
+                print("      _isStepOf hasValue", NONESTMT)
             if neighbor[1] != None:
                 print("      _isPreceededBy hasValue ", neighbor[1].__class__.__name__,  hex(id(neighbor[1])), sep="")
             else:
-                print("      _isPreceededBy hasValue", _NONESTMT)
+                print("      _isPreceededBy hasValue", NONESTMT)
             if neighbor[2] != None:
                 print("      _isSucceededBy hasValue ", neighbor[2].__class__.__name__,  hex(id(neighbor[2])), sep="")
             else:
-                print("      _isSucceededBy hasValue", _NONESTMT)
+                print("      _isSucceededBy hasValue", NONESTMT)
 
     
 
@@ -179,18 +179,18 @@ class AsdlToWSML(VisitorBase):
             print('(0 *) ', end="")
         elif field.opt:
             print('(0 1) ', end="")
-        print (_DCT_WSMLTYPES.get(key, key))
+        print (DCT_WSMLTYPES.get(key, key))
 
     def visitProduct(self, prod, name):
         for f in prod.fields:
             self.visit(f, name)
 
 
-_PYTHON_ASDL = 'python.asdl'
-_PYTHON_PROGRAM = 'test.py'
-_PYTHON_ABSTRACT = 'PythonAbstractSyntax.wsml'
+PYTHON_ASDL = 'python.asdl'
+PYTHON_PROGRAM = 'test.py'
+PYTHON_ABSTRACT = 'PythonAbstractSyntax.wsml'
 
-def generate_concepts(fileInput = _PYTHON_ASDL):
+def generate_concepts(fileInput = PYTHON_ASDL):
     vis = AsdlToWSML()
     r = parse(fileInput)
     vis.visit(r)
@@ -198,12 +198,12 @@ def generate_concepts(fileInput = _PYTHON_ASDL):
 
 
 
-def generate_instances(fileInput = _PYTHON_PROGRAM):
+def generate_instances(fileInput = PYTHON_PROGRAM):
     vis = AstToWsmlVis(fileInput) 
     r = open(fileInput, 'r')
     tree = astparse(r.read())
     vis.visit(tree)
-    print ("   instance", _NONESTMT, "memberOf stmt")
+    print ("   instance", NONESTMT, "memberOf stmt")
 
 
 def generate(fileName, function, fname):
@@ -215,9 +215,23 @@ def generate(fileName, function, fname):
         sys.stdout = tmp
         
 
-def generate_ontology(srcpath, fileOAS = _PYTHON_ABSTRACT):
-    generate(fileOAS, generate_concepts, _PYTHON_ASDL)
+def generate_ontology(srcpath, fileOAS = PYTHON_ABSTRACT):
+    generate(fileOAS, generate_concepts, PYTHON_ASDL)
     target = srcpath.replace(".py", ".wsml")
     generate(target, generate_instances, srcpath)
+
+class RdfTypes: 
+    N3 = '-n3'
+    NTRIPLES = '-ntriples'
+    XML = '-xml'
+    TURTLE = '-turtle'
+
+RDFOPTIONS = {RdfTypes.N3:('1', '.n3'), RdfTypes.NTRIPLES: ('2', '.nt'), RdfTypes.XML: ('3', '.rdf'), RdfTypes.TURTLE:('4', '.ttl')}
+CALLJAR = "java -jar wsml2rdfs.jar "
+def generate_rdf(pythonsrc, type):
+    source = pythonsrc.replace(".py", ".wsml")
+    target = pythonsrc.replace(".py", RDFOPTIONS.get(type)[1])
+    os.system(CALLJAR +  source + " " + target + " " + RDFOPTIONS.get(type)[0]) 
+
 
 

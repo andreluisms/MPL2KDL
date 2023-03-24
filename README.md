@@ -4,7 +4,26 @@ Dependencies: asdl library
 
 Install via pip: `pip3 install asdl`
 
-How to run: `python mpl2kdl.py source-name.py`
+How to run: `python mpl2kdl.py source-name1.py source-name2.py ... `
+
+## <a>2023-03-24-16:50</a>
+Integração com tradutor WSML para RDF
+
+É possível gerar 4 diferentes notações, são elas:
+
+ - N3: 
+    - `python mpl2kdl.py -rdf -n3 source-name1.py source-name2.py ...`
+ - rdf triple: 
+    - `python mpl2kdl.py -rdf -ntriples source-name1.py source-name2.py ...` 
+ - rdf/xml: 
+    - `python mpl2kdl.py -rdf -xml source-name1.py source-name2.py ...`
+ - rdf turtle: 
+    - `python mpl2kdl.py -rdf -turtle source-name1.py source-name2.py ...`
+
+Também é possível chamar apenas o parâmetro -rdf, tal chamada fará a geração de rdf/xml 
+  - `python mpl2kdl.py -rdf source-name1.py source-name2.py ...`
+
+
 
 ## <a>2023-03-23-19:08</a>
 Correção de bug:
